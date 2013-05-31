@@ -5,11 +5,11 @@
     {
       "label": "Gender",
       "description": "what sex is you",
-      "count": 2,
+      "count": 3,
       "options": [
         {
           "label": "male",
-          "count": 1
+          "count": 2
         },
         {
           "label": "female",
