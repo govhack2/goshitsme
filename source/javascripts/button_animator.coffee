@@ -1,4 +1,5 @@
 dieFaces = ['&#x2680;', '&#x2681;', '&#x2682;', '&#x2683;', '&#x2684;', '&#x2685;']
+values = ['yes', 'no', 'harry', 'indeed', '23cm', '85kg']
 
 rand = (max, min = 0) ->
   n = Math.round(Math.random() * max)
@@ -27,4 +28,4 @@ $ ->
   $('.questions .btn').on 'click', (e) =>
     button = $(e.target)
     commenceRollin button, ->
-      console.log 'they see me done be rollin\''
+      button.siblings('input').val(values[rand(values.length)])
