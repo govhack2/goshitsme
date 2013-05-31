@@ -1,0 +1,87 @@
+{
+  "title": "GoShitMe",
+  "description": "roll for identity",
+  "dimensions": [
+    {
+      "label": "Gender",
+      "description": "what sex is you",
+      "count": 2,
+      "options": [
+        {
+          "label": "male",
+          "count": 1
+        },
+        {
+          "label": "female",
+          "count": 1,
+          "dimensions": [
+            {
+              "label": "Age",
+              "count": 10,
+              "options": [
+                {
+                  "label": "too young",
+                  "count": 1
+                },
+                {
+                  "label": "too old",
+                  "count": 1
+                },
+                {
+                  "label": "just right",
+                  "count": 8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Age",
+      "description": "how old is you",
+      "count": 171,
+      "options": [
+        {
+          "label": "0-5",
+          "count": 10
+        },
+        {
+          "label": "5-15",
+          "count": 20
+        },
+        {
+          "label": "15-30",
+          "count": 30
+        },
+        {
+          "label": "30-50",
+          "count": 100
+        },
+        {
+          "label": "50-70",
+          "count": 10
+        },
+        {
+          "label": "70-100",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "label": "Favourite Colour",
+      "description": "yep",
+      "count": 5,
+      "options": [
+        {
+          "label": "Red",
+          "count": 1
+        },
+        {
+          "label": "Blue",
+          "count": 4
+        }
+      ]
+    }
+  ]
+}
