@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Who Dat Stat? Gosh it's me!</title>
+    <title>STATISTICALME.COM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sound files -->
     <audio id="dice1" src="sounds/dice1.mp3"></audio>
@@ -18,36 +18,41 @@
   <body>
     <div class="hero">
       <div class="container">
-        <h1>Gosh! It's Me!</h1>
+        <h1>STATISTICALME.COM</h1>
         <p>See how long it takes to randomly find someone just like you and discover just how unique you are.</p>
-      </div>
-      <div style="float: right">
-        Sound kind:
-        <button type="button" class="btn" id="soundChoice">Dice</button>
+        <div class="options" style="float: right">
+          Sound kind:
+          <button type="button" class="btn" id="soundChoice">Dice</button>
+        </div>
+        <div style="clear:both"></div>
       </div>
     </div>
     <div class="instruction">
-      <button type="button" class="close">Okay!</button>
-      <p>Step one, press the reroll button until you match your age!</p>
-    </div>
-      <div class="questions">
+      <div class="container">
+        <button type="button" class="close">Okay!</button>
+        <p>Step one, press the reroll button until you match your age!</p>
       </div>
+    </div>
+    <div class="divider">
+      &nbsp;
+    </div>
+    <div class="container questions">
     </div>
   </body>
 
   <script id="question-template" type="text/x-handlebars-template">
     <div class="question">
-      &nbsp;
       <div class="label">
         {{name}}
         <div class="source" style="display:none">{{source}}</div>
       </div>
-
-      <input class="answer" id="appendedInputButton" type="text" />
-      <button class="dice">
-        <div class="dieface">&nbsp;</div>
-      </button>
-      <div style="clear:both;"></div>
+      <div class="answer-and-dice">
+        <button class="dice">
+          <div class="dieface">&nbsp;</div>
+        </button>
+        <input class="answer" id="appendedInputButton" type="text" />
+      </div>
+      <div style="clear:both"></div>
     </div>
   </script>
 
