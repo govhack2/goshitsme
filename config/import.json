@@ -7,15 +7,15 @@
   ],
   "location": {
     "total": "Total Australia",
-    "states": {
-      "nsw": "New South Wales",
-      "vic": "Victoria",
-      "qld": "Queensland",
-      "sa": "South Australia",
-      "wa": "Western Australia",
-      "tas": "Tasmania",
-      "nt": "Northern Territory",
-      "act": "Australian Capital Territory"
-    }
+    "states": [
+      "New South Wales",
+      "Victoria",
+      "Queensland",
+      "South Australia",
+      "Western Australia",
+      "Tasmania",
+      "Northern Territory",
+      "Australian Capital Territory"
+    ]
   }
 }
