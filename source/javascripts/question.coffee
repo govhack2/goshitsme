@@ -2,7 +2,10 @@ class window.Question
   constructor: (@name, @desc, @source, @answers, @selectedAnswers) ->
     @clickCount = 0
 
-  randomAnswer: ->
+  randomAnswer: () ->
+    @answers[Math.floor(Math.random() * @answers.length)]
+
+  weightedRandomAnswer: () ->
     return null unless @answers.length > 0
 
     sortedAnswers = _.sortBy @answers, (answer) -> answer.probability.numerator
@@ -17,7 +20,10 @@ class window.Question
 
     winner = _.find(slices, (slice) -> slice[0] >= randomPercentage)
 
-    winner[1] || slices[slices.count-1]
+    if winner
+      winner[1]
+    else
+      slices[slices.count-1]
     # (return slice) for slice in slices when slice > randomPercentage
 
   clicked: ->

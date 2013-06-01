@@ -55,6 +55,10 @@ $ ->
     playSound()
     button.closest('.question').data("question").clicked()
     commenceRollin button, ->
+      # the final (non-rollin') answer must be weighted random
+      question = button.closest('.question').data("question")
+      randomAnswer = question.weightedRandomAnswer()
+      button.siblings('input').val(if randomAnswer then randomAnswer.value else 'no answers')
       sourceElement = button.closest('.question').find('.source')
       sourceElement.fadeIn('fast') unless sourceElement.is(':visible')
 
