@@ -48,14 +48,14 @@ end]
 
 #------------------------------------------------------------------------------#
 
-def _add_entry(row, entry, name, pattern)
+def _add_entry(row, entry, name, pattern, num = 2)
   row.each do |header, count|
     next if header =~ /Not_stated/i
     next unless match = pattern.match(header)
-    next unless match.length == 2
-    dimension = match[1]
+    next unless match.length == num
+    dimension = match[num-1]
     dimension = 'None' if dimension.length == 0
-    next if dimension == 'Total'
+    next if dimension =~ /Total/
     entry[name] ||= {}
     entry[name][dimension] ||= 0
     entry[name][dimension] += count.to_i
@@ -118,6 +118,27 @@ csv_files.each do |file|
     end
     if type =~ /B35/
       _add_entry(row, entry, :internet_type, /connection_(.*?)[_]*Total/)
+    end
+    if type =~ /B46/
+      _add_entry(row, entry, :travel_to_work, /(.*?)_Persons/)
+    end
+    if type =~ /B14/
+      _add_entry(row, entry, :religion, /(.*?)_Persons/)
+    end
+    if type =~ /B09/
+      _add_entry(row, entry, :country_of_birth, /(.*?)_Persons/)
+    end
+    if type =~ /B13/
+      _add_entry(row, entry, :languages_spoken, /Speaks_(other_language_)*(.*?)_Persons/, 3)
+    end
+    if type =~ /B05/
+      _add_entry(row, entry, :marital_status, /Persons_Total_(.*)/)
+    end
+    if type =~ /B17/
+      _add_entry(row, entry, :weekly_personal_income, /Persons_(.*)_Total/)
+    end
+    if type =~ /B41/
+      _add_entry(row, entry, :qualifications, /Persons_(.*)_Total/)
     end
   end
 end
