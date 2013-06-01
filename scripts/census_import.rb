@@ -54,6 +54,7 @@ def _add_entry(row, entry, name, pattern)
     next unless match = pattern.match(header)
     next unless match.length == 2
     dimension = match[1]
+    dimension = 'None' if dimension.length == 0
     next if dimension == 'Total'
     entry[name] ||= {}
     entry[name][dimension] ||= 0
@@ -107,7 +108,16 @@ csv_files.each do |file|
       _add_entry(row, entry, :vehicles_per_house, /^Number_of_motor_vehicles_per_dwelling_(.*)_Dwellings/)
     end
     if type =~ /B28/
-      _add_entry(row, entry, :household_income, /^([0-9]+.*)_Total/)
+      _add_entry(row, entry, :weekly_household_income, /^([0-9]+.*)_Total/)
+    end
+    if type =~ /B33/
+      _add_entry(row, entry, :monthly_mortgage_repayment, /^([0-9]+.*)_Total/)
+    end
+    if type =~ /B34/
+      _add_entry(row, entry, :weekly_rent, /^([0-9]+.*)_Total/)
+    end
+    if type =~ /B35/
+      _add_entry(row, entry, :internet_type, /connection_(.*?)[_]*Total/)
     end
   end
 end
