@@ -2,8 +2,8 @@ dieFaces = [1,2,3,4,5,6]
 
 # Sound types
 diceIds = ["dice1", "dice2"]
-laughIds = ["laugh1", "laugh2", "laugh3", "laugh4", "laugh5", "laugh6"]
-randomIds = ["random1", "random2"]
+laughIds = []
+randomIds = []
 soundIds = { "Dice": diceIds, "Laugh": laughIds, "Random": randomIds }
 
 rand = (max) ->
@@ -45,8 +45,8 @@ commenceRollin = (button, onDone)->
 
 # Pick a random sound based on the Sound Choice category
 playSound = ->
-  numSounds = soundIds[$('#soundChoice').text()].length
-  id = soundIds[$('#soundChoice').text()][rand(numSounds)]
+  numSounds = soundIds["Dice"].length
+  id = soundIds["Dice"][rand(numSounds)]
   sound = $('#'+id)[0]
   sound.playbackRate = _.random(50, 90) / 100 if sound.playbackRate
   sound.play()
@@ -64,16 +64,4 @@ $ ->
       probabilityText = "You and #{randomAnswer.probability.toString()} of the population"
       sourceElement = button.closest('.question').find('.source').html(probabilityText)
       sourceElement.fadeIn('fast') unless sourceElement.is(':visible')
-
-  # Cycle through the sound choice catergories on click:
-  $soundChoice = $('#soundChoice')
-  $soundChoice.on 'click', (e) =>
-    if $soundChoice.text() == "Dice"
-      $soundChoice.text("Laugh")
-    else if $soundChoice.text() == "Laugh"
-      $soundChoice.text("Random")
-    else if $soundChoice.text() == "Random"
-      $soundChoice.text("Dice")
-
-
 
