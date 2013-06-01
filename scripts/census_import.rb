@@ -322,7 +322,7 @@ questions = {
   ]
 }
 
-POPULATION=21507735
+POPULATION=21507719
 
 australia = data[nil][nil]
 questions[:questions].each do |question|
