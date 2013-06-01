@@ -1,4 +1,4 @@
-dieFaces = ['&#x2680;', '&#x2681;', '&#x2682;', '&#x2683;', '&#x2684;', '&#x2685;']
+dieFaces = [1,2,3,4,5,6]
 values = ['yes', 'no', 'harry', 'indeed', '23cm', '85kg']
 
 # Sound types
@@ -15,10 +15,16 @@ gimmeFace = ->
   console.log 'giving face'
   dieFaces[rand(dieFaces.length)]
 
+setFace = (button, face) ->
+  die = $(button).find("div")
+  die.removeClass()
+  die.addClass("dieface")
+  die.addClass("dieface#{face}")
+
 newFace = (button, onDone) ->
   spins = button.data('spins')
   if spins > 0
-    button.html(gimmeFace())
+    setFace(button, gimmeFace())
     button.siblings('input').val(values[rand(values.length)])
     button.data('spins', spins - 1)
     setTimeout((->newFace(button, onDone)), 65)
@@ -38,13 +44,13 @@ playSound = ->
   $('#'+id)[0].play()
 
 $ ->
-  buttons = $('.questions .dice')
+  buttons = $('.dice')
 
   _.each buttons, (button) ->
-    $(button).html(gimmeFace)
+    setFace(button, gimmeFace())
 
-  buttons.on 'click', (e) =>
-    button = $(e.target)
+  $('.questions').on 'click', '.dice', (e) ->
+    button = $(@)
     playSound()
     commenceRollin button, ->
       button.siblings('input').val(values[rand(values.length)])
