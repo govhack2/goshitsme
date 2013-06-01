@@ -339,14 +339,15 @@ questions[:questions].each do |question|
     end
   end
   total = question[:answers].reduce(0) { |acc, val| acc + val[:count] }
-  question[:count] = POPULATION
-  raise if total > POPULATION
-  if POPULATION > total
-    question[:answers] << {
-      label: 'Other / Not Applicable',
-      count: POPULATION - total
-    }
-  end
+  question[:count] = total
+# question[:count] = POPULATION
+# raise if total > POPULATION
+# if POPULATION > total
+#   question[:answers] << {
+#     label: 'Other / Not Applicable',
+#     count: POPULATION - total
+#   }
+# end
 end
 
 File.open('data/questions.json', 'wb') do |file|

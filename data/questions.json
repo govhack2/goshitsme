@@ -8,7 +8,7 @@
     {
       "label":"State / Territory",
       "description":"Where do you live?",
-      "count":21507719,
+      "count":21504702,
       "answers":[
         {
           "label":"NSW",
@@ -41,10 +41,6 @@
         {
           "label":"ACT",
           "count":357222
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":3017
         }
       ]
     },
@@ -120,7 +116,7 @@
       "code":"marital_status",
       "label":"Marital Status",
       "description":"What is your marital status?",
-      "count":21507719,
+      "count":17363696,
       "answers":[
         {
           "label":"Married",
@@ -141,10 +137,6 @@
         {
           "label":"Never Married",
           "count":5962769
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":4144023
         }
       ]
     },
@@ -152,7 +144,7 @@
       "code":"country_of_birth",
       "label":"Country of Birth",
       "description":"Where were you born?",
-      "count":21507719,
+      "count":20236390,
       "answers":[
         {
           "label":"Australia",
@@ -289,10 +281,6 @@
         {
           "label":"Born elsewhere",
           "count":886990
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":1271329
         }
       ]
     },
@@ -300,7 +288,7 @@
       "code":"languages_spoken",
       "label":"Languages Spoken",
       "description":"Which language are you most proficient in?",
-      "count":21507719,
+      "count":19995096,
       "answers":[
         {
           "label":"English only",
@@ -469,10 +457,6 @@
         {
           "label":"Vietnamese",
           "count":233388
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":1512623
         }
       ]
     },
@@ -480,7 +464,7 @@
       "code":"number_of_children",
       "label":"Number of Children",
       "description":"How many kids have you had?",
-      "count":21507719,
+      "count":8329319,
       "answers":[
         {
           "label":"No children",
@@ -509,10 +493,6 @@
         {
           "label":"Six or more children",
           "count":150327
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":13178400
         }
       ]
     },
@@ -520,7 +500,7 @@
       "code":"vehicles_per_house",
       "label":"Number of Cars",
       "description":"How many cars do you have at your place?",
-      "count":21507719,
+      "count":7526031,
       "answers":[
         {
           "label":"No motor vehicles",
@@ -541,10 +521,6 @@
         {
           "label":"Four or more motor vehicles",
           "count":417652
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":13981688
         }
       ]
     },
@@ -552,7 +528,7 @@
       "code":"weekly_rent",
       "label":"Weekly Rent",
       "description":"What do you pay in weekly rent?",
-      "count":21507719,
+      "count":2216097,
       "answers":[
         {
           "label":"0 - 74",
@@ -597,10 +573,6 @@
         {
           "label":"650 and over",
           "count":84170
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":19291622
         }
       ]
     },
@@ -608,7 +580,7 @@
       "code":"monthly_mortgage_repayment",
       "label":"Monthly Mortgage Repayment",
       "description":"What is your monthly mortgage repayment?",
-      "count":21507719,
+      "count":2568982,
       "answers":[
         {
           "label":"0 - 299",
@@ -653,10 +625,6 @@
         {
           "label":"4000 and over",
           "count":175821
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":18938737
         }
       ]
     },
@@ -664,7 +632,7 @@
       "code":"internet_type",
       "label":"Internet Type",
       "description":"What kind of internet connection do you have?",
-      "count":21507719,
+      "count":19105938,
       "answers":[
         {
           "label":"None",
@@ -677,10 +645,6 @@
         {
           "label":"Dial up",
           "count":235401
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":2401781
         }
       ]
     },
@@ -688,7 +652,7 @@
       "code":"school_completed",
       "label":"School Completed",
       "description":"Which level of school did you complete?",
-      "count":21507719,
+      "count":15897494,
       "answers":[
         {
           "label":"Year 12 or equivalent",
@@ -713,10 +677,6 @@
         {
           "label":"Did not go to school",
           "count":142572
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":5610225
         }
       ]
     },
@@ -724,7 +684,7 @@
       "code":"level_of_education",
       "label":"Level of Education",
       "description":"What is your level of education?",
-      "count":21507719,
+      "count":10931777,
       "answers":[
         {
           "label":"Postgraduate Degree Level",
@@ -757,10 +717,6 @@
         {
           "label":"Certificate Level",
           "count":3134910
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":10575942
         }
       ]
     },
@@ -768,7 +724,7 @@
       "code":"qualifications",
       "label":"Qualifications",
       "description":"Which area are you qualified in?",
-      "count":21507719,
+      "count":7960012,
       "answers":[
         {
           "label":"Natural and Physical Sciences",
@@ -817,10 +773,6 @@
         {
           "label":"Mixed Field Programmes",
           "count":13434
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":13547707
         }
       ]
     },
@@ -828,7 +780,7 @@
       "code":"industry_of_employment",
       "label":"Industry",
       "description":"Which industry are you employed in?",
-      "count":21507719,
+      "count":9824440,
       "answers":[
         {
           "label":"Agriculture forestry and fishing",
@@ -905,10 +857,6 @@
         {
           "label":"Other services",
           "count":378217
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":11683279
         }
       ]
     },
@@ -916,7 +864,7 @@
       "code":"occupation",
       "label":"Occupation",
       "description":"Which occupation group are you in?",
-      "count":21507719,
+      "count":19738618,
       "answers":[
         {
           "label":"Managers",
@@ -949,10 +897,6 @@
         {
           "label":"Labourers",
           "count":1895214
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":1769101
         }
       ]
     },
@@ -960,7 +904,7 @@
       "code":"weekly_personal_income",
       "label":"Weekly Personal Income",
       "description":"How much money do you earn?",
-      "count":21507719,
+      "count":15990994,
       "answers":[
         {
           "label":"Negative Nil income",
@@ -1005,10 +949,6 @@
         {
           "label":"2000 or more",
           "count":1081279
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":5516725
         }
       ]
     },
@@ -1016,7 +956,7 @@
       "code":"travel_to_work",
       "label":"Daily Commute",
       "description":"How do you get to your place of work?",
-      "count":21507719,
+      "count":9908394,
       "answers":[
         {
           "label":"One method Train",
@@ -1133,10 +1073,6 @@
         {
           "label":"Did not go to work",
           "count":1024882
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":11599325
         }
       ]
     },
@@ -1144,7 +1080,7 @@
       "code":"religion",
       "label":"Religion",
       "description":"What religion are you?",
-      "count":21507719,
+      "count":19668070,
       "answers":[
         {
           "label":"Buddhism",
@@ -1253,10 +1189,6 @@
         {
           "label":"Other religious affiliation",
           "count":174282
-        },
-        {
-          "label":"Other / Not Applicable",
-          "count":1839649
         }
       ]
     }
