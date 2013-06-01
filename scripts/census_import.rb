@@ -50,6 +50,52 @@ end]
 
 #------------------------------------------------------------------------------#
 
+CORRECTIONS = {
+  'Males' => 'Male',
+  'Females' => 'Female',
+  'China excl SARs and Taiwan' => 'China',
+  'Hong Kong SAR of China' => 'Hong Kong',
+  'Korea Republic of South' => 'South Korea',
+  'South Eastern Europe nfd' => 'South Eastern Europe',
+  'United Kingdom Channel Islands and Isle of Man' => 'United Kingdom',
+  'Born elsewhere' => 'Elsewhere',
+  'English only' => 'English',
+  'Chinese languages Cantonese' => 'Cantonese',
+  'Chinese languages Mandarin' => 'Mandarin',
+  'Chinese languages Other' => 'Other Chinese',
+  'Indo Aryan Languages Bengali' => 'Bengali',
+  'Indo Aryan Languages Hindi' => 'Hindi',
+  'Indo Aryan Languages Punjabi' => 'Punjabi',
+  'Indo Aryan Languages Sinhalese' => 'Sinhalese',
+  'Indo Aryan Languages Urdu' => 'Urdu',
+  'Indo Aryan Languages Other' => 'Other Indo Aryan',
+  'Iranic Languages Dari' => 'Dari',
+  'Iranic Languages Persian excluding Dari' => 'Persian',
+  'Iranic Languages Other' => 'Other Iranic',
+  'Southeast Asian Austronesian Languages Filipino' => 'Filipino',
+  'Southeast Asian Austronesian Languages Indonesian' => 'Indonesian',
+  'Southeast Asian Austronesian Languages Tagalog' => 'Tagalog',
+  'Southeast Asian Austronesian Languages Other' => 'Other Southeast Asian',
+  'Certificate Level Certificate Level nfd' => 'Other Certificate',
+  'Certificate Level Certificate III and IV Level' => 'Certificate III and IV',
+  'Certificate Level Certificate I and II Level' => 'Certificate I and II',
+  'Certificate Level' => 'Other Certificate',
+  'Other religious affiliation' => 'Other religious groups',
+  'Managers' => 'Manager',
+  'Professionals' => 'Professional',
+  'Technicians and trades workers' => 'Technician / Trade',
+  'Community and personal service workers' => 'Community / Personal Service',
+  'Clerical and administrative workers' => 'Clerical / Administrative',
+  'Sales workers' => 'Sales',
+  'Machinery operators and drivers' => 'Machinery Operator / Driver',
+  'Labourers' => 'Labourer',
+  'Negative Nil income' => 'No Income',
+  '2000 or more' => '$2000 or more',
+  '650 and over' => '$650 and over',
+  '4000 and over' => '$4000 and over',
+  'Christian nfd' => 'Other Christian'
+}
+
 def _add_entry(row, entry, name, pattern, num = 2)
   row.each do |header, count|
     next if header =~ /Not_stated/i
@@ -57,6 +103,19 @@ def _add_entry(row, entry, name, pattern, num = 2)
     next unless match.length == num
     dimension = match[num-1]
     dimension = 'None' if dimension.length == 0
+    if dimension =~ /^[0-9]*_[0-9]*$/
+      dimension = dimension.gsub(/([0-9])\_([0-9])/, '\1 - \2')
+      dimension = dimension.split(' - ').map{ |n| "$#{n}" }.join(' - ')
+    end
+    dimension = dimension.split('_').join(' ')
+    dimension = dimension.gsub('One method ', '')
+    dimension = dimension.gsub('Two methods ', '')
+    dimension = dimension.gsub('Three methods ', '')
+    dimension = dimension.gsub('Christianity ', '')
+    dimension = dimension.gsub('Other Religions ', '')
+    dimension = dimension.gsub(' includes light rail', '')
+    dimension = (CORRECTIONS[dimension] || dimension)
+    dimension = dimension.gsub(/ Level/, '')
     next if dimension =~ /Total/
     next if dimension =~ /inadequate/
     entry[name] ||= {}
@@ -224,7 +283,7 @@ questions = {
     {
       :code => :languages_spoken,
       label: "Languages Spoken",
-      description: "Which language are you most proficient in?",
+      description: "Which language do you speak at home?",
       count: 0,
       answers: []
     },
@@ -245,7 +304,7 @@ questions = {
     {
       :code => :weekly_rent,
       label: "Weekly Rent",
-      description: "What do you pay in weekly rent?",
+      description: "What is your weekly rent?",
       count: 0,
       answers: []
     },
@@ -266,21 +325,21 @@ questions = {
     {
       :code => :school_completed,
       label: "School Completed",
-      description: "Which level of school did you complete?",
+      description: "Which level of high school did you complete?",
       count: 0,
       answers: []
     },
     {
       :code => :level_of_education,
       label: "Level of Education",
-      description: "What is your level of education?",
+      description: "What kind of tertiary qualification do you have?",
       count: 0,
       answers: []
     },
     {
       :code => :qualifications,
       label: "Qualifications",
-      description: "Which area are you qualified in?",
+      description: "What did you study?",
       count: 0,
       answers: []
     },
@@ -294,14 +353,14 @@ questions = {
     {
       :code => :occupation,
       label: "Occupation",
-      description: "Which occupation group are you in?",
+      description: "What is your role at work?",
       count: 0,
       answers: []
     },
     {
       :code => :weekly_personal_income,
       label: "Weekly Personal Income",
-      description: "How much money do you earn?",
+      description: "How much money do you earn each week?",
       count: 0,
       answers: []
     },
@@ -331,9 +390,8 @@ questions[:questions].each do |question|
   if code
     australia[code].each do |label, count|
       next if label == 'Other'
-      label = label.gsub(/([0-9])\_([0-9])/, '\1 - \2')
       question[:answers] << {
-        label: label.split('_').join(' '),
+        label: label,
         count: count
       }
     end
@@ -350,7 +408,7 @@ questions[:questions].each do |question|
 # end
 end
 
-File.open('data/questions.json', 'wb') do |file|
+File.open('source/api/questions.json', 'wb') do |file|
   file.write(MultiJson.dump(questions, pretty: true))
 end
 

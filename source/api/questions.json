@@ -51,11 +51,11 @@
       "count":21507719,
       "answers":[
         {
-          "label":"Males",
+          "label":"Male",
           "count":10634013
         },
         {
-          "label":"Females",
+          "label":"Female",
           "count":10873706
         }
       ]
@@ -67,43 +67,43 @@
       "count":21507719,
       "answers":[
         {
-          "label":"0 - 4 years",
+          "label":"0 4 years",
           "count":1421048
         },
         {
-          "label":"5 - 14 years",
+          "label":"5 14 years",
           "count":2722973
         },
         {
-          "label":"15 - 19 years",
+          "label":"15 19 years",
           "count":1405798
         },
         {
-          "label":"20 - 24 years",
+          "label":"20 24 years",
           "count":1460675
         },
         {
-          "label":"25 - 34 years",
+          "label":"25 34 years",
           "count":2967019
         },
         {
-          "label":"35 - 44 years",
+          "label":"35 44 years",
           "count":3063015
         },
         {
-          "label":"45 - 54 years",
+          "label":"45 54 years",
           "count":2951547
         },
         {
-          "label":"55 - 64 years",
+          "label":"55 64 years",
           "count":2503361
         },
         {
-          "label":"65 - 74 years",
+          "label":"65 74 years",
           "count":1627410
         },
         {
-          "label":"75 - 84 years",
+          "label":"75 84 years",
           "count":982193
         },
         {
@@ -163,7 +163,7 @@
           "count":38870
         },
         {
-          "label":"China excl SARs and Taiwan",
+          "label":"China",
           "count":318969
         },
         {
@@ -187,7 +187,7 @@
           "count":99937
         },
         {
-          "label":"Hong Kong SAR of China",
+          "label":"Hong Kong",
           "count":74955
         },
         {
@@ -211,7 +211,7 @@
           "count":185403
         },
         {
-          "label":"Korea Republic of South",
+          "label":"South Korea",
           "count":74536
         },
         {
@@ -251,7 +251,7 @@
           "count":145682
         },
         {
-          "label":"South Eastern Europe nfd",
+          "label":"South Eastern Europe",
           "count":25072
         },
         {
@@ -267,7 +267,7 @@
           "count":32846
         },
         {
-          "label":"United Kingdom Channel Islands and Isle of Man",
+          "label":"United Kingdom",
           "count":1101082
         },
         {
@@ -279,7 +279,7 @@
           "count":185036
         },
         {
-          "label":"Born elsewhere",
+          "label":"Elsewhere",
           "count":886990
         }
       ]
@@ -287,11 +287,11 @@
     {
       "code":"languages_spoken",
       "label":"Languages Spoken",
-      "description":"Which language are you most proficient in?",
+      "description":"Which language do you speak at home?",
       "count":19995096,
       "answers":[
         {
-          "label":"English only",
+          "label":"English",
           "count":16509290
         },
         {
@@ -307,15 +307,15 @@
           "count":61800
         },
         {
-          "label":"Chinese languages Cantonese",
+          "label":"Cantonese",
           "count":263675
         },
         {
-          "label":"Chinese languages Mandarin",
+          "label":"Mandarin",
           "count":336410
         },
         {
-          "label":"Chinese languages Other",
+          "label":"Other Chinese",
           "count":51243
         },
         {
@@ -343,39 +343,39 @@
           "count":20881
         },
         {
-          "label":"Indo Aryan Languages Bengali",
+          "label":"Bengali",
           "count":35645
         },
         {
-          "label":"Indo Aryan Languages Hindi",
+          "label":"Hindi",
           "count":111352
         },
         {
-          "label":"Indo Aryan Languages Punjabi",
+          "label":"Punjabi",
           "count":71230
         },
         {
-          "label":"Indo Aryan Languages Sinhalese",
+          "label":"Sinhalese",
           "count":48193
         },
         {
-          "label":"Indo Aryan Languages Urdu",
+          "label":"Urdu",
           "count":36837
         },
         {
-          "label":"Indo Aryan Languages Other",
+          "label":"Other Indo Aryan",
           "count":79587
         },
         {
-          "label":"Iranic Languages Dari",
+          "label":"Dari",
           "count":20179
         },
         {
-          "label":"Iranic Languages Persian excluding Dari",
+          "label":"Persian",
           "count":42170
         },
         {
-          "label":"Iranic Languages Other",
+          "label":"Other Iranic",
           "count":9584
         },
         {
@@ -423,19 +423,19 @@
           "count":55116
         },
         {
-          "label":"Southeast Asian Austronesian Languages Filipino",
+          "label":"Filipino",
           "count":55404
         },
         {
-          "label":"Southeast Asian Austronesian Languages Indonesian",
+          "label":"Indonesian",
           "count":55869
         },
         {
-          "label":"Southeast Asian Austronesian Languages Tagalog",
+          "label":"Tagalog",
           "count":81456
         },
         {
-          "label":"Southeast Asian Austronesian Languages Other",
+          "label":"Other Southeast Asian",
           "count":23461
         },
         {
@@ -527,51 +527,51 @@
     {
       "code":"weekly_rent",
       "label":"Weekly Rent",
-      "description":"What do you pay in weekly rent?",
+      "description":"What is your weekly rent?",
       "count":2216097,
       "answers":[
         {
-          "label":"0 - 74",
+          "label":"$0 - $74",
           "count":155465
         },
         {
-          "label":"75 - 99",
+          "label":"$75 - $99",
           "count":104120
         },
         {
-          "label":"100 - 149",
+          "label":"$100 - $149",
           "count":163809
         },
         {
-          "label":"150 - 199",
+          "label":"$150 - $199",
           "count":201285
         },
         {
-          "label":"200 - 224",
+          "label":"$200 - $224",
           "count":140989
         },
         {
-          "label":"225 - 274",
+          "label":"$225 - $274",
           "count":269383
         },
         {
-          "label":"275 - 349",
+          "label":"$275 - $349",
           "count":445917
         },
         {
-          "label":"350 - 449",
+          "label":"$350 - $449",
           "count":416491
         },
         {
-          "label":"450 - 549",
+          "label":"$450 - $549",
           "count":164414
         },
         {
-          "label":"550 - 649",
+          "label":"$550 - $649",
           "count":70054
         },
         {
-          "label":"650 and over",
+          "label":"$650 and over",
           "count":84170
         }
       ]
@@ -583,47 +583,47 @@
       "count":2568982,
       "answers":[
         {
-          "label":"0 - 299",
+          "label":"$0 - $299",
           "count":114197
         },
         {
-          "label":"300 - 449",
+          "label":"$300 - $449",
           "count":64357
         },
         {
-          "label":"450 - 599",
+          "label":"$450 - $599",
           "count":60317
         },
         {
-          "label":"600 - 799",
+          "label":"$600 - $799",
           "count":113616
         },
         {
-          "label":"800 - 999",
+          "label":"$800 - $999",
           "count":146303
         },
         {
-          "label":"1000 - 1399",
+          "label":"$1000 - $1399",
           "count":380790
         },
         {
-          "label":"1400 - 1799",
+          "label":"$1400 - $1799",
           "count":400688
         },
         {
-          "label":"1800 - 2399",
+          "label":"$1800 - $2399",
           "count":548587
         },
         {
-          "label":"2400 - 2999",
+          "label":"$2400 - $2999",
           "count":303184
         },
         {
-          "label":"3000 - 3999",
+          "label":"$3000 - $3999",
           "count":261122
         },
         {
-          "label":"4000 and over",
+          "label":"$4000 and over",
           "count":175821
         }
       ]
@@ -651,7 +651,7 @@
     {
       "code":"school_completed",
       "label":"School Completed",
-      "description":"Which level of school did you complete?",
+      "description":"Which level of high school did you complete?",
       "count":15897494,
       "answers":[
         {
@@ -683,47 +683,43 @@
     {
       "code":"level_of_education",
       "label":"Level of Education",
-      "description":"What is your level of education?",
+      "description":"What kind of tertiary qualification do you have?",
       "count":10931777,
       "answers":[
         {
-          "label":"Postgraduate Degree Level",
+          "label":"Postgraduate Degree",
           "count":631119
         },
         {
-          "label":"Graduate Diploma and Graduate Certificate Level",
+          "label":"Graduate Diploma and Graduate Certificate",
           "count":297282
         },
         {
-          "label":"Bachelor Degree Level",
+          "label":"Bachelor Degree",
           "count":2340507
         },
         {
-          "label":"Advanced Diploma and Diploma Level",
+          "label":"Advanced Diploma and Diploma",
           "count":1393049
         },
         {
-          "label":"Certificate Level Certificate Level nfd",
-          "count":269810
+          "label":"Other Certificate",
+          "count":3404720
         },
         {
-          "label":"Certificate Level Certificate III and IV Level",
+          "label":"Certificate III and IV",
           "count":2653127
         },
         {
-          "label":"Certificate Level Certificate I and II Level",
+          "label":"Certificate I and II",
           "count":211973
-        },
-        {
-          "label":"Certificate Level",
-          "count":3134910
         }
       ]
     },
     {
       "code":"qualifications",
       "label":"Qualifications",
-      "description":"Which area are you qualified in?",
+      "description":"What did you study?",
       "count":7960012,
       "answers":[
         {
@@ -863,39 +859,39 @@
     {
       "code":"occupation",
       "label":"Occupation",
-      "description":"Which occupation group are you in?",
+      "description":"What is your role at work?",
       "count":19738618,
       "answers":[
         {
-          "label":"Managers",
+          "label":"Manager",
           "count":2587938
         },
         {
-          "label":"Professionals",
+          "label":"Professional",
           "count":4290882
         },
         {
-          "label":"Technicians and trades workers",
+          "label":"Technician / Trade",
           "count":2850292
         },
         {
-          "label":"Community and personal service workers",
+          "label":"Community / Personal Service",
           "count":1943796
         },
         {
-          "label":"Clerical and administrative workers",
+          "label":"Clerical / Administrative",
           "count":2967118
         },
         {
-          "label":"Sales workers",
+          "label":"Sales",
           "count":1884280
         },
         {
-          "label":"Machinery operators and drivers",
+          "label":"Machinery Operator / Driver",
           "count":1319098
         },
         {
-          "label":"Labourers",
+          "label":"Labourer",
           "count":1895214
         }
       ]
@@ -903,51 +899,51 @@
     {
       "code":"weekly_personal_income",
       "label":"Weekly Personal Income",
-      "description":"How much money do you earn?",
+      "description":"How much money do you earn each week?",
       "count":15990994,
       "answers":[
         {
-          "label":"Negative Nil income",
+          "label":"No Income",
           "count":1416400
         },
         {
-          "label":"1 - 199",
+          "label":"$1 - $199",
           "count":1285554
         },
         {
-          "label":"200 - 299",
+          "label":"$200 - $299",
           "count":1797356
         },
         {
-          "label":"300 - 399",
+          "label":"$300 - $399",
           "count":1715819
         },
         {
-          "label":"400 - 599",
+          "label":"$400 - $599",
           "count":2006075
         },
         {
-          "label":"600 - 799",
+          "label":"$600 - $799",
           "count":1799651
         },
         {
-          "label":"800 - 999",
+          "label":"$800 - $999",
           "count":1436399
         },
         {
-          "label":"1000 - 1249",
+          "label":"$1000 - $1249",
           "count":1372001
         },
         {
-          "label":"1250 - 1499",
+          "label":"$1250 - $1499",
           "count":959618
         },
         {
-          "label":"1500 - 1999",
+          "label":"$1500 - $1999",
           "count":1120842
         },
         {
-          "label":"2000 or more",
+          "label":"$2000 or more",
           "count":1081279
         }
       ]
@@ -956,114 +952,110 @@
       "code":"travel_to_work",
       "label":"Daily Commute",
       "description":"How do you get to your place of work?",
-      "count":9908394,
+      "count":9841778,
       "answers":[
         {
-          "label":"One method Train",
+          "label":"Train",
           "count":388012
         },
         {
-          "label":"One method Bus",
+          "label":"Bus",
           "count":301188
         },
         {
-          "label":"One method Ferry",
+          "label":"Ferry",
           "count":10892
         },
         {
-          "label":"One method Tram includes light rail",
+          "label":"Tram",
           "count":46500
         },
         {
-          "label":"One method Taxi",
+          "label":"Taxi",
           "count":22077
         },
         {
-          "label":"One method Car as driver",
+          "label":"Car as driver",
           "count":6059972
         },
         {
-          "label":"One method Car as passenger",
+          "label":"Car as passenger",
           "count":537637
         },
         {
-          "label":"One method Truck",
+          "label":"Truck",
           "count":104744
         },
         {
-          "label":"One method Motorbike scooter",
+          "label":"Motorbike scooter",
           "count":64342
         },
         {
-          "label":"One method Bicycle",
+          "label":"Bicycle",
           "count":103913
         },
         {
-          "label":"One method Other",
-          "count":66616
-        },
-        {
-          "label":"One method Walked only",
+          "label":"Walked only",
           "count":377045
         },
         {
-          "label":"Two methods Train and Bus",
+          "label":"Train and Bus",
           "count":83712
         },
         {
-          "label":"Two methods Train and Ferry",
+          "label":"Train and Ferry",
           "count":1350
         },
         {
-          "label":"Two methods Train and Tram includes light rail",
+          "label":"Train and Tram",
           "count":14653
         },
         {
-          "label":"Two methods Train and Car as driver",
+          "label":"Train and Car as driver",
           "count":77820
         },
         {
-          "label":"Two methods Train and Car as passenger",
+          "label":"Train and Car as passenger",
           "count":22120
         },
         {
-          "label":"Two methods Train and Other",
+          "label":"Train and Other",
           "count":7729
         },
         {
-          "label":"Two methods Bus and Ferry",
+          "label":"Bus and Ferry",
           "count":2233
         },
         {
-          "label":"Two methods Bus and Tram includes light rail",
+          "label":"Bus and Tram",
           "count":3368
         },
         {
-          "label":"Two methods Bus and Car as driver",
+          "label":"Bus and Car as driver",
           "count":17447
         },
         {
-          "label":"Two methods Bus and Car as passenger",
+          "label":"Bus and Car as passenger",
           "count":14195
         },
         {
-          "label":"Two methods Bus and Other",
+          "label":"Bus and Other",
           "count":4778
         },
         {
-          "label":"Two methods Other two methods",
+          "label":"Other two methods",
           "count":61484
         },
         {
-          "label":"Three methods Train and two other methods",
+          "label":"Train and two other methods",
           "count":36945
         },
         {
-          "label":"Three methods Bus and two other methods excludes train",
+          "label":"Bus and two other methods excludes train",
           "count":4447
         },
         {
-          "label":"Three methods Other three methods",
+          "label":"Other three methods",
           "count":4354
         },
         {
@@ -1087,80 +1079,76 @@
           "count":528977
         },
         {
-          "label":"Christianity Anglican",
+          "label":"Anglican",
           "count":3679907
         },
         {
-          "label":"Christianity Assyrian Apostolic",
+          "label":"Assyrian Apostolic",
           "count":10589
         },
         {
-          "label":"Christianity Baptist",
+          "label":"Baptist",
           "count":352499
         },
         {
-          "label":"Christianity Brethren",
+          "label":"Brethren",
           "count":21733
         },
         {
-          "label":"Christianity Catholic",
+          "label":"Catholic",
           "count":5439268
         },
         {
-          "label":"Christianity Churches of Christ",
+          "label":"Churches of Christ",
           "count":49687
         },
         {
-          "label":"Christianity Eastern Orthodox",
+          "label":"Eastern Orthodox",
           "count":563074
         },
         {
-          "label":"Christianity Jehovahs Witnesses",
+          "label":"Jehovahs Witnesses",
           "count":85638
         },
         {
-          "label":"Christianity Latter day Saints",
+          "label":"Latter day Saints",
           "count":59770
         },
         {
-          "label":"Christianity Lutheran",
+          "label":"Lutheran",
           "count":251930
         },
         {
-          "label":"Christianity Oriental Orthodox",
+          "label":"Oriental Orthodox",
           "count":41261
         },
         {
-          "label":"Christianity Other Protestant",
+          "label":"Other Protestant",
           "count":60239
         },
         {
-          "label":"Christianity Pentecostal",
+          "label":"Pentecostal",
           "count":237984
         },
         {
-          "label":"Christianity Presbyterian and Reformed",
+          "label":"Presbyterian and Reformed",
           "count":599516
         },
         {
-          "label":"Christianity Salvation Army",
+          "label":"Salvation Army",
           "count":60162
         },
         {
-          "label":"Christianity Seventh day Adventist",
+          "label":"Seventh day Adventist",
           "count":63003
         },
         {
-          "label":"Christianity Uniting Church",
+          "label":"Uniting Church",
           "count":1065796
         },
         {
-          "label":"Christianity Christian nfd",
-          "count":470942
-        },
-        {
-          "label":"Christianity Other Christian",
-          "count":37675
+          "label":"Other Christian",
+          "count":508617
         },
         {
           "label":"Hinduism",
@@ -1175,20 +1163,16 @@
           "count":97335
         },
         {
-          "label":"Other Religions Australian Aboriginal Traditional Religions",
+          "label":"Australian Aboriginal Traditional Religions",
           "count":7363
         },
         {
-          "label":"Other Religions Other religious groups",
-          "count":160830
+          "label":"Other religious groups",
+          "count":335112
         },
         {
           "label":"No Religion",
           "count":4796785
-        },
-        {
-          "label":"Other religious affiliation",
-          "count":174282
         }
       ]
     }
