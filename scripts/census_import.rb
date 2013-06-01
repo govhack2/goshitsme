@@ -103,8 +103,8 @@ def _add_entry(row, entry, name, pattern, num = 2)
     next unless match.length == num
     dimension = match[num-1]
     dimension = 'None' if dimension.length == 0
-    if dimension =~ /^[0-9]*_[0-9]*$/
-      dimension = dimension.gsub(/([0-9])\_([0-9])/, '\1 - \2')
+    dimension = dimension.gsub(/([0-9])\_([0-9])/, '\1 - \2')
+    if dimension =~ /^[0-9]* - [0-9]*$/
       dimension = dimension.split(' - ').map{ |n| "$#{n}" }.join(' - ')
     end
     dimension = dimension.split('_').join(' ')
