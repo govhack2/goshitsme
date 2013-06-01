@@ -71,47 +71,47 @@
       "count":21507719,
       "answers":[
         {
-          "label":"0_4_years",
+          "label":"0 - 4 years",
           "count":1421048
         },
         {
-          "label":"5_14_years",
+          "label":"5 - 14 years",
           "count":2722973
         },
         {
-          "label":"15_19_years",
+          "label":"15 - 19 years",
           "count":1405798
         },
         {
-          "label":"20_24_years",
+          "label":"20 - 24 years",
           "count":1460675
         },
         {
-          "label":"25_34_years",
+          "label":"25 - 34 years",
           "count":2967019
         },
         {
-          "label":"35_44_years",
+          "label":"35 - 44 years",
           "count":3063015
         },
         {
-          "label":"45_54_years",
+          "label":"45 - 54 years",
           "count":2951547
         },
         {
-          "label":"55_64_years",
+          "label":"55 - 64 years",
           "count":2503361
         },
         {
-          "label":"65_74_years",
+          "label":"65 - 74 years",
           "count":1627410
         },
         {
-          "label":"75_84_years",
+          "label":"75 - 84 years",
           "count":982193
         },
         {
-          "label":"85_years_and_over",
+          "label":"85 years and over",
           "count":402680
         }
       ]
@@ -139,7 +139,7 @@
           "count":949634
         },
         {
-          "label":"Never_Married",
+          "label":"Never Married",
           "count":5962769
         },
         {
@@ -159,7 +159,7 @@
           "count":15017845
         },
         {
-          "label":"Bosnia_and_Herzegovina",
+          "label":"Bosnia and Herzegovina",
           "count":25682
         },
         {
@@ -171,7 +171,7 @@
           "count":38870
         },
         {
-          "label":"China_excl_SARs_and_Taiwan",
+          "label":"China excl SARs and Taiwan",
           "count":318969
         },
         {
@@ -195,7 +195,7 @@
           "count":99937
         },
         {
-          "label":"Hong_Kong_SAR_of_China",
+          "label":"Hong Kong SAR of China",
           "count":74955
         },
         {
@@ -219,7 +219,7 @@
           "count":185403
         },
         {
-          "label":"Korea_Republic_of_South",
+          "label":"Korea Republic of South",
           "count":74536
         },
         {
@@ -239,7 +239,7 @@
           "count":76048
         },
         {
-          "label":"New_Zealand",
+          "label":"New Zealand",
           "count":483397
         },
         {
@@ -255,15 +255,15 @@
           "count":48646
         },
         {
-          "label":"South_Africa",
+          "label":"South Africa",
           "count":145682
         },
         {
-          "label":"South_Eastern_Europe_nfd",
+          "label":"South Eastern Europe nfd",
           "count":25072
         },
         {
-          "label":"Sri_Lanka",
+          "label":"Sri Lanka",
           "count":86415
         },
         {
@@ -275,11 +275,11 @@
           "count":32846
         },
         {
-          "label":"United_Kingdom_Channel_Islands_and_Isle_of_Man",
+          "label":"United Kingdom Channel Islands and Isle of Man",
           "count":1101082
         },
         {
-          "label":"United_States_of_America",
+          "label":"United States of America",
           "count":77009
         },
         {
@@ -287,7 +287,7 @@
           "count":185036
         },
         {
-          "label":"Born_elsewhere",
+          "label":"Born elsewhere",
           "count":886990
         },
         {
@@ -303,7 +303,7 @@
       "count":21507719,
       "answers":[
         {
-          "label":"English_only",
+          "label":"English only",
           "count":16509290
         },
         {
@@ -315,19 +315,19 @@
           "count":31323
         },
         {
-          "label":"Australian_Indigenous_Languages",
+          "label":"Australian Indigenous Languages",
           "count":61800
         },
         {
-          "label":"Chinese_languages_Cantonese",
+          "label":"Chinese languages Cantonese",
           "count":263675
         },
         {
-          "label":"Chinese_languages_Mandarin",
+          "label":"Chinese languages Mandarin",
           "count":336410
         },
         {
-          "label":"Chinese_languages_Other",
+          "label":"Chinese languages Other",
           "count":51243
         },
         {
@@ -355,39 +355,39 @@
           "count":20881
         },
         {
-          "label":"Indo_Aryan_Languages_Bengali",
+          "label":"Indo Aryan Languages Bengali",
           "count":35645
         },
         {
-          "label":"Indo_Aryan_Languages_Hindi",
+          "label":"Indo Aryan Languages Hindi",
           "count":111352
         },
         {
-          "label":"Indo_Aryan_Languages_Punjabi",
+          "label":"Indo Aryan Languages Punjabi",
           "count":71230
         },
         {
-          "label":"Indo_Aryan_Languages_Sinhalese",
+          "label":"Indo Aryan Languages Sinhalese",
           "count":48193
         },
         {
-          "label":"Indo_Aryan_Languages_Urdu",
+          "label":"Indo Aryan Languages Urdu",
           "count":36837
         },
         {
-          "label":"Indo_Aryan_Languages_Other",
+          "label":"Indo Aryan Languages Other",
           "count":79587
         },
         {
-          "label":"Iranic_Languages_Dari",
+          "label":"Iranic Languages Dari",
           "count":20179
         },
         {
-          "label":"Iranic_Languages_Persian_excluding_Dari",
+          "label":"Iranic Languages Persian excluding Dari",
           "count":42170
         },
         {
-          "label":"Iranic_Languages_Other",
+          "label":"Iranic Languages Other",
           "count":9584
         },
         {
@@ -435,19 +435,19 @@
           "count":55116
         },
         {
-          "label":"Southeast_Asian_Austronesian_Languages_Filipino",
+          "label":"Southeast Asian Austronesian Languages Filipino",
           "count":55404
         },
         {
-          "label":"Southeast_Asian_Austronesian_Languages_Indonesian",
+          "label":"Southeast Asian Austronesian Languages Indonesian",
           "count":55869
         },
         {
-          "label":"Southeast_Asian_Austronesian_Languages_Tagalog",
+          "label":"Southeast Asian Austronesian Languages Tagalog",
           "count":81456
         },
         {
-          "label":"Southeast_Asian_Austronesian_Languages_Other",
+          "label":"Southeast Asian Austronesian Languages Other",
           "count":23461
         },
         {
@@ -483,31 +483,31 @@
       "count":21507719,
       "answers":[
         {
-          "label":"No_children",
+          "label":"No children",
           "count":2721679
         },
         {
-          "label":"One_child",
+          "label":"One child",
           "count":1016142
         },
         {
-          "label":"Two_children",
+          "label":"Two children",
           "count":2286081
         },
         {
-          "label":"Three_children",
+          "label":"Three children",
           "count":1385472
         },
         {
-          "label":"Four_children",
+          "label":"Four children",
           "count":572604
         },
         {
-          "label":"Five_children",
+          "label":"Five children",
           "count":197014
         },
         {
-          "label":"Six_or_more_children",
+          "label":"Six or more children",
           "count":150327
         },
         {
@@ -523,23 +523,23 @@
       "count":21507719,
       "answers":[
         {
-          "label":"No_motor_vehicles",
+          "label":"No motor vehicles",
           "count":665851
         },
         {
-          "label":"One_motor_vehicle",
+          "label":"One motor vehicle",
           "count":2778575
         },
         {
-          "label":"Two_motor_vehicles",
+          "label":"Two motor vehicles",
           "count":2802468
         },
         {
-          "label":"Three_motor_vehicles",
+          "label":"Three motor vehicles",
           "count":861485
         },
         {
-          "label":"Four_or_more_motor_vehicles",
+          "label":"Four or more motor vehicles",
           "count":417652
         },
         {
@@ -555,47 +555,47 @@
       "count":21507719,
       "answers":[
         {
-          "label":"0_74",
+          "label":"0 - 74",
           "count":155465
         },
         {
-          "label":"75_99",
+          "label":"75 - 99",
           "count":104120
         },
         {
-          "label":"100_149",
+          "label":"100 - 149",
           "count":163809
         },
         {
-          "label":"150_199",
+          "label":"150 - 199",
           "count":201285
         },
         {
-          "label":"200_224",
+          "label":"200 - 224",
           "count":140989
         },
         {
-          "label":"225_274",
+          "label":"225 - 274",
           "count":269383
         },
         {
-          "label":"275_349",
+          "label":"275 - 349",
           "count":445917
         },
         {
-          "label":"350_449",
+          "label":"350 - 449",
           "count":416491
         },
         {
-          "label":"450_549",
+          "label":"450 - 549",
           "count":164414
         },
         {
-          "label":"550_649",
+          "label":"550 - 649",
           "count":70054
         },
         {
-          "label":"650_and_over",
+          "label":"650 and over",
           "count":84170
         },
         {
@@ -611,47 +611,47 @@
       "count":21507719,
       "answers":[
         {
-          "label":"0_299",
+          "label":"0 - 299",
           "count":114197
         },
         {
-          "label":"300_449",
+          "label":"300 - 449",
           "count":64357
         },
         {
-          "label":"450_599",
+          "label":"450 - 599",
           "count":60317
         },
         {
-          "label":"600_799",
+          "label":"600 - 799",
           "count":113616
         },
         {
-          "label":"800_999",
+          "label":"800 - 999",
           "count":146303
         },
         {
-          "label":"1000_1399",
+          "label":"1000 - 1399",
           "count":380790
         },
         {
-          "label":"1400_1799",
+          "label":"1400 - 1799",
           "count":400688
         },
         {
-          "label":"1800_2399",
+          "label":"1800 - 2399",
           "count":548587
         },
         {
-          "label":"2400_2999",
+          "label":"2400 - 2999",
           "count":303184
         },
         {
-          "label":"3000_3999",
+          "label":"3000 - 3999",
           "count":261122
         },
         {
-          "label":"4000_and_over",
+          "label":"4000 and over",
           "count":175821
         },
         {
@@ -675,7 +675,7 @@
           "count":5424509
         },
         {
-          "label":"Dial_up",
+          "label":"Dial up",
           "count":235401
         },
         {
@@ -691,27 +691,27 @@
       "count":21507719,
       "answers":[
         {
-          "label":"Year_12_or_equivalent",
+          "label":"Year 12 or equivalent",
           "count":8260554
         },
         {
-          "label":"Year_11_or_equivalent",
+          "label":"Year 11 or equivalent",
           "count":1684371
         },
         {
-          "label":"Year_10_or_equivalent",
+          "label":"Year 10 or equivalent",
           "count":3691090
         },
         {
-          "label":"Year_9_or_equivalent",
+          "label":"Year 9 or equivalent",
           "count":1098424
         },
         {
-          "label":"Year_8_or_below",
+          "label":"Year 8 or below",
           "count":1020483
         },
         {
-          "label":"Did_not_go_to_school",
+          "label":"Did not go to school",
           "count":142572
         },
         {
@@ -727,35 +727,35 @@
       "count":21507719,
       "answers":[
         {
-          "label":"Postgraduate_Degree_Level",
+          "label":"Postgraduate Degree Level",
           "count":631119
         },
         {
-          "label":"Graduate_Diploma_and_Graduate_Certificate_Level",
+          "label":"Graduate Diploma and Graduate Certificate Level",
           "count":297282
         },
         {
-          "label":"Bachelor_Degree_Level",
+          "label":"Bachelor Degree Level",
           "count":2340507
         },
         {
-          "label":"Advanced_Diploma_and_Diploma_Level",
+          "label":"Advanced Diploma and Diploma Level",
           "count":1393049
         },
         {
-          "label":"Certificate_Level_Certificate_Level_nfd",
+          "label":"Certificate Level Certificate Level nfd",
           "count":269810
         },
         {
-          "label":"Certificate_Level_Certificate_III_and_IV_Level",
+          "label":"Certificate Level Certificate III and IV Level",
           "count":2653127
         },
         {
-          "label":"Certificate_Level_Certificate_I_and_II_Level",
+          "label":"Certificate Level Certificate I and II Level",
           "count":211973
         },
         {
-          "label":"Certificate_Level",
+          "label":"Certificate Level",
           "count":3134910
         },
         {
@@ -771,23 +771,23 @@
       "count":21507719,
       "answers":[
         {
-          "label":"Natural_and_Physical_Sciences",
+          "label":"Natural and Physical Sciences",
           "count":272960
         },
         {
-          "label":"Information_Technology",
+          "label":"Information Technology",
           "count":277924
         },
         {
-          "label":"Engineering_and_Related_Technologies",
+          "label":"Engineering and Related Technologies",
           "count":1509939
         },
         {
-          "label":"Architecture_and_Building",
+          "label":"Architecture and Building",
           "count":546495
         },
         {
-          "label":"Agriculture_Environmental_and_Related_Studies",
+          "label":"Agriculture Environmental and Related Studies",
           "count":196247
         },
         {
@@ -799,23 +799,23 @@
           "count":714087
         },
         {
-          "label":"Management_and_Commerce",
+          "label":"Management and Commerce",
           "count":1744947
         },
         {
-          "label":"Society_and_Culture",
+          "label":"Society and Culture",
           "count":999398
         },
         {
-          "label":"Creative_Arts",
+          "label":"Creative Arts",
           "count":324950
         },
         {
-          "label":"Food_Hospitality_and_Personal_Services",
+          "label":"Food Hospitality and Personal Services",
           "count":486133
         },
         {
-          "label":"Mixed_Field_Programmes",
+          "label":"Mixed Field Programmes",
           "count":13434
         },
         {
@@ -831,7 +831,7 @@
       "count":21507719,
       "answers":[
         {
-          "label":"Agriculture_forestry_and_fishing",
+          "label":"Agriculture forestry and fishing",
           "count":249828
         },
         {
@@ -843,7 +843,7 @@
           "count":902829
         },
         {
-          "label":"Electricity_gas_water_and_waste_services",
+          "label":"Electricity gas water and waste services",
           "count":115611
         },
         {
@@ -851,59 +851,59 @@
           "count":828910
         },
         {
-          "label":"Wholesale_trade",
+          "label":"Wholesale trade",
           "count":403801
         },
         {
-          "label":"Retail_trade",
+          "label":"Retail trade",
           "count":1057310
         },
         {
-          "label":"Accommodation_and_food_services",
+          "label":"Accommodation and food services",
           "count":650397
         },
         {
-          "label":"Transport_postal_and_warehousing",
+          "label":"Transport postal and warehousing",
           "count":479181
         },
         {
-          "label":"Information_media_and_telecommunications",
+          "label":"Information media and telecommunications",
           "count":178190
         },
         {
-          "label":"Financial_and_insurance_services",
+          "label":"Financial and insurance services",
           "count":377352
         },
         {
-          "label":"Rental_hiring_and_real_estate_services",
+          "label":"Rental hiring and real estate services",
           "count":158853
         },
         {
-          "label":"Professional_scientific_and_technical_services",
+          "label":"Professional scientific and technical services",
           "count":730062
         },
         {
-          "label":"Administrative_and_support_services",
+          "label":"Administrative and support services",
           "count":323779
         },
         {
-          "label":"Public_administration_and_safety",
+          "label":"Public administration and safety",
           "count":689931
         },
         {
-          "label":"Education_and_training",
+          "label":"Education and training",
           "count":804418
         },
         {
-          "label":"Health_care_and_social_assistance",
+          "label":"Health care and social assistance",
           "count":1167634
         },
         {
-          "label":"Arts_and_recreation_services",
+          "label":"Arts and recreation services",
           "count":151574
         },
         {
-          "label":"Other_services",
+          "label":"Other services",
           "count":378217
         },
         {
@@ -927,23 +927,23 @@
           "count":4290882
         },
         {
-          "label":"Technicians_and_trades_workers",
+          "label":"Technicians and trades workers",
           "count":2850292
         },
         {
-          "label":"Community_and_personal_service_workers",
+          "label":"Community and personal service workers",
           "count":1943796
         },
         {
-          "label":"Clerical_and_administrative_workers",
+          "label":"Clerical and administrative workers",
           "count":2967118
         },
         {
-          "label":"Sales_workers",
+          "label":"Sales workers",
           "count":1884280
         },
         {
-          "label":"Machinery_operators_and_drivers",
+          "label":"Machinery operators and drivers",
           "count":1319098
         },
         {
@@ -963,47 +963,47 @@
       "count":21507719,
       "answers":[
         {
-          "label":"Negative_Nil_income",
+          "label":"Negative Nil income",
           "count":1416400
         },
         {
-          "label":"1_199",
+          "label":"1 - 199",
           "count":1285554
         },
         {
-          "label":"200_299",
+          "label":"200 - 299",
           "count":1797356
         },
         {
-          "label":"300_399",
+          "label":"300 - 399",
           "count":1715819
         },
         {
-          "label":"400_599",
+          "label":"400 - 599",
           "count":2006075
         },
         {
-          "label":"600_799",
+          "label":"600 - 799",
           "count":1799651
         },
         {
-          "label":"800_999",
+          "label":"800 - 999",
           "count":1436399
         },
         {
-          "label":"1000_1249",
+          "label":"1000 - 1249",
           "count":1372001
         },
         {
-          "label":"1250_1499",
+          "label":"1250 - 1499",
           "count":959618
         },
         {
-          "label":"1500_1999",
+          "label":"1500 - 1999",
           "count":1120842
         },
         {
-          "label":"2000_or_more",
+          "label":"2000 or more",
           "count":1081279
         },
         {
@@ -1019,119 +1019,119 @@
       "count":21507719,
       "answers":[
         {
-          "label":"One_method_Train",
+          "label":"One method Train",
           "count":388012
         },
         {
-          "label":"One_method_Bus",
+          "label":"One method Bus",
           "count":301188
         },
         {
-          "label":"One_method_Ferry",
+          "label":"One method Ferry",
           "count":10892
         },
         {
-          "label":"One_method_Tram_includes_light_rail",
+          "label":"One method Tram includes light rail",
           "count":46500
         },
         {
-          "label":"One_method_Taxi",
+          "label":"One method Taxi",
           "count":22077
         },
         {
-          "label":"One_method_Car_as_driver",
+          "label":"One method Car as driver",
           "count":6059972
         },
         {
-          "label":"One_method_Car_as_passenger",
+          "label":"One method Car as passenger",
           "count":537637
         },
         {
-          "label":"One_method_Truck",
+          "label":"One method Truck",
           "count":104744
         },
         {
-          "label":"One_method_Motorbike_scooter",
+          "label":"One method Motorbike scooter",
           "count":64342
         },
         {
-          "label":"One_method_Bicycle",
+          "label":"One method Bicycle",
           "count":103913
         },
         {
-          "label":"One_method_Other",
+          "label":"One method Other",
           "count":66616
         },
         {
-          "label":"One_method_Walked_only",
+          "label":"One method Walked only",
           "count":377045
         },
         {
-          "label":"Two_methods_Train_and_Bus",
+          "label":"Two methods Train and Bus",
           "count":83712
         },
         {
-          "label":"Two_methods_Train_and_Ferry",
+          "label":"Two methods Train and Ferry",
           "count":1350
         },
         {
-          "label":"Two_methods_Train_and_Tram_includes_light_rail",
+          "label":"Two methods Train and Tram includes light rail",
           "count":14653
         },
         {
-          "label":"Two_methods_Train_and_Car_as_driver",
+          "label":"Two methods Train and Car as driver",
           "count":77820
         },
         {
-          "label":"Two_methods_Train_and_Car_as_passenger",
+          "label":"Two methods Train and Car as passenger",
           "count":22120
         },
         {
-          "label":"Two_methods_Train_and_Other",
+          "label":"Two methods Train and Other",
           "count":7729
         },
         {
-          "label":"Two_methods_Bus_and_Ferry",
+          "label":"Two methods Bus and Ferry",
           "count":2233
         },
         {
-          "label":"Two_methods_Bus_and_Tram_includes_light_rail",
+          "label":"Two methods Bus and Tram includes light rail",
           "count":3368
         },
         {
-          "label":"Two_methods_Bus_and_Car_as_driver",
+          "label":"Two methods Bus and Car as driver",
           "count":17447
         },
         {
-          "label":"Two_methods_Bus_and_Car_as_passenger",
+          "label":"Two methods Bus and Car as passenger",
           "count":14195
         },
         {
-          "label":"Two_methods_Bus_and_Other",
+          "label":"Two methods Bus and Other",
           "count":4778
         },
         {
-          "label":"Two_methods_Other_two_methods",
+          "label":"Two methods Other two methods",
           "count":61484
         },
         {
-          "label":"Three_methods_Train_and_two_other_methods",
+          "label":"Three methods Train and two other methods",
           "count":36945
         },
         {
-          "label":"Three_methods_Bus_and_two_other_methods_excludes_train",
+          "label":"Three methods Bus and two other methods excludes train",
           "count":4447
         },
         {
-          "label":"Three_methods_Other_three_methods",
+          "label":"Three methods Other three methods",
           "count":4354
         },
         {
-          "label":"Worked_at_home",
+          "label":"Worked at home",
           "count":443939
         },
         {
-          "label":"Did_not_go_to_work",
+          "label":"Did not go to work",
           "count":1024882
         },
         {
@@ -1151,79 +1151,79 @@
           "count":528977
         },
         {
-          "label":"Christianity_Anglican",
+          "label":"Christianity Anglican",
           "count":3679907
         },
         {
-          "label":"Christianity_Assyrian_Apostolic",
+          "label":"Christianity Assyrian Apostolic",
           "count":10589
         },
         {
-          "label":"Christianity_Baptist",
+          "label":"Christianity Baptist",
           "count":352499
         },
         {
-          "label":"Christianity_Brethren",
+          "label":"Christianity Brethren",
           "count":21733
         },
         {
-          "label":"Christianity_Catholic",
+          "label":"Christianity Catholic",
           "count":5439268
         },
         {
-          "label":"Christianity_Churches_of_Christ",
+          "label":"Christianity Churches of Christ",
           "count":49687
         },
         {
-          "label":"Christianity_Eastern_Orthodox",
+          "label":"Christianity Eastern Orthodox",
           "count":563074
         },
         {
-          "label":"Christianity_Jehovahs_Witnesses",
+          "label":"Christianity Jehovahs Witnesses",
           "count":85638
         },
         {
-          "label":"Christianity_Latter_day_Saints",
+          "label":"Christianity Latter day Saints",
           "count":59770
         },
         {
-          "label":"Christianity_Lutheran",
+          "label":"Christianity Lutheran",
           "count":251930
         },
         {
-          "label":"Christianity_Oriental_Orthodox",
+          "label":"Christianity Oriental Orthodox",
           "count":41261
         },
         {
-          "label":"Christianity_Other_Protestant",
+          "label":"Christianity Other Protestant",
           "count":60239
         },
         {
-          "label":"Christianity_Pentecostal",
+          "label":"Christianity Pentecostal",
           "count":237984
         },
         {
-          "label":"Christianity_Presbyterian_and_Reformed",
+          "label":"Christianity Presbyterian and Reformed",
           "count":599516
         },
         {
-          "label":"Christianity_Salvation_Army",
+          "label":"Christianity Salvation Army",
           "count":60162
         },
         {
-          "label":"Christianity_Seventh_day_Adventist",
+          "label":"Christianity Seventh day Adventist",
           "count":63003
         },
         {
-          "label":"Christianity_Uniting_Church",
+          "label":"Christianity Uniting Church",
           "count":1065796
         },
         {
-          "label":"Christianity_Christian_nfd",
+          "label":"Christianity Christian nfd",
           "count":470942
         },
         {
-          "label":"Christianity_Other_Christian",
+          "label":"Christianity Other Christian",
           "count":37675
         },
         {
@@ -1239,19 +1239,19 @@
           "count":97335
         },
         {
-          "label":"Other_Religions_Australian_Aboriginal_Traditional_Religions",
+          "label":"Other Religions Australian Aboriginal Traditional Religions",
           "count":7363
         },
         {
-          "label":"Other_Religions_Other_religious_groups",
+          "label":"Other Religions Other religious groups",
           "count":160830
         },
         {
-          "label":"No_Religion",
+          "label":"No Religion",
           "count":4796785
         },
         {
-          "label":"Other_religious_affiliation",
+          "label":"Other religious affiliation",
           "count":174282
         },
         {

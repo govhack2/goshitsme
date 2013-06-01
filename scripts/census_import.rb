@@ -331,8 +331,9 @@ questions[:questions].each do |question|
   if code
     australia[code].each do |label, count|
       next if label == 'Other'
+      label = label.gsub(/([0-9])\_([0-9])/, '\1 - \2')
       question[:answers] << {
-        label: label,
+        label: label.split('_').join(' '),
         count: count
       }
     end

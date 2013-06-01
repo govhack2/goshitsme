@@ -1,123 +1,1264 @@
 {
   "title":"GoShitMe",
   "description":"Roll for identity!",
+  "license":"Creative Commons Attribution 2.5 Australia",
+  "attribution":"Based on Australian Bureau of Statistics Data",
+  "year":"2011",
   "questions":[
     {
-      "label":"State or Territory",
+      "label":"State / Territory",
       "description":"Where do you live?",
-      "attribution":"Australian Bureau of Statistics population estimates",
-      "year":"June 2012",
-      "count":23007169,
+      "count":21507719,
       "answers":[
         {
-          "label": "New South Wales",
-          "count": 7272800
+          "label":"NSW",
+          "count":6917658
         },
         {
-          "label": "Victoria",
-          "count": 5603100
+          "label":"VIC",
+          "count":5354042
         },
         {
-          "label": "Queensland",
-          "count": 4516361
+          "label":"QLD",
+          "count":4332739
         },
         {
-          "label": "Western Australia",
-          "count": 2296411
+          "label":"SA",
+          "count":1596572
         },
         {
-          "label": "South Australia",
-          "count": 1644642
+          "label":"WA",
+          "count":2239170
         },
         {
-          "label": "Tasmania",
-          "count": 507626
+          "label":"TAS",
+          "count":495354
         },
         {
-          "label": "Australian Capital Territory",
-          "count": 358894
+          "label":"NT",
+          "count":211945
         },
         {
-          "label": "Northern Territory",
-          "count": 229675
+          "label":"ACT",
+          "count":357222
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":3017
         }
-      ],
-      "locations":[]
+      ]
     },
     {
-      "label":"WA Local Government",
-      "description":"Which area do you live in within New South Wales?",
-      "count":0,
-      "answers":[],
-      "locations":[]
-    },
-    {
-      "label":"NSW Local Government",
-      "description":"Which area do you live in within New South Wales?",
-      "count":0,
-      "answers":[],
-      "locations":[]
-    },
-    {
+      "code":"gender",
       "label":"Gender",
-      "description":"What is your gender?",
-      "count":0,
-      "answers":[],
-      "locations":[]
+      "description":"Which gender are you?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Males",
+          "count":10634013
+        },
+        {
+          "label":"Females",
+          "count":10873706
+        }
+      ]
     },
     {
+      "code":"age",
       "label":"Age",
       "description":"How old are you?",
-      "count":0,
-      "answers":[],
-      "locations":[]
-    },
-    {
-      "label":"Occupation",
-      "description":"What do you do?",
-      "count":9739596,
+      "count":21507719,
       "answers":[
         {
-          "label":"Clerical-and-admin",
-          "count":1706588
+          "label":"0 - 4 years",
+          "count":1421048
         },
         {
-          "label":"Community-and-personal-service",
-          "count":912945
+          "label":"5 - 14 years",
+          "count":2722973
         },
         {
-          "label":"Labourers",
-          "count":1040407
+          "label":"15 - 19 years",
+          "count":1405798
         },
         {
-          "label":"Machinery-operators-and-drivers",
-          "count":579873
+          "label":"20 - 24 years",
+          "count":1460675
         },
+        {
+          "label":"25 - 34 years",
+          "count":2967019
+        },
+        {
+          "label":"35 - 44 years",
+          "count":3063015
+        },
+        {
+          "label":"45 - 54 years",
+          "count":2951547
+        },
+        {
+          "label":"55 - 64 years",
+          "count":2503361
+        },
+        {
+          "label":"65 - 74 years",
+          "count":1627410
+        },
+        {
+          "label":"75 - 84 years",
+          "count":982193
+        },
+        {
+          "label":"85 years and over",
+          "count":402680
+        }
+      ]
+    },
+    {
+      "code":"marital_status",
+      "label":"Marital Status",
+      "description":"What is your marital status?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Married",
+          "count":8461114
+        },
+        {
+          "label":"Separated",
+          "count":529279
+        },
+        {
+          "label":"Divorced",
+          "count":1460900
+        },
+        {
+          "label":"Widowed",
+          "count":949634
+        },
+        {
+          "label":"Never Married",
+          "count":5962769
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":4144023
+        }
+      ]
+    },
+    {
+      "code":"country_of_birth",
+      "label":"Country of Birth",
+      "description":"Where were you born?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Australia",
+          "count":15017845
+        },
+        {
+          "label":"Bosnia and Herzegovina",
+          "count":25682
+        },
+        {
+          "label":"Cambodia",
+          "count":28328
+        },
+        {
+          "label":"Canada",
+          "count":38870
+        },
+        {
+          "label":"China excl SARs and Taiwan",
+          "count":318969
+        },
+        {
+          "label":"Croatia",
+          "count":48829
+        },
+        {
+          "label":"Egypt",
+          "count":36530
+        },
+        {
+          "label":"Fiji",
+          "count":56980
+        },
+        {
+          "label":"Germany",
+          "count":108001
+        },
+        {
+          "label":"Greece",
+          "count":99937
+        },
+        {
+          "label":"Hong Kong SAR of China",
+          "count":74955
+        },
+        {
+          "label":"India",
+          "count":295362
+        },
+        {
+          "label":"Indonesia",
+          "count":63160
+        },
+        {
+          "label":"Iraq",
+          "count":48168
+        },
+        {
+          "label":"Ireland",
+          "count":67316
+        },
+        {
+          "label":"Italy",
+          "count":185403
+        },
+        {
+          "label":"Korea Republic of South",
+          "count":74536
+        },
+        {
+          "label":"Lebanon",
+          "count":76450
+        },
+        {
+          "label":"Malaysia",
+          "count":116195
+        },
+        {
+          "label":"Malta",
+          "count":41275
+        },
+        {
+          "label":"Netherlands",
+          "count":76048
+        },
+        {
+          "label":"New Zealand",
+          "count":483397
+        },
+        {
+          "label":"Philippines",
+          "count":171233
+        },
+        {
+          "label":"Poland",
+          "count":48679
+        },
+        {
+          "label":"Singapore",
+          "count":48646
+        },
+        {
+          "label":"South Africa",
+          "count":145682
+        },
+        {
+          "label":"South Eastern Europe nfd",
+          "count":25072
+        },
+        {
+          "label":"Sri Lanka",
+          "count":86415
+        },
+        {
+          "label":"Thailand",
+          "count":45464
+        },
+        {
+          "label":"Turkey",
+          "count":32846
+        },
+        {
+          "label":"United Kingdom Channel Islands and Isle of Man",
+          "count":1101082
+        },
+        {
+          "label":"United States of America",
+          "count":77009
+        },
+        {
+          "label":"Vietnam",
+          "count":185036
+        },
+        {
+          "label":"Born elsewhere",
+          "count":886990
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":1271329
+        }
+      ]
+    },
+    {
+      "code":"languages_spoken",
+      "label":"Languages Spoken",
+      "description":"Which language are you most proficient in?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"English only",
+          "count":16509290
+        },
+        {
+          "label":"Arabic",
+          "count":287178
+        },
+        {
+          "label":"Assyrian",
+          "count":31323
+        },
+        {
+          "label":"Australian Indigenous Languages",
+          "count":61800
+        },
+        {
+          "label":"Chinese languages Cantonese",
+          "count":263675
+        },
+        {
+          "label":"Chinese languages Mandarin",
+          "count":336410
+        },
+        {
+          "label":"Chinese languages Other",
+          "count":51243
+        },
+        {
+          "label":"Croatian",
+          "count":61548
+        },
+        {
+          "label":"Dutch",
+          "count":37249
+        },
+        {
+          "label":"French",
+          "count":57740
+        },
+        {
+          "label":"German",
+          "count":80370
+        },
+        {
+          "label":"Greek",
+          "count":252217
+        },
+        {
+          "label":"Hungarian",
+          "count":20881
+        },
+        {
+          "label":"Indo Aryan Languages Bengali",
+          "count":35645
+        },
+        {
+          "label":"Indo Aryan Languages Hindi",
+          "count":111352
+        },
+        {
+          "label":"Indo Aryan Languages Punjabi",
+          "count":71230
+        },
+        {
+          "label":"Indo Aryan Languages Sinhalese",
+          "count":48193
+        },
+        {
+          "label":"Indo Aryan Languages Urdu",
+          "count":36837
+        },
+        {
+          "label":"Indo Aryan Languages Other",
+          "count":79587
+        },
+        {
+          "label":"Iranic Languages Dari",
+          "count":20179
+        },
+        {
+          "label":"Iranic Languages Persian excluding Dari",
+          "count":42170
+        },
+        {
+          "label":"Iranic Languages Other",
+          "count":9584
+        },
+        {
+          "label":"Italian",
+          "count":299833
+        },
+        {
+          "label":"Japanese",
+          "count":43692
+        },
+        {
+          "label":"Khmer",
+          "count":29518
+        },
+        {
+          "label":"Korean",
+          "count":79786
+        },
+        {
+          "label":"Macedonian",
+          "count":68846
+        },
+        {
+          "label":"Maltese",
+          "count":34396
+        },
+        {
+          "label":"Polish",
+          "count":50692
+        },
+        {
+          "label":"Portuguese",
+          "count":33352
+        },
+        {
+          "label":"Russian",
+          "count":44059
+        },
+        {
+          "label":"Samoan",
+          "count":36576
+        },
+        {
+          "label":"Serbian",
+          "count":55116
+        },
+        {
+          "label":"Southeast Asian Austronesian Languages Filipino",
+          "count":55404
+        },
+        {
+          "label":"Southeast Asian Austronesian Languages Indonesian",
+          "count":55869
+        },
+        {
+          "label":"Southeast Asian Austronesian Languages Tagalog",
+          "count":81456
+        },
+        {
+          "label":"Southeast Asian Austronesian Languages Other",
+          "count":23461
+        },
+        {
+          "label":"Spanish",
+          "count":117497
+        },
+        {
+          "label":"Tamil",
+          "count":50150
+        },
+        {
+          "label":"Thai",
+          "count":36680
+        },
+        {
+          "label":"Turkish",
+          "count":59624
+        },
+        {
+          "label":"Vietnamese",
+          "count":233388
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":1512623
+        }
+      ]
+    },
+    {
+      "code":"number_of_children",
+      "label":"Number of Children",
+      "description":"How many kids have you had?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"No children",
+          "count":2721679
+        },
+        {
+          "label":"One child",
+          "count":1016142
+        },
+        {
+          "label":"Two children",
+          "count":2286081
+        },
+        {
+          "label":"Three children",
+          "count":1385472
+        },
+        {
+          "label":"Four children",
+          "count":572604
+        },
+        {
+          "label":"Five children",
+          "count":197014
+        },
+        {
+          "label":"Six or more children",
+          "count":150327
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":13178400
+        }
+      ]
+    },
+    {
+      "code":"vehicles_per_house",
+      "label":"Number of Cars",
+      "description":"How many cars do you have at your place?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"No motor vehicles",
+          "count":665851
+        },
+        {
+          "label":"One motor vehicle",
+          "count":2778575
+        },
+        {
+          "label":"Two motor vehicles",
+          "count":2802468
+        },
+        {
+          "label":"Three motor vehicles",
+          "count":861485
+        },
+        {
+          "label":"Four or more motor vehicles",
+          "count":417652
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":13981688
+        }
+      ]
+    },
+    {
+      "code":"weekly_rent",
+      "label":"Weekly Rent",
+      "description":"What do you pay in weekly rent?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"0 - 74",
+          "count":155465
+        },
+        {
+          "label":"75 - 99",
+          "count":104120
+        },
+        {
+          "label":"100 - 149",
+          "count":163809
+        },
+        {
+          "label":"150 - 199",
+          "count":201285
+        },
+        {
+          "label":"200 - 224",
+          "count":140989
+        },
+        {
+          "label":"225 - 274",
+          "count":269383
+        },
+        {
+          "label":"275 - 349",
+          "count":445917
+        },
+        {
+          "label":"350 - 449",
+          "count":416491
+        },
+        {
+          "label":"450 - 549",
+          "count":164414
+        },
+        {
+          "label":"550 - 649",
+          "count":70054
+        },
+        {
+          "label":"650 and over",
+          "count":84170
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":19291622
+        }
+      ]
+    },
+    {
+      "code":"monthly_mortgage_repayment",
+      "label":"Monthly Mortgage Repayment",
+      "description":"What is your monthly mortgage repayment?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"0 - 299",
+          "count":114197
+        },
+        {
+          "label":"300 - 449",
+          "count":64357
+        },
+        {
+          "label":"450 - 599",
+          "count":60317
+        },
+        {
+          "label":"600 - 799",
+          "count":113616
+        },
+        {
+          "label":"800 - 999",
+          "count":146303
+        },
+        {
+          "label":"1000 - 1399",
+          "count":380790
+        },
+        {
+          "label":"1400 - 1799",
+          "count":400688
+        },
+        {
+          "label":"1800 - 2399",
+          "count":548587
+        },
+        {
+          "label":"2400 - 2999",
+          "count":303184
+        },
+        {
+          "label":"3000 - 3999",
+          "count":261122
+        },
+        {
+          "label":"4000 and over",
+          "count":175821
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":18938737
+        }
+      ]
+    },
+    {
+      "code":"internet_type",
+      "label":"Internet Type",
+      "description":"What kind of internet connection do you have?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"None",
+          "count":13446028
+        },
+        {
+          "label":"Broadband",
+          "count":5424509
+        },
+        {
+          "label":"Dial up",
+          "count":235401
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":2401781
+        }
+      ]
+    },
+    {
+      "code":"school_completed",
+      "label":"School Completed",
+      "description":"Which level of school did you complete?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Year 12 or equivalent",
+          "count":8260554
+        },
+        {
+          "label":"Year 11 or equivalent",
+          "count":1684371
+        },
+        {
+          "label":"Year 10 or equivalent",
+          "count":3691090
+        },
+        {
+          "label":"Year 9 or equivalent",
+          "count":1098424
+        },
+        {
+          "label":"Year 8 or below",
+          "count":1020483
+        },
+        {
+          "label":"Did not go to school",
+          "count":142572
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":5610225
+        }
+      ]
+    },
+    {
+      "code":"level_of_education",
+      "label":"Level of Education",
+      "description":"What is your level of education?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Postgraduate Degree Level",
+          "count":631119
+        },
+        {
+          "label":"Graduate Diploma and Graduate Certificate Level",
+          "count":297282
+        },
+        {
+          "label":"Bachelor Degree Level",
+          "count":2340507
+        },
+        {
+          "label":"Advanced Diploma and Diploma Level",
+          "count":1393049
+        },
+        {
+          "label":"Certificate Level Certificate Level nfd",
+          "count":269810
+        },
+        {
+          "label":"Certificate Level Certificate III and IV Level",
+          "count":2653127
+        },
+        {
+          "label":"Certificate Level Certificate I and II Level",
+          "count":211973
+        },
+        {
+          "label":"Certificate Level",
+          "count":3134910
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":10575942
+        }
+      ]
+    },
+    {
+      "code":"qualifications",
+      "label":"Qualifications",
+      "description":"Which area are you qualified in?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Natural and Physical Sciences",
+          "count":272960
+        },
+        {
+          "label":"Information Technology",
+          "count":277924
+        },
+        {
+          "label":"Engineering and Related Technologies",
+          "count":1509939
+        },
+        {
+          "label":"Architecture and Building",
+          "count":546495
+        },
+        {
+          "label":"Agriculture Environmental and Related Studies",
+          "count":196247
+        },
+        {
+          "label":"Health",
+          "count":873498
+        },
+        {
+          "label":"Education",
+          "count":714087
+        },
+        {
+          "label":"Management and Commerce",
+          "count":1744947
+        },
+        {
+          "label":"Society and Culture",
+          "count":999398
+        },
+        {
+          "label":"Creative Arts",
+          "count":324950
+        },
+        {
+          "label":"Food Hospitality and Personal Services",
+          "count":486133
+        },
+        {
+          "label":"Mixed Field Programmes",
+          "count":13434
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":13547707
+        }
+      ]
+    },
+    {
+      "code":"industry_of_employment",
+      "label":"Industry",
+      "description":"Which industry are you employed in?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Agriculture forestry and fishing",
+          "count":249828
+        },
+        {
+          "label":"Mining",
+          "count":176563
+        },
+        {
+          "label":"Manufacturing",
+          "count":902829
+        },
+        {
+          "label":"Electricity gas water and waste services",
+          "count":115611
+        },
+        {
+          "label":"Construction",
+          "count":828910
+        },
+        {
+          "label":"Wholesale trade",
+          "count":403801
+        },
+        {
+          "label":"Retail trade",
+          "count":1057310
+        },
+        {
+          "label":"Accommodation and food services",
+          "count":650397
+        },
+        {
+          "label":"Transport postal and warehousing",
+          "count":479181
+        },
+        {
+          "label":"Information media and telecommunications",
+          "count":178190
+        },
+        {
+          "label":"Financial and insurance services",
+          "count":377352
+        },
+        {
+          "label":"Rental hiring and real estate services",
+          "count":158853
+        },
+        {
+          "label":"Professional scientific and technical services",
+          "count":730062
+        },
+        {
+          "label":"Administrative and support services",
+          "count":323779
+        },
+        {
+          "label":"Public administration and safety",
+          "count":689931
+        },
+        {
+          "label":"Education and training",
+          "count":804418
+        },
+        {
+          "label":"Health care and social assistance",
+          "count":1167634
+        },
+        {
+          "label":"Arts and recreation services",
+          "count":151574
+        },
+        {
+          "label":"Other services",
+          "count":378217
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":11683279
+        }
+      ]
+    },
+    {
+      "code":"occupation",
+      "label":"Occupation",
+      "description":"Which occupation group are you in?",
+      "count":21507719,
+      "answers":[
         {
           "label":"Managers",
-          "count":1103429
-        },
-        {
-          "label":"Not-stated",
-          "count":606492
+          "count":2587938
         },
         {
           "label":"Professionals",
-          "count":1913240
+          "count":4290882
         },
         {
-          "label":"Sales",
-          "count":757740
+          "label":"Technicians and trades workers",
+          "count":2850292
         },
         {
-          "label":"Technicians-and-trade",
-          "count":1118882
+          "label":"Community and personal service workers",
+          "count":1943796
+        },
+        {
+          "label":"Clerical and administrative workers",
+          "count":2967118
+        },
+        {
+          "label":"Sales workers",
+          "count":1884280
+        },
+        {
+          "label":"Machinery operators and drivers",
+          "count":1319098
+        },
+        {
+          "label":"Labourers",
+          "count":1895214
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":1769101
         }
-      ],
-      "name":"W&S Earners by Occupation (year ended 30 June)- Technicians and Trade Workers (Persons)",
-      "license":"Creative Commons Attribution 2.5 Australia",
-      "attribution":"Based on Australian Bureau of Statistics Data",
-      "year":"2009"
+      ]
+    },
+    {
+      "code":"weekly_personal_income",
+      "label":"Weekly Personal Income",
+      "description":"How much money do you earn?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Negative Nil income",
+          "count":1416400
+        },
+        {
+          "label":"1 - 199",
+          "count":1285554
+        },
+        {
+          "label":"200 - 299",
+          "count":1797356
+        },
+        {
+          "label":"300 - 399",
+          "count":1715819
+        },
+        {
+          "label":"400 - 599",
+          "count":2006075
+        },
+        {
+          "label":"600 - 799",
+          "count":1799651
+        },
+        {
+          "label":"800 - 999",
+          "count":1436399
+        },
+        {
+          "label":"1000 - 1249",
+          "count":1372001
+        },
+        {
+          "label":"1250 - 1499",
+          "count":959618
+        },
+        {
+          "label":"1500 - 1999",
+          "count":1120842
+        },
+        {
+          "label":"2000 or more",
+          "count":1081279
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":5516725
+        }
+      ]
+    },
+    {
+      "code":"travel_to_work",
+      "label":"Daily Commute",
+      "description":"How do you get to your place of work?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"One method Train",
+          "count":388012
+        },
+        {
+          "label":"One method Bus",
+          "count":301188
+        },
+        {
+          "label":"One method Ferry",
+          "count":10892
+        },
+        {
+          "label":"One method Tram includes light rail",
+          "count":46500
+        },
+        {
+          "label":"One method Taxi",
+          "count":22077
+        },
+        {
+          "label":"One method Car as driver",
+          "count":6059972
+        },
+        {
+          "label":"One method Car as passenger",
+          "count":537637
+        },
+        {
+          "label":"One method Truck",
+          "count":104744
+        },
+        {
+          "label":"One method Motorbike scooter",
+          "count":64342
+        },
+        {
+          "label":"One method Bicycle",
+          "count":103913
+        },
+        {
+          "label":"One method Other",
+          "count":66616
+        },
+        {
+          "label":"One method Walked only",
+          "count":377045
+        },
+        {
+          "label":"Two methods Train and Bus",
+          "count":83712
+        },
+        {
+          "label":"Two methods Train and Ferry",
+          "count":1350
+        },
+        {
+          "label":"Two methods Train and Tram includes light rail",
+          "count":14653
+        },
+        {
+          "label":"Two methods Train and Car as driver",
+          "count":77820
+        },
+        {
+          "label":"Two methods Train and Car as passenger",
+          "count":22120
+        },
+        {
+          "label":"Two methods Train and Other",
+          "count":7729
+        },
+        {
+          "label":"Two methods Bus and Ferry",
+          "count":2233
+        },
+        {
+          "label":"Two methods Bus and Tram includes light rail",
+          "count":3368
+        },
+        {
+          "label":"Two methods Bus and Car as driver",
+          "count":17447
+        },
+        {
+          "label":"Two methods Bus and Car as passenger",
+          "count":14195
+        },
+        {
+          "label":"Two methods Bus and Other",
+          "count":4778
+        },
+        {
+          "label":"Two methods Other two methods",
+          "count":61484
+        },
+        {
+          "label":"Three methods Train and two other methods",
+          "count":36945
+        },
+        {
+          "label":"Three methods Bus and two other methods excludes train",
+          "count":4447
+        },
+        {
+          "label":"Three methods Other three methods",
+          "count":4354
+        },
+        {
+          "label":"Worked at home",
+          "count":443939
+        },
+        {
+          "label":"Did not go to work",
+          "count":1024882
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":11599325
+        }
+      ]
+    },
+    {
+      "code":"religion",
+      "label":"Religion",
+      "description":"What religion are you?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Buddhism",
+          "count":528977
+        },
+        {
+          "label":"Christianity Anglican",
+          "count":3679907
+        },
+        {
+          "label":"Christianity Assyrian Apostolic",
+          "count":10589
+        },
+        {
+          "label":"Christianity Baptist",
+          "count":352499
+        },
+        {
+          "label":"Christianity Brethren",
+          "count":21733
+        },
+        {
+          "label":"Christianity Catholic",
+          "count":5439268
+        },
+        {
+          "label":"Christianity Churches of Christ",
+          "count":49687
+        },
+        {
+          "label":"Christianity Eastern Orthodox",
+          "count":563074
+        },
+        {
+          "label":"Christianity Jehovahs Witnesses",
+          "count":85638
+        },
+        {
+          "label":"Christianity Latter day Saints",
+          "count":59770
+        },
+        {
+          "label":"Christianity Lutheran",
+          "count":251930
+        },
+        {
+          "label":"Christianity Oriental Orthodox",
+          "count":41261
+        },
+        {
+          "label":"Christianity Other Protestant",
+          "count":60239
+        },
+        {
+          "label":"Christianity Pentecostal",
+          "count":237984
+        },
+        {
+          "label":"Christianity Presbyterian and Reformed",
+          "count":599516
+        },
+        {
+          "label":"Christianity Salvation Army",
+          "count":60162
+        },
+        {
+          "label":"Christianity Seventh day Adventist",
+          "count":63003
+        },
+        {
+          "label":"Christianity Uniting Church",
+          "count":1065796
+        },
+        {
+          "label":"Christianity Christian nfd",
+          "count":470942
+        },
+        {
+          "label":"Christianity Other Christian",
+          "count":37675
+        },
+        {
+          "label":"Hinduism",
+          "count":275534
+        },
+        {
+          "label":"Islam",
+          "count":476291
+        },
+        {
+          "label":"Judaism",
+          "count":97335
+        },
+        {
+          "label":"Other Religions Australian Aboriginal Traditional Religions",
+          "count":7363
+        },
+        {
+          "label":"Other Religions Other religious groups",
+          "count":160830
+        },
+        {
+          "label":"No Religion",
+          "count":4796785
+        },
+        {
+          "label":"Other religious affiliation",
+          "count":174282
+        },
+        {
+          "label":"Other / Not Applicable",
+          "count":1839649
+        }
+      ]
     }
   ]
 }
