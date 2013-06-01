@@ -26,7 +26,12 @@ commenceRollin = (button, onDone)->
   setTimeout((->newFace(button, onDone)), 65)
 
 $ ->
-  $('.questions .btn').on 'click', (e) =>
+  buttons = $('.questions .btn')
+
+  _.each buttons, (button) ->
+    $(button).html(gimmeFace)
+
+  buttons.on 'click', (e) =>
     button = $(e.target)
     commenceRollin button, ->
       button.siblings('input').val(values[rand(values.length)])
