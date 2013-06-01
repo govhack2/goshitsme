@@ -1,2 +1,5 @@
 class window.Source
-  constructor: (@name, @uri) ->
+  constructor: (@name, @license, @attribution, @year) ->
+
+  toString: ->
+    "#{@attribution} (#{@year})"

@@ -10,7 +10,6 @@ rand = (max) ->
   Math.floor(Math.random() * max)
 
 gimmeFace = ->
-  console.log 'giving face'
   dieFaces[rand(dieFaces.length)]
 
 setFace = (button, face) ->
@@ -20,8 +19,10 @@ setFace = (button, face) ->
   die.addClass("dieface#{face}")
 
 gimmeAnswer = (button) ->
-  answers = (a.value for a in button.closest('.question').data("question").answers)
-  button.siblings('input').val(answers[rand(answers.length)])
+  question = button.closest('.question').data("question")
+  answers = question.answers
+  randomAnswer = answers[rand(answers.length)]
+  button.siblings('input').val(randomAnswer.value)
 
 newFace = (button, onDone) ->
   spins = button.data('spins')
@@ -53,7 +54,9 @@ $ ->
   $('.questions').on 'click', '.dice', (e) ->
     button = $(@)
     playSound()
-    commenceRollin button
+    commenceRollin button, ->
+      sourceElement = button.closest('.question').find('.source')
+      sourceElement.fadeIn('fast') unless sourceElement.is(':visible')
 
   # Cycle through the sound choice catergories on click:
   $soundChoice = $('#soundChoice')

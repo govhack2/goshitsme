@@ -25,7 +25,7 @@ class window.DATATRON
       q = new Question
       q.name = question.label
       q.desc = question.description
-      q.source = new Source('department of fake departments', 'http://fake.gov.au/')
+      q.source = new Source(question.name, question.license, question.attribution, question.year)
       q.answers = _.map question.answers, (option) =>
         answer = new Answer()
         answer.value = option.label
