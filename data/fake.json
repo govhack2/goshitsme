@@ -5,15 +5,15 @@
     {
       "label": "Gender",
       "description": "what sex is you",
-      "count": 3,
+      "count": 33,
       "options": [
         {
           "label": "male",
-          "count": 2
+          "count": 24
         },
         {
           "label": "female",
-          "count": 1,
+          "count": 8,
           "dimensions": [
             {
               "label": "Age",
