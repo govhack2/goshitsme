@@ -21,18 +21,14 @@ class window.DATATRON
     @questions
 
   _mapQuestions: (data) ->
-    _.map data.dimensions, (dimension) =>
-      question = new Question
-      question.name = dimension.label
-      question.desc = dimension.description
-      question.source = new Source('department of fake departments', 'http://fake.gov.au/')
-      question.answers = _.map dimension.options, (option) =>
+    _.map data.questions, (question) =>
+      q = new Question
+      q.name = question.label
+      q.desc = question.description
+      q.source = new Source('department of fake departments', 'http://fake.gov.au/')
+      q.answers = _.map question.answers, (option) =>
         answer = new Answer()
         answer.value = option.label
-        answer.probability = new Probability(option.count, dimension.count)
+        answer.probability = new Probability(option.count, question.count)
         answer
-      question
-
-
-
-
+      q
