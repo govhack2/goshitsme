@@ -28,5 +28,5 @@ class window.Question
 
   clicked: ->
     @clickCount++
-    if @clickCount == 5
-      alert("5")
+    # if @clickCount == 5
+    #   alert("5")
