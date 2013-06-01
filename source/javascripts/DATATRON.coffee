@@ -12,7 +12,7 @@ class window.DATATRON
 
   constructor: (onReady)->
     $.ajax
-      url: 'data.json'
+      url: 'api/questions.json'
       success: (data, textStatus, jqXHR) =>
         @questions = @_mapQuestions(data)
         onReady(@) if onReady
