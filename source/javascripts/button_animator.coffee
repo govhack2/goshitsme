@@ -20,8 +20,7 @@ setFace = (button, face) ->
 
 gimmeAnswer = (button) ->
   question = button.closest('.question').data("question")
-  answers = question.answers
-  randomAnswer = answers[rand(answers.length)]
+  randomAnswer = question.randomAnswer()
   button.siblings('input').val(if randomAnswer then randomAnswer.value else 'no answers')
 
 newFace = (button, onDone) ->
