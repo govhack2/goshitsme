@@ -1,0 +1,21 @@
+{
+  "path": "~/Dropbox/GoshItsMe/",
+  "dimensions": [
+    "population",
+    "age",
+    "gender"
+  ],
+  "location": {
+    "total": "Total Australia",
+    "states": {
+      "nsw": "New South Wales",
+      "vic": "Victoria",
+      "qld": "Queensland",
+      "sa": "South Australia",
+      "wa": "Western Australia",
+      "tas": "Tasmania",
+      "nt": "Northern Territory",
+      "act": "Australian Capital Territory"
+    }
+  }
+}
