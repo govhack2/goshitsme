@@ -25,58 +25,56 @@ files = Dir["#{config.path}/**/*.xlsx"]
 
 results = {
   title: 'GoShitMe',
-  desription: 'Roll for identity!',
-  dimensions: [
+  description: 'Roll for identity!',
+  questions: [
     {
-      label: 'Location',
+      label: 'State or Territory',
       description: 'Where do you live?',
       count: 0,
-      options: [],
-      dimensions: []
+      answers: [],
+      locations: []
+    },
+    {
+      label: 'Local Government',
+      description: 'Which area do you live in within New South Wales?',
+      count: 0,
+      answers: [],
+      locations: []
     },
     {
       label: 'Gender',
       description: 'What is your gender?',
       count: 0,
-      options: [],
-      dimensions: []
+      answers: [],
+      locations: []
     },
     {
       label: 'Age',
       description: 'How old are you?',
       count: 0,
-      options: [],
-      dimensions: []
+      answers: [],
+      locations: []
     },
     {
       label: 'Occupation',
       description: 'What do you do?',
       count: 0,
-      options: [],
-      dimensions: []
+      answers: [],
+      locations: []
     }
   ]
 }
 
-config.location.states.each do |state|
-  results[:dimensions].first[:options] << {
-    label: state,
-    count: 0,
-    options: [],
-    dimensions: []
-  }
-end
-
 files.each do |file|
 
   if occupation = /earners_(.*)\./.match(file)[1]
-    dimension = 'Occupation'
-    option = occupation.capitalize
+    question = 'Occupation'
+    answer = occupation.capitalize
     location = []
   end
-  next unless dimension
+  next unless question
 
-  data = results[:dimensions].find { |d| d[:label] == dimension }
+  data = results[:questions].find { |d| d[:label] == question }
   next if data.nil?
 
   doc = RubyXL::Parser.parse(file)
@@ -90,18 +88,64 @@ files.each do |file|
   data.merge!(meta)
 
   headings = [rows[5][0].value] + rows[4][2..9].map(&:value)
-
-  ap data
-  exit
+  state = nil
 
   rows[6..-1].each do |row|
     row.map!(&:value)
     row.slice!(1)
     row.map! { |v| v.to_i if Float(v) rescue v.strip unless v.nil? }
+    row = Hash[headings.zip(row)]
+    count = 0
+    year = nil
+    row.keys.each do |key|
+      next unless row[key].is_a?(Numeric)
+      year = key
+      count = row[key]
+    end
+    next unless year
+    current = if row['Location'] == config.location.total
+      data
+    else
+      found = false
+      config.location.states.each do |name|
+        next unless row['Location'] == name
+        unless state = data[:locations].find { |d| d[:label] == name }
+          state = {
+            label: name,
+            count: 0,
+            answers: [],
+            locations: []
+          }
+          data[:locations] << state
+        end
+        found = true
+      end
+      if found
+        state
+      else
+        unless town = state[:locations].find { |d| d[:label] == row['Location'] }
+          town = {
+            label: row['Location'],
+            count: 0,
+            answers: []
+          }
+          state[:locations] << town
+        end
+        town
+      end
+    end
+    current[:answers] << {
+      label: answer,
+      count: count
+    }
+    current[:count] += count
+    current[:year] = year
   end
 
 end
 
-#ap data
+File.open('data/big.json', 'wb') do |file|
+  file.write(MultiJson.dump(results, pretty: true))
+end
 
 #==============================================================================#

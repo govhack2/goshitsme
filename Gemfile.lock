@@ -151,6 +151,7 @@ DEPENDENCIES
   hashie
   middleman (~> 3.0.14)
   middleman-livereload
+  multi_json
   nokogiri
   oj
   rubyXL
