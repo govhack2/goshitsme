@@ -29,8 +29,8 @@
     </div>
     <div class="instruction">
       <div class="container">
-        <button type="button" class="close">Okay!</button>
-        <p>Step one, press the reroll button until you match your age!</p>
+        <button type="button" class="close">OK</button>
+        <p>Click the dice until you find yourself.</p>
       </div>
     </div>
     <div class="divider">
@@ -38,13 +38,16 @@
     </div>
     <div class="container questions">
     </div>
+    <div class="license">
+      Creative Commons Attribution 2.5 Australia. Based on Australian Bureau of Statistics Data (2011).
+    </div>
   </body>
 
   <script id="question-template" type="text/x-handlebars-template">
     <div class="question" id="question-{{id}}">
       <div class="label">
-        {{name}}
-        <div class="source" style="display:none">{{source}}</div>
+        {{desc}}
+        <div class="source" style="display:none"></div>
       </div>
       <div class="answer-and-dice">
         <button class="dice">

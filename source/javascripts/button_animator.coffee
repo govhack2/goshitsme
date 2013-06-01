@@ -47,7 +47,9 @@ commenceRollin = (button, onDone)->
 playSound = ->
   numSounds = soundIds[$('#soundChoice').text()].length
   id = soundIds[$('#soundChoice').text()][rand(numSounds)]
-  $('#'+id)[0].play()
+  sound = $('#'+id)[0]
+  sound.playbackRate = _.random(50, 90) / 100 if sound.playbackRate
+  sound.play()
 
 $ ->
   $('.questions').on 'click', '.dice', (e) ->
@@ -55,7 +57,12 @@ $ ->
     playSound()
     button.closest('.question').data("question").clicked()
     commenceRollin button, ->
-      sourceElement = button.closest('.question').find('.source')
+      # the final (non-rollin') answer must be weighted random
+      question = button.closest('.question').data("question")
+      randomAnswer = question.weightedRandomAnswer()
+      button.siblings('input').val(if randomAnswer then randomAnswer.value else 'no answers')
+      probabilityText = "You and #{randomAnswer.probability.toString()} of the population"
+      sourceElement = button.closest('.question').find('.source').html(probabilityText)
       sourceElement.fadeIn('fast') unless sourceElement.is(':visible')
 
   # Cycle through the sound choice catergories on click:
