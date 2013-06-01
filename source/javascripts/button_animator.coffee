@@ -47,7 +47,7 @@ commenceRollin = (button, onDone)->
 # Pick a random sound based on the Sound Choice category
 playSound = ->
   numSounds = soundIds[$('#soundChoice').text()].length
-  id = soundIds[$('#soundChoice').text()][rand(numSounds-1)]
+  id = soundIds[$('#soundChoice').text()][rand(numSounds)]
   $('#'+id)[0].play()
 
 $ ->

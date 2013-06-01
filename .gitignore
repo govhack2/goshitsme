@@ -16,3 +16,4 @@
 log/*.log
 data/big.json
 census
+*.DS_Store
