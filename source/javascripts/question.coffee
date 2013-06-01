@@ -13,7 +13,7 @@ class window.Question
     $d = @dom()
     $dice = $d.find('.dice')
     $dice.siblings('input').val(if answer then answer.value else 'no answers')
-    probabilityText = "You and #{answer.probability.toString()} of the population"
+    probabilityText = "You and #{answer.ratio.toString()} of the population"
     $sourceElement = $dice.closest('.question').find('.source').html(probabilityText)
     $sourceElement.fadeIn('fast') unless $sourceElement.is(':visible')
 

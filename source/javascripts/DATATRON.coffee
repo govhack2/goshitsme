@@ -30,5 +30,6 @@ class window.DATATRON
         answer = new Answer()
         answer.value = option.label
         answer.probability = new Probability(option.count, question.count)
+        answer.ratio = new Probability(option.count, 21504702)
         answer
       q
