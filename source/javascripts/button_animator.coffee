@@ -53,6 +53,7 @@ $ ->
   $('.questions').on 'click', '.dice', (e) ->
     button = $(@)
     playSound()
+    button.closest('.question').data("question").clicked()
     commenceRollin button, ->
       sourceElement = button.closest('.question').find('.source')
       sourceElement.fadeIn('fast') unless sourceElement.is(':visible')

@@ -1,5 +1,6 @@
 class window.Question
   constructor: (@name, @desc, @source, @answers, @selectedAnswers) ->
+    @clickCount = 0
 
   randomAnswer: ->
     return null unless @answers.length > 0
@@ -18,3 +19,8 @@ class window.Question
 
     winner[1] || slices[slices.count-1]
     # (return slice) for slice in slices when slice > randomPercentage
+
+  clicked: ->
+    @clickCount++
+    if @clickCount == 5
+      alert("5")
