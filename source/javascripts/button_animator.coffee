@@ -1,5 +1,4 @@
 dieFaces = [1,2,3,4,5,6]
-values = ['yes', 'no', 'harry', 'indeed', '23cm', '85kg']
 
 # Sound types
 diceIds = ["dice1", "dice2"]
@@ -32,11 +31,13 @@ newFace = (button, onDone) ->
     button.data('spins', spins - 1)
     setTimeout((->newFace(button, onDone)), 65)
   else
-    onDone()
+    onDone() if onDone
 
 commenceRollin = (button, onDone)->
   unless button.data('spins')
-    button.data('spins', 5)
+    button.data('spins', 6)
+
+  newFace button
 
   setTimeout((->newFace(button, ->
       onDone() if onDone
