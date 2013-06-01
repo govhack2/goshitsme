@@ -52,6 +52,10 @@ playSound = ->
   sound.play()
 
 $ ->
+  $('.questions').on 'change', 'select', (e) ->
+    select = $(@)
+    select.closest('.question').data("question").dropdownSelected()
+
   $('.questions').on 'click', '.dice', (e) ->
     button = $(@)
     playSound()
@@ -60,8 +64,5 @@ $ ->
       # the final (non-rollin') answer must be weighted random
       question = button.closest('.question').data("question")
       randomAnswer = question.weightedRandomAnswer()
-      button.siblings('input').val(if randomAnswer then randomAnswer.value else 'no answers')
-      probabilityText = "You and #{randomAnswer.probability.toString()} of the population"
-      sourceElement = button.closest('.question').find('.source').html(probabilityText)
-      sourceElement.fadeIn('fast') unless sourceElement.is(':visible')
+      question.setAnswer(randomAnswer)
 

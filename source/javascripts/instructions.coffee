@@ -1,7 +1,5 @@
 $ ->
-  buttons = $('.instruction .close')
-
-  buttons.on 'click', (e) =>
-    button = $(e.target)
+  $('body').on '.instruction .close', (e) =>
+    button = $(this)
     div = button.closest('.instruction')
     div.addClass("fadeout")
