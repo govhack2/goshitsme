@@ -72,6 +72,7 @@ class window.Question
       @showDropdown()
       answer_selector = $("#question-#{this.id}").find("select.answer-selector")
 
+      answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
       $.each @answers, ->
         answer_selector.append($("<option />").val(this.value).text(this.value))
 
