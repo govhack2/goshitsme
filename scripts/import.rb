@@ -67,12 +67,16 @@ results = {
 
 files.each do |file|
 
+  drilldown = false
+  question = nil
+  answer = nil
   if occupation = /earners_(.*)\./.match(file)[1]
     question = 'Occupation'
     answer = occupation.capitalize
+    drilldown = true
     location = []
   end
-  next unless question
+  next unless question && answer
 
   data = results[:questions].find { |d| d[:label] == question }
   next if data.nil?
@@ -83,7 +87,9 @@ files.each do |file|
   meta = {
     name: rows[3][2].value,
     license: 'Creative Commons Attribution 2.5 Australia',
-    attribution: 'Based on Australian Bureau of Statistics Data'
+    attribution: 'Based on Australian Bureau of Statistics Data',
+    state: nil,
+    drilldown: drilldown
   }
   data.merge!(meta)
 
@@ -142,10 +148,6 @@ files.each do |file|
     current[:year] = year
   end
 
-end
-
-File.open('data/big.json', 'wb') do |file|
-  file.write(MultiJson.dump(results, pretty: true))
 end
 
 #==============================================================================#

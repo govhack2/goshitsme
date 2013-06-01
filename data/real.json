@@ -6,11 +6,22 @@
       "label":"State or Territory",
       "description":"Where do you live?",
       "count":0,
+      "answers":[
+        {
+          "label": "WA"
+        }
+      ],
+      "locations":[]
+    },
+    {
+      "label":"WA Local Government",
+      "description":"Which area do you live in within New South Wales?",
+      "count":0,
       "answers":[],
       "locations":[]
     },
     {
-      "label":"Local Government",
+      "label":"NSW Local Government",
       "description":"Which area do you live in within New South Wales?",
       "count":0,
       "answers":[],
