@@ -1,6 +1,10 @@
 class window.Question
+  idCount = 0
+
   constructor: (@name, @desc, @source, @answers, @selectedAnswers) ->
     @clickCount = 0
+    @id = idCount
+    idCount++
 
   randomAnswer: ->
     return null unless @answers.length > 0
@@ -23,4 +27,9 @@ class window.Question
   clicked: ->
     @clickCount++
     if @clickCount == 5
-      alert("5")
+      # Show the auto-roll functionality
+      answer_selector = $("#question-#{this.id}").find("select.answer_selector")
+
+      $.each @answers, ->
+        answer_selector.append($("<option />").val(this.value).text(this.value))
+

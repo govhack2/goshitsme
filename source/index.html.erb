@@ -41,7 +41,7 @@
   </body>
 
   <script id="question-template" type="text/x-handlebars-template">
-    <div class="question">
+    <div class="question" id="question-{{id}}">
       <div class="label">
         {{name}}
         <div class="source" style="display:none">{{source}}</div>
@@ -51,6 +51,9 @@
           <div class="dieface">&nbsp;</div>
         </button>
         <input class="answer" id="appendedInputButton" type="text" />
+      </div>
+      <div style="float: right">
+        <select class="answer_selector"/>
       </div>
       <div style="clear:both"></div>
     </div>
