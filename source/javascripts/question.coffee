@@ -1,2 +1,2 @@
 class window.Question
-  constructor: (@name, @desc, @source) ->
+  constructor: (@dimension, @name, @desc, @source, @answers) ->
