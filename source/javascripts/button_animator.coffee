@@ -47,7 +47,9 @@ commenceRollin = (button, onDone)->
 playSound = ->
   numSounds = soundIds[$('#soundChoice').text()].length
   id = soundIds[$('#soundChoice').text()][rand(numSounds)]
-  $('#'+id)[0].play()
+  sound = $('#'+id)[0]
+  sound.playbackRate = _.random(50, 90) / 100 if sound.playbackRate
+  sound.play()
 
 $ ->
   $('.questions').on 'click', '.dice', (e) ->
