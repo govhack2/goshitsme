@@ -5,10 +5,41 @@
     {
       "label":"State or Territory",
       "description":"Where do you live?",
-      "count":0,
+      "attribution":"Australian Bureau of Statistics population estimates",
+      "year":"June 2012",
+      "count":23007169,
       "answers":[
         {
-          "label": "WA"
+          "label": "New South Wales",
+          "count": 7272800
+        },
+        {
+          "label": "Victoria",
+          "count": 5603100
+        },
+        {
+          "label": "Queensland",
+          "count": 4516361
+        },
+        {
+          "label": "Western Australia",
+          "count": 2296411
+        },
+        {
+          "label": "South Australia",
+          "count": 1644642
+        },
+        {
+          "label": "Tasmania",
+          "count": 507626
+        },
+        {
+          "label": "Australian Capital Territory",
+          "count": 358894
+        },
+        {
+          "label": "Northern Territory",
+          "count": 229675
         }
       ],
       "locations":[]
