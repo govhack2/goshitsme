@@ -23,9 +23,7 @@ body
   background-repeat: no-repeat
   background-color: white
   padding: 35px 0 20px 0
-  .container
-    h1, p
-      padding: 0px 15px
+
 
 button
   @include rounded(5px)
@@ -75,7 +73,7 @@ body
   padding: 0
 
 .options
-  margin: 15px
+  margin: 15px 0 15px 15px
 
 .instruction
   width: 100%
@@ -108,13 +106,11 @@ body
 
 
 .question
+  position: relative
   padding: 10px 0
   margin: 0
   margin-top: 5px
   clear: both
-
-  > div, > button
-    margin: 0px 15px
 
   .source
     color: #888
@@ -123,22 +119,52 @@ body
 
 .label
   font-size: 18px
+.message
+  font-size: 14px
+
+.label, .message
   padding-top: 5px
   float: left
-  width: 250px
+  width: 330px
   height: 45px
 
-.answer
+.autoroll-select select
+  background: transparent
+  width: 240px
+  font-size: 16px
+  line-height: 1
+  border: 0
+  border-radius: 0
+  -webkit-appearance: none
+  &:focus
+    outline-width: 0
+  height: 50px
+  option
+    padding: 5px
+
+.autoroll-select
+  padding: 0 10px
+  width: 225px
+  height: 34px
+  overflow: hidden
+  background: url("../images/downarrow.png") no-repeat right #ddd
+  background-size: 32px
+  background-position: right center
+  border: 1px solid #ccc
+
+
+.answer, .autoroll-select
   @include rounded(5px)
   @include dropshadow( rgba(0,0,0,0.075) )
 
   float: right
 
-  width: 150px
   height: 50px
-  padding: 0 15px
   border: none
-  background: white
+  background-color: white
+.answer
+  width: 150px
+  padding: 0 15px
 
 .license
   font-size: small

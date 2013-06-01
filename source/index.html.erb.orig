@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STATISTICALME.COM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sound files -->
+    <audio id="dice1" src="sounds/dice1.mp3"></audio>
+    <audio id="dice2" src="sounds/dice2.mp3"></audio>
+    <audio id="laugh1" src="sounds/laugh1.mp3"></audio>
+    <audio id="laugh2" src="sounds/laugh2.mp3"></audio>
+    <audio id="laugh3" src="sounds/laugh3.mp3"></audio>
+    <audio id="laugh4" src="sounds/laugh4.mp3"></audio>
+    <audio id="laugh5" src="sounds/laugh5.mp3"></audio>
+    <audio id="laugh6" src="sounds/laugh6.mp3"></audio>
+    <audio id="random1" src="sounds/random1.mp3"></audio>
+    <audio id="random2" src="sounds/random2.mp3"></audio>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <h1>STATISTICALME.COM</h1>
+        <p>See how long it takes to randomly find someone just like you and discover just how unique you are.</p>
+        <div class="options" style="float: right">
+          Sound kind:
+          <button type="button" class="btn" id="soundChoice">Dice</button>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="instruction">
+      <div class="container" style="display:none;">
+        <button type="button" class="close">Okay!</button>
+        <p>Step one, press the reroll button until you match your age!</p>
+      </div>
+    </div>
+    <div class="divider">
+      &nbsp;
+    </div>
+    <div class="container questions">
+    </div>
+  </body>
+
+  <script id="question-template" type="text/x-handlebars-template">
+    <div class="question">
+      <div class="label">
+<<<<<<< Updated upstream
+        {{desc}}
+        <div class="source" style="display:none"></div>
+=======
+        {{name}}
+>>>>>>> Stashed changes
+      </div>
+      <div class="answer-and-dice">
+        <button class="dice">
+          <div class="dieface">&nbsp;</div>
+        </button>
+        <input class="answer" id="appendedInputButton" type="text" />
+      </div>
+      {{#if first}}
+      <div class="autoroll">
+        <div class="message">Tired of clicking? Choose your desired value and we'll roll for you.</div>
+        <div class="autoroll-select">
+          <select>
+            <option>A</option>
+            <option>b</option>
+            <option>c</option>
+          </select>
+        </div>
+      </div>
+      {{/if}}
+      <div style="clear:both"></div>
+    </div>
+  </script>
+
+</html>
