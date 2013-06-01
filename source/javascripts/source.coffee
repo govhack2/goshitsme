@@ -2,4 +2,4 @@ class window.Source
   constructor: (@name, @license, @attribution, @year) ->
 
   toString: ->
-    "#{@attribution} (#{@year})"
+    if @attribution then "#{@attribution} (#{@year})" else "Source unknown."
