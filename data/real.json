@@ -1,0 +1,81 @@
+{
+  "title":"GoShitMe",
+  "description":"Roll for identity!",
+  "questions":[
+    {
+      "label":"State or Territory",
+      "description":"Where do you live?",
+      "count":0,
+      "answers":[],
+      "locations":[]
+    },
+    {
+      "label":"Local Government",
+      "description":"Which area do you live in within New South Wales?",
+      "count":0,
+      "answers":[],
+      "locations":[]
+    },
+    {
+      "label":"Gender",
+      "description":"What is your gender?",
+      "count":0,
+      "answers":[],
+      "locations":[]
+    },
+    {
+      "label":"Age",
+      "description":"How old are you?",
+      "count":0,
+      "answers":[],
+      "locations":[]
+    },
+    {
+      "label":"Occupation",
+      "description":"What do you do?",
+      "count":9739596,
+      "answers":[
+        {
+          "label":"Clerical-and-admin",
+          "count":1706588
+        },
+        {
+          "label":"Community-and-personal-service",
+          "count":912945
+        },
+        {
+          "label":"Labourers",
+          "count":1040407
+        },
+        {
+          "label":"Machinery-operators-and-drivers",
+          "count":579873
+        },
+        {
+          "label":"Managers",
+          "count":1103429
+        },
+        {
+          "label":"Not-stated",
+          "count":606492
+        },
+        {
+          "label":"Professionals",
+          "count":1913240
+        },
+        {
+          "label":"Sales",
+          "count":757740
+        },
+        {
+          "label":"Technicians-and-trade",
+          "count":1118882
+        }
+      ],
+      "name":"W&amp;S Earners by Occupation (year ended 30 June)- Technicians and Trade Workers (Persons)",
+      "license":"Creative Commons Attribution 2.5 Australia",
+      "attribution":"Based on Australian Bureau of Statistics Data",
+      "year":"2009"
+    }
+  ]
+}
