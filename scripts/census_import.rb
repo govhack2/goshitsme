@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# add another column: prefer not to say
+
 #==============================================================================#
 
 require 'rubygems'
@@ -56,6 +58,7 @@ def _add_entry(row, entry, name, pattern, num = 2)
     dimension = match[num-1]
     dimension = 'None' if dimension.length == 0
     next if dimension =~ /Total/
+    next if dimension =~ /inadequate/
     entry[name] ||= {}
     entry[name][dimension] ||= 0
     entry[name][dimension] += count.to_i
@@ -66,7 +69,7 @@ end
 
 data = {}
 csv_files.each do |file|
-  next unless match =  /^.*_(B[0-9]+[AB]*)_AUST_([^_]+)/.match(file)
+  next unless match =  /^.*_(B[0-9]+[ABCD]*)_AUST_([^_]+)/.match(file)
   type, region = match[1..2]
   region = 'AUST' if region == 'long.csv'
   #next unless region == 'SSC'
@@ -87,19 +90,15 @@ csv_files.each do |file|
       _add_entry(row, entry, :gender, /^Total_Persons_([^P].*)/)
       _add_entry(row, entry, :age, /^Age_groups_(.*)_Persons/)
       _add_entry(row, entry, :school_completed, /^Highest_year_of_school_completed_(.*)_Persons/)
-      row.each do |k, v|
-        next if k =~ /(Total|Persons|Males|Females)/
-        next if k =~ /Not_stated/
-        next unless match = /^(.*)_Occupation_(.*)/.match(k)
-        next unless match.length == 3
-        industry, occupation = match[1..2]
-        entry[:industry] ||= {}
-        entry[:industry][industry] ||= 0
-        entry[:industry][industry] += v.to_i
-        entry[:occupation] ||= {}
-        entry[:occupation][occupation] ||= 0
-        entry[:occupation][occupation] += v.to_i
-      end
+    end
+    if type =~ /B40/
+      _add_entry(row, entry, :level_of_education, /Persons_(.*)_Total/)
+    end
+    if type =~ /B43/
+      _add_entry(row, entry, :industry_of_employment, /Persons_(.*)_Total/)
+    end
+    if type =~ /B45/
+      _add_entry(row, entry, :occupation, /Total_Occupation_(.*)/)
     end
     if type =~ /B24/
       _add_entry(row, entry, :number_of_children, /^Total_Number_of_children_ever_born_(.*)/)
@@ -146,5 +145,7 @@ end
 File.open('data/australia.json', 'wb') do |file|
   file.write(MultiJson.dump(data, pretty: true))
 end
+
+
 
 #==============================================================================#

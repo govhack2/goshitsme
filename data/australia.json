@@ -222,6 +222,16 @@
         "Dial_up":235401,
         "Other":303047
       },
+      "level_of_education":{
+        "Postgraduate_Degree_Level":631119,
+        "Graduate_Diploma_and_Graduate_Certificate_Level":297282,
+        "Bachelor_Degree_Level":2340507,
+        "Advanced_Diploma_and_Diploma_Level":1393049,
+        "Certificate_Level_Certificate_Level_nfd":269810,
+        "Certificate_Level_Certificate_III_and_IV_Level":2653127,
+        "Certificate_Level_Certificate_I_and_II_Level":211973,
+        "Certificate_Level":3134910
+      },
       "qualifications":{
         "Natural_and_Physical_Sciences":272960,
         "Information_Technology":277924,
@@ -234,8 +244,38 @@
         "Society_and_Culture":999398,
         "Creative_Arts":324950,
         "Food_Hospitality_and_Personal_Services":486133,
-        "Mixed_Field_Programmes":13434,
-        "Field_of_study_inadequately_described":119249
+        "Mixed_Field_Programmes":13434
+      },
+      "industry_of_employment":{
+        "Agriculture_forestry_and_fishing":249828,
+        "Mining":176563,
+        "Manufacturing":902829,
+        "Electricity_gas_water_and_waste_services":115611,
+        "Construction":828910,
+        "Wholesale_trade":403801,
+        "Retail_trade":1057310,
+        "Accommodation_and_food_services":650397,
+        "Transport_postal_and_warehousing":479181,
+        "Information_media_and_telecommunications":178190,
+        "Financial_and_insurance_services":377352,
+        "Rental_hiring_and_real_estate_services":158853,
+        "Professional_scientific_and_technical_services":730062,
+        "Administrative_and_support_services":323779,
+        "Public_administration_and_safety":689931,
+        "Education_and_training":804418,
+        "Health_care_and_social_assistance":1167634,
+        "Arts_and_recreation_services":151574,
+        "Other_services":378217
+      },
+      "occupation":{
+        "Managers":2587938,
+        "Professionals":4290882,
+        "Technicians_and_trades_workers":2850292,
+        "Community_and_personal_service_workers":1943796,
+        "Clerical_and_administrative_workers":2967118,
+        "Sales_workers":1884280,
+        "Machinery_operators_and_drivers":1319098,
+        "Labourers":1895214
       },
       "travel_to_work":{
         "One_method_Train":388012,
