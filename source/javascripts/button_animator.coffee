@@ -38,7 +38,7 @@ playSound = ->
   $('#'+id)[0].play()
 
 $ ->
-  buttons = $('.questions .btn')
+  buttons = $('.questions .dice')
 
   _.each buttons, (button) ->
     $(button).html(gimmeFace)

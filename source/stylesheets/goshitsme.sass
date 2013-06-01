@@ -1,7 +1,99 @@
 h1
   color: hotpink !important
+  margin: 0
+
+body
+  margin: 0
+  background: rgba(240,240,240,1)
+
+@mixin rounded($size)
+  -moz-border-radius: $size
+  border-radius: $size
+
+@mixin dropshadow($color)
+  box-shadow: 0px 2px 4px $color
+
+.hero
+  background: white
+  padding: 50px 0
+
+.container
+  width: 768px
+  margin: auto
+
+.questions
+  padding: 0
+  width: 600px
+  margin: auto
+
+button
+  @include rounded(5px)
+  @include dropshadow( rgba(0,0,0,0.4) )
+  border: none
 
 .dice
-  font-size: 30px
-  padding-top: 2px
-  padding-bottom: 6px
+  width: 50px
+  height: 50px
+
+  float: left
+
+  background-color: red
+  color: red
+
+body
+  padding: 0
+
+
+.instruction
+  background: rgb(200,255,200)
+  padding: 0
+  p
+    margin: 0
+    padding: 25px
+  .close
+    width: 50px
+    height: 50px
+    float: right
+    margin: 15px
+
+  overflow: hidden
+
+  opacity: 1
+  -webkit-transition: all 0.5s ease
+  -moz-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: all 0.5s ease
+
+  &.fadeout
+    height: -0px
+    opacity: 0
+
+
+
+.question
+  padding: 10px 0
+  margin: 0
+  clear: both
+
+  div, button
+    margin: 0px 15px
+
+.label
+  font-size: 18px
+  padding-top: 5px
+  float: left
+  width: 300px
+  vertical-align: middle
+  display: table-cell
+  height: 45px
+
+.answer
+  @include rounded(5px)
+  @include dropshadow( rgba(0,0,0,0.075) )
+
+  float: left
+  width: 100px
+  height: 50px
+  padding: 0 15px
+  border: none
+  background: white

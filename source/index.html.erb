@@ -1,14 +1,8 @@
----
-title: Who Dat Stat? Gosh it's me!
----
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Who Dat Stat? Gosh it's me!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- Sound files -->
     <audio id="dice1" src="sounds/dice1.mp3"></audio>
     <audio id="dice2" src="sounds/dice2.mp3"></audio>
@@ -22,82 +16,33 @@ title: Who Dat Stat? Gosh it's me!
     <audio id="random2" src="sounds/random2.mp3"></audio>
   </head>
   <body>
-    <div class="hero-unit">
+    <div class="hero">
+      <div class="container">
+        <h1>Gosh! It's Me!</h1>
+        <p>See how long it takes to randomly find someone just like you and discover out just how unique you are.</p>
+      </div>
       <div style="float: right">
         Sound kind:
         <button type="button" class="btn" id="soundChoice">Dice</button>
       </div>
-      <h1>Gosh! It's Me!</h1>
-      <p>See how long it takes to randomly find someone, just like you and Find out just how unique you are.</p>
     </div>
-    <div class="alert alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      Step one, click the dice button until you match your attribute!
+    <div class="instruction">
+      <button type="button" class="close">Okay!</button>
+      <p>Step one, press the reroll button until you match your age!</p>
     </div>
-    <div class="container-fluid questions">
-      <hr />
-      <div class="row">
-        <div class="span6">My age:</div>
-        <div class="span3">
-          <div class="input-append">
-            <input class="span2" id="appendedInputButton" type="text" />
-            <button class="btn dice" type="button">&#x2680;</button>
+      <div class="questions">
+        <% (0..5).each do |i| %>
+          <div class="question">
+            &nbsp;
+            <div class="label">
+              My age: blah blah
+            </div>
+            <input class="answer" id="appendedInputButton" type="text" />
+            <button class="dice">&#x268<%= i %></button>
+            <div style="clear:both;"></div>
           </div>
-        </div>
+        <% end %>
       </div>
-      <hr />
-      <div class="row">
-        <div class="span6">Beard length:</div>
-        <div class="span3">
-          <div class="input-append">
-            <input class="span2" id="appendedInputButton" type="text" />
-            <button class="btn dice" type="button">&#x2681;</button>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="span6">Distance to nearest Victorian micro brewery:</div>
-        <div class="span3">
-          <div class="input-append">
-            <input class="span2" id="appendedInputButton" type="text" />
-            <button class="btn dice" type="button">&#x2682;</button>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="span6">Eye color:</div>
-        <div class="span3">
-          <div class="input-append">
-            <input class="span2" id="appendedInputButton" type="text" />
-            <button class="btn dice" type="button">&#x2683;</button>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="span6">Education level:</div>
-        <div class="span3">
-          <div class="input-append">
-            <input class="span2" id="appendedInputButton" type="text" />
-            <button class="btn dice" type="button">&#x2684;</button>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="span6">Years at current job:</div>
-        <div class="span3">
-          <div class="input-append">
-            <input class="span2" id="appendedInputButton" type="text" />
-            <button class="btn dice" type="button">&#x2685;</button>
-          </div>
-        </div>
-      </div>
-      <hr />
     </div>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
