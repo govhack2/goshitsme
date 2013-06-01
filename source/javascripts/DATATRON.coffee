@@ -8,10 +8,11 @@ class window.DATATRON
 
   questions: ->
     _.map @data.dimensions, (dimension)=>
-      name: dimension.label
-      desc: dimension.description
-      sourceName: 'department of fake departments'
-      sourceUrl: 'http://fake.gov.au/'
+      question = new Question
+      question.name = dimension.label
+      question.desc = dimension.description
+      question.source = new Source('department of fake departments', 'http://fake.gov.au/')
+      question
 
 
 
