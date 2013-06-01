@@ -7,9 +7,8 @@ laughIds = ["laugh1", "laugh2", "laugh3", "laugh4", "laugh5", "laugh6"]
 randomIds = ["random1", "random2"]
 soundIds = { "Dice": diceIds, "Laugh": laughIds, "Random": randomIds }
 
-rand = (max, min = 0) ->
-  n = Math.round(Math.random() * max)
-  if n > min then n else min
+rand = (max) ->
+  Math.floor(Math.random() * max)
 
 gimmeFace = ->
   console.log 'giving face'
@@ -21,11 +20,15 @@ setFace = (button, face) ->
   die.addClass("dieface")
   die.addClass("dieface#{face}")
 
+gimmeAnswer = (button) ->
+  answers = (a.value for a in button.closest('.question').data("question").answers)
+  button.siblings('input').val(answers[rand(answers.length)])
+
 newFace = (button, onDone) ->
   spins = button.data('spins')
   if spins > 0
     setFace(button, gimmeFace())
-    button.siblings('input').val(values[rand(values.length)])
+    gimmeAnswer(button)
     button.data('spins', spins - 1)
     setTimeout((->newFace(button, onDone)), 65)
   else
@@ -35,7 +38,9 @@ commenceRollin = (button, onDone)->
   unless button.data('spins')
     button.data('spins', 5)
 
-  setTimeout((->newFace(button, onDone)), 65)
+  setTimeout((->newFace(button, ->
+      onDone() if onDone
+    )), 65)
 
 # Pick a random sound based on the Sound Choice category
 playSound = ->
@@ -44,16 +49,10 @@ playSound = ->
   $('#'+id)[0].play()
 
 $ ->
-  buttons = $('.dice')
-
-  _.each buttons, (button) ->
-    setFace(button, gimmeFace())
-
   $('.questions').on 'click', '.dice', (e) ->
     button = $(@)
     playSound()
-    commenceRollin button, ->
-      button.siblings('input').val(values[rand(values.length)])
+    commenceRollin button
 
   # Cycle through the sound choice catergories on click:
   $soundChoice = $('#soundChoice')

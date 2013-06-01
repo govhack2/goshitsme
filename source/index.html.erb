@@ -19,7 +19,7 @@
     <div class="hero">
       <div class="container">
         <h1>Gosh! It's Me!</h1>
-        <p>See how long it takes to randomly find someone just like you and discover out just how unique you are.</p>
+        <p>See how long it takes to randomly find someone just like you and discover just how unique you are.</p>
       </div>
       <div style="float: right">
         Sound kind:
@@ -31,20 +31,22 @@
       <p>Step one, press the reroll button until you match your age!</p>
     </div>
       <div class="questions">
-        <% (0..5).each do |i| %>
-          <div class="question">
-            &nbsp;
-            <div class="label">
-              My age: blah blah
-            </div>
-            <input class="answer" id="appendedInputButton" type="text" />
-            <button class="dice">
-              <div class="dieface">&nbsp;</div>
-            </button>
-            <div style="clear:both;"></div>
-          </div>
-        <% end %>
       </div>
     </div>
   </body>
+
+  <script id="question-template" type="text/x-handlebars-template">
+    <div class="question">
+      &nbsp;
+      <div class="label">
+        {{name}}
+      </div>
+      <input class="answer" id="appendedInputButton" type="text" />
+      <button class="dice">
+        <div class="dieface">&nbsp;</div>
+      </button>
+      <div style="clear:both;"></div>
+    </div>
+  </script>
+
 </html>
