@@ -1,10 +1,13 @@
+$backdrop: rgba(240,240,240,1)
+$divider: rgba(240,240,240,1)
+
 h1
   color: hotpink !important
   margin: 0
 
 body
   margin: 0
-  background: rgba(240,240,240,1)
+  background: $backdrop
 
 @mixin rounded($size)
   -moz-border-radius: $size
@@ -15,27 +18,26 @@ body
 
 .hero
   background: white
-  padding: 50px 0
-
-.container
-  width: 768px
-  margin: auto
-
-.questions
-  padding: 0
-  width: 600px
-  margin: auto
+  padding: 35px 0 0 0
+  .container
+    h1, p
+      padding: 0px 15px
 
 button
   @include rounded(5px)
   @include dropshadow( rgba(0,0,0,0.4) )
   border: none
 
+.answer-and-dice
+  float: right
+  width: 270px
+
 .dice
   width: 50px
   height: 50px
+  margin-left: 15px
 
-  float: left
+  float: right
 
   background-color: rgb(200,5,34)
   color: white
@@ -68,13 +70,16 @@ button
 body
   padding: 0
 
+.options
+  margin: 15px
 
 .instruction
+  width: 100%
   background: rgb(200,255,200)
   padding: 0
   p
     margin: 0
-    padding: 25px
+    padding: 25px 15px
   .close
     width: 50px
     height: 50px
@@ -93,14 +98,18 @@ body
     height: -0px
     opacity: 0
 
+.divider
+  background: $divider
+  height: 20px
 
 
 .question
   padding: 10px 0
   margin: 0
+  margin-top: 5px
   clear: both
 
-  div, button
+  > div, > button
     margin: 0px 15px
 
   .source
@@ -112,17 +121,16 @@ body
   font-size: 18px
   padding-top: 5px
   float: left
-  width: 300px
-  vertical-align: middle
-  display: table-cell
+  width: 250px
   height: 45px
 
 .answer
   @include rounded(5px)
   @include dropshadow( rgba(0,0,0,0.075) )
 
-  float: left
-  width: 100px
+  float: right
+
+  width: 150px
   height: 50px
   padding: 0 15px
   border: none

@@ -3,5 +3,5 @@ $ ->
 
   buttons.on 'click', (e) =>
     button = $(e.target)
-    div = button.parent('.instruction')
+    div = button.closest('.instruction')
     div.addClass("fadeout")
