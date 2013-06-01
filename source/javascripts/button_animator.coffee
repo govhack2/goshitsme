@@ -19,16 +19,17 @@ newFace = (button, onDone) ->
   spins = button.data('spins')
   if spins > 0
     button.html(gimmeFace())
+    button.siblings('input').val(values[rand(values.length)])
     button.data('spins', spins - 1)
-    setTimeout((->newFace(button, onDone)), rand(150, 75))
+    setTimeout((->newFace(button, onDone)), 65)
   else
     onDone()
 
 commenceRollin = (button, onDone)->
   unless button.data('spins')
-    button.data('spins', rand(40, 20))
+    button.data('spins', 5)
 
-  setTimeout((->newFace(button, onDone)), rand(150, 75))
+  setTimeout((->newFace(button, onDone)), 65)
 
 # Pick a random sound based on the Sound Choice category
 playSound = ->
@@ -37,7 +38,12 @@ playSound = ->
   $('#'+id)[0].play()
 
 $ ->
-  $('.questions .btn').on 'click', (e) =>
+  buttons = $('.questions .btn')
+
+  _.each buttons, (button) ->
+    $(button).html(gimmeFace)
+
+  buttons.on 'click', (e) =>
     button = $(e.target)
     playSound()
     commenceRollin button, ->
