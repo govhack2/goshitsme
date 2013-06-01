@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Sound files -->
+    <audio id="dice1" src="sounds/dice1.mp3"></audio>
+    <audio id="dice2" src="sounds/dice2.mp3"></audio>
+    <audio id="laugh1" src="sounds/laugh1.mp3"></audio>
+    <audio id="laugh2" src="sounds/laugh2.mp3"></audio>
+    <audio id="laugh3" src="sounds/laugh3.mp3"></audio>
+    <audio id="laugh4" src="sounds/laugh4.mp3"></audio>
+    <audio id="laugh5" src="sounds/laugh5.mp3"></audio>
+    <audio id="laugh6" src="sounds/laugh6.mp3"></audio>
+    <audio id="random1" src="sounds/random1.mp3"></audio>
+    <audio id="random2" src="sounds/random2.mp3"></audio>
   </head>
   <body>
     <div class="hero-unit">
+      <div style="float: right">
+        Sound kind:
+        <button type="button" class="btn" id="soundChoice">Dice</button>
+      </div>
       <h1>Gosh! It's Me!</h1>
       <p>See how long it takes to randomly find someone, just like you and Find out just how unique you are.</p>
     </div>
     <div class="alert alert-success">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      Step one, press the reroll button until you match your age!
+      Step one, click the dice button until you match your attribute!
     </div>
     <div class="container-fluid questions">
       <hr />
