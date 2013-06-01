@@ -81,26 +81,26 @@ body
   padding: 0
   p
     margin: 0
-    padding: 25px 0px
+    padding: 15px 0px 0px 0px
   .close
-    width: 50px
-    height: 50px
+    font-size: 14px
+    width: 100px
+    height: 25px
     float: right
-    margin: 15px 0px
+    margin: 10px 0px
     background-color: rgb(5,210,34)
     color: white
 
   overflow: hidden
 
-  opacity: 1
-  -webkit-transition: all 0.5s ease
-  -moz-transition: all 0.5s ease
-  -o-transition: all 0.5s ease
-  transition: all 0.5s ease
+  -webkit-transition: 0.5s
+  -moz-transition: 0.5s
+  -o-transition: 0.5s
+  transition: 0.5s
+  max-height: 45px
 
   &.fadeout
-    height: -0px
-    opacity: 0
+    max-height: 0px
 
 .divider
   background: $divider
@@ -169,7 +169,7 @@ body
   padding: 0 15px
 
 .license
+  margin: 50px 0 10px 0
   font-size: small
   color: #BBB
   text-align: center
-  margin: 20px
