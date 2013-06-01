@@ -59,7 +59,8 @@ $ ->
       question = button.closest('.question').data("question")
       randomAnswer = question.weightedRandomAnswer()
       button.siblings('input').val(if randomAnswer then randomAnswer.value else 'no answers')
-      sourceElement = button.closest('.question').find('.source')
+      probabilityText = "You and #{randomAnswer.probability.toString()} of the population"
+      sourceElement = button.closest('.question').find('.source').html(probabilityText)
       sourceElement.fadeIn('fast') unless sourceElement.is(':visible')
 
   # Cycle through the sound choice catergories on click:
