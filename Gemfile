@@ -10,8 +10,10 @@ group :import do
   gem 'zip'
   gem 'oj'
   gem 'hashie'
+  gem 'savon'
 end
 
 group :development do
   gem 'awesome_print'
+  gem 'debugger'
 end
