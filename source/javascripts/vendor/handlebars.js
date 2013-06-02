@@ -2276,3 +2276,12 @@ Handlebars.template = Handlebars.VM.template;
 // lib/handlebars/browser-suffix.js
 })(Handlebars);
 ;
+
+Handlebars.registerHelper('showStat', function(context, options) {
+    var ret = "";
+    for(var prop in context)
+    {
+        ret = ret + options.fn({label:prop,count:context[prop]});
+    }
+    return ret;
+});

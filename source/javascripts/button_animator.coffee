@@ -38,7 +38,7 @@ window.commenceRollin = (button, onDone, spinAmount=6)->
     button.data('spins', spinAmount)
 
   newFace button, ->
-    onDone() if onDone
+      onDone() if onDone
 
 # Pick a random sound based on the Sound Choice category
 playSound = ->
@@ -52,10 +52,13 @@ nextAnswer = _.debounce ->
   return if lastAnswered.data('nextified')
   lastAnswered.data('nextified', true)
   hiddenAnswers = $('div.question:hidden')
-  if hiddenAnswers.length == 0
+  newThing = if hiddenAnswers.length == 0
     $('#finished').fadeIn('fast')
   else
     hiddenAnswers.first().fadeIn('fast')
+
+  unless lastAnswered.closest('.question').data("question").autorollButtonVisible()
+    newThing[0].scrollIntoView()
 , 1250
 
 lastAnswered = null
@@ -73,9 +76,12 @@ $ ->
 
   $('.questions').on 'click', '.answer-and-dice', (e) ->
     button = $(@)
-    playSound()
     questionContainer = button.closest('.question')
-    questionContainer.data("question").clicked()
+    questionModel = questionContainer.data("question")
+    return if questionModel.isAutoRolling()
+
+    questionModel.clicked()
+    playSound()
     lastAnswered = questionContainer
     commenceRollin button, ->
       # the final (non-rollin') answer must be weighted random
@@ -86,7 +92,8 @@ $ ->
       nextAnswer()
 
   source   = $("#question-template").html()
-  template = Handlebars.compile(source)
+  if source
+    template = Handlebars.compile(source)
 
   DATATRON.get_questions (questions)->
     i = 0
