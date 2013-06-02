@@ -102,15 +102,6 @@ CORRECTIONS = {
   'Christian nfd' => 'Other Christian'
 }
 
-#No_Internet_connection_Total
-#1525107
-#Type_of_Internet_connection_Broadband_Total
-#5424509
-#Type_of_Internet_connection_Dial_up_Total
-#235401
-#Type_of_Internet_connection_Other_Total
-#303047
-
 def _add_entry(row, entry, name, pattern, num = 2)
   row.each do |header, count|
     next if header =~ /Not_stated/i
@@ -142,8 +133,8 @@ end
 #------------------------------------------------------------------------------#
 
 #IMPORT = :australia
-IMPORT = :states
-#IMPORT = :suburbs
+#IMPORT = :states
+IMPORT = :suburbs
 
 data = {}
 TYPES = %w{B01 B05 B09 B13 B14 B17B B24 B28 B29 B33 B34 B35 B40B B41B B43C B45A B46}
@@ -159,10 +150,13 @@ csv_files.each do |file|
   rows = CSV.parse(File.read(file))
   headings = rows[0]
   rows = rows[1..-1].map { |row| Hash[headings.zip(row)] }
-  rows.each do |row|
+  rows.each_with_index do |row, index|
     state = STATES.find { |k, v| row['region_id'] =~ /SSC#{k}/ }.last rescue nil
     state ||= STATES.find { |k, v| row['region_id'] =~ /#{k}/ }.last rescue nil
     suburb = SUBURBS[row['region_id']][:name] rescue nil
+    suburb = suburb.gsub(/\([^)]*\)/, '')
+    suburb = suburb.gsub(/ +/, ' ')
+    suburb = suburb.strip
     data[state] ||= {}
     data[state][suburb] ||= {}
     entry = data[state][suburb]
@@ -224,7 +218,49 @@ csv_files.each do |file|
   end
 end
 
-if IMPORT == :states
+if IMPORT == :suburbs
+  answers = {}
+  data.each do |state, state_data|
+    next if state == nil || state.length == 0
+    answers[state] = []
+    state_data.each do |suburb, suburb_data|
+      next if suburb == nil || suburb.length == 0
+      count = 0
+      count += suburb_data[:gender]['Male'] + suburb_data[:gender]['Female']
+      answers[state] << {
+        label: suburb,
+        count: count
+      }
+      suburb = suburb.gsub(' ', '_')
+      path = "source/api/#{state}/#{suburb}"
+      FileUtils::mkdir_p(path)
+      File.open("#{path}/statistics.json", 'wb') do |file|
+        file.write(MultiJson.dump(suburb_data.merge(META), pretty: true))
+      end
+    end
+  end
+  STATES.values.each do |state|
+    total = answers[state].reduce(0) { |acc, val| acc + val[:count] } rescue 0
+    questions = {
+      title: "Statistical Me",
+      description: "Roll for identity!",
+      questions: [
+        {
+          :code => :suburb,
+          label: "Suburb",
+          description: "Which suburb of #{state} do you live in?",
+          count: total,
+          answers: answers[state] || []
+        }
+      ]
+    }
+    path = "source/api/#{state}"
+    FileUtils::mkdir_p(path)
+    File.open("#{path}/questions.json", 'wb') do |file|
+      file.write(MultiJson.dump(questions.merge(META), pretty: true))
+    end
+  end
+elsif IMPORT == :states
   STATES.values.each do |state|
     path = "source/api/#{state}"
     FileUtils::mkdir_p(path)
@@ -415,7 +451,6 @@ elsif IMPORT == :australia
     code = question[:code]
     if code && australia.include?(code)
       australia[code].each do |label, count|
-        #next if label == 'Other'
         question[:answers] << {
           label: label,
           count: count
