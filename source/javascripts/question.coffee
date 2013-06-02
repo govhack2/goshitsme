@@ -1,7 +1,7 @@
 
 class window.Question
   idCount = 0
-  autorollThresholdClicks = 10
+  autorollThresholdClicks = 2
 
   @summarise: ->
     finishMessageTemplate = Handlebars.compile( $("#finish-message-template").html() )
@@ -102,7 +102,7 @@ class window.Question
     donefn = =>
       @clickCount++
       randomAnswer = question.weightedRandomAnswer()
-      if randomAnswer == @answerToAutoFind
+      if @clickCount > 300 || randomAnswer == @answerToAutoFind
         @setAnswer(@answerToAutoFind)
         Question.summarise()
         @answerToAutoFind = null

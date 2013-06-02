@@ -57,8 +57,8 @@ nextAnswer = _.debounce ->
   else
     hiddenAnswers.first().fadeIn('fast')
 
-  unless lastAnswered.closest('.question').data("question").autorollButtonVisible()
-    newThing[0].scrollIntoView()
+  # unless lastAnswered.closest('.question').data("question").autorollButtonVisible()
+  #   newThing[0].scrollIntoView()
 , 1250
 
 lastAnswered = null
