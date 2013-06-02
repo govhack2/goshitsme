@@ -141,8 +141,8 @@ end
 
 #------------------------------------------------------------------------------#
 
-IMPORT = :australia
-#IMPORT = :states
+#IMPORT = :australia
+IMPORT = :states
 #IMPORT = :suburbs
 
 data = {}
@@ -228,9 +228,9 @@ if IMPORT == :states
   STATES.values.each do |state|
     path = "source/api/#{state}"
     FileUtils::mkdir_p(path)
-    File.mkdir_p('source/api/#{state.downcase}/statistics.json')
-    File.open('data/australia.json', 'wb') do |file|
-      file.write(MultiJson.dump(data, pretty: true))
+    state_data = data[state][nil] rescue {}
+    File.open("#{path}/statistics.json", 'wb') do |file|
+      file.write(MultiJson.dump(state_data.merge(META), pretty: true))
     end
   end
 elsif IMPORT == :australia
