@@ -55,7 +55,7 @@ nextAnswer = _.debounce ->
   return if lastAnswered.data('nextified')
   lastAnswered.data('nextified', true)
   $('div.question:hidden').first().fadeIn('fast')
-, 1000
+, 1500
 
 lastAnswered = null
 
