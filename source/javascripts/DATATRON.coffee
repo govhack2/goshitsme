@@ -32,4 +32,5 @@ class window.DATATRON
         answer.probability = new Probability(option.count, question.count)
         answer.ratio = new Probability(option.count, 21504702)
         answer
+      q.answers = _.sortBy q.answers, (answer) -> answer.value
       q
