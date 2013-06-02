@@ -65,11 +65,22 @@ class window.Question
     @hideDropdown()
     @setAnswer(@findAnswer($d.find("select").val()))
 
+  showAutorollButton: =>
+    $d = @dom()
+    $d.find('.autoroll-button').show()
+
+  autorollButtonClicked: =>
+    $d = @dom()
+    if $d.find(".autoroll-select").is(":visible")
+      @hideDropdown()
+    else
+      @showDropdown()
+
   clicked: =>
     @clickCount++
     if @clickCount == 5
       # Show the auto-roll functionality
-      @showDropdown()
+      @showAutorollButton()
       answer_selector = $("#question-#{this.id}").find("select.answer-selector")
 
       answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))

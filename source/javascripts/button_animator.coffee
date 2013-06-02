@@ -57,6 +57,10 @@ $ ->
     select = $(@)
     select.closest('.question').data("question").dropdownSelected()
 
+  $('.questions').on 'click', '.autoroll-button', (e) ->
+    button = $(@)
+    button.closest('.question').data("question").autorollButtonClicked()
+
   $('.questions').on 'click', '.dice', (e) ->
     button = $(@)
     playSound()

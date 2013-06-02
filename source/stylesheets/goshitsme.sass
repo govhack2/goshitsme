@@ -1,5 +1,6 @@
 $backdrop: rgba(240,240,240,1)
 $divider: rgba(240,240,240,1)
+$green: rgb(5,210,34)
 
 h1
   color: hotpink !important
@@ -88,7 +89,7 @@ body
     height: 25px
     float: right
     margin: 10px 0px
-    background-color: rgb(5,210,34)
+    background-color: $green
     color: white
 
   overflow: hidden
@@ -125,6 +126,7 @@ body
   font-size: 14px
 
 .label, .message
+  position: relative
   padding-top: 5px
   float: left
   width: 330px
@@ -141,8 +143,7 @@ body
   &:focus
     outline-width: 0
   height: 50px
-  option
-    padding: 5px
+
 
 .autoroll-select
   padding: 0 10px
@@ -173,3 +174,15 @@ body
   font-size: small
   color: #BBB
   text-align: center
+
+.autoroll-button
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.4)
+  position: absolute
+  right: 250px
+  top: 20px
+  width: 25px
+  height: 25px
+  background-color: $green
+  color: white
+  font-size: 16px
+  // display: none
