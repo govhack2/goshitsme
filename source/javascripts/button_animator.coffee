@@ -61,7 +61,7 @@ $ ->
     button = $(@)
     button.closest('.question').data("question").autorollButtonClicked()
 
-  $('.questions').on 'click', '.dice', (e) ->
+  $('.questions').on 'click', '.answer-and-dice', (e) ->
     button = $(@)
     playSound()
     button.closest('.question').data("question").clicked()
