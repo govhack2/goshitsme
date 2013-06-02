@@ -33,6 +33,7 @@ button
   border: none
 
 .answer-and-dice
+  cursor: pointer
   float: right
   width: 270px
 
@@ -170,6 +171,8 @@ body
 
 
 .answer, .autoroll-select
+  &:disabled
+    cursor: pointer
   @include rounded(5px)
   @include dropshadow( rgba(0,0,0,0.075) )
 

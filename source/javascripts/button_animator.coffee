@@ -55,7 +55,7 @@ nextAnswer = _.debounce ->
   return if lastAnswered.data('nextified')
   lastAnswered.data('nextified', true)
   $('div.question:hidden').first().fadeIn('fast')
-, 1500
+, 1250
 
 lastAnswered = null
 
@@ -98,6 +98,7 @@ $ ->
       $('.questions').append( element )
       element.show() if i == 1
 
+      # populate dropdown
       answer_selector = element.find("select.answer-selector")
       answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
       $.each question.answers, ->
