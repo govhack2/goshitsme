@@ -57,7 +57,7 @@ $ ->
     select = $(@)
     select.closest('.question').data("question").dropdownSelected()
 
-  $('.questions').on 'click', '.dice', (e) ->
+  $('.questions').on 'click', '.answer-and-dice', (e) ->
     button = $(@)
     playSound()
     button.closest('.question').data("question").clicked()
