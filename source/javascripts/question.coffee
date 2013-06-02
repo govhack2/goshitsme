@@ -99,11 +99,16 @@ class window.Question
     $d.find('.autoroll-button').hide()
 
   autorollButtonClicked: =>
-    $d = @dom()
-    if $d.find(".autoroll-select").is(":visible")
+    if @autorollSelectVisible()
       @hideDropdown()
     else
       @showDropdown()
+
+  autorollSelectVisible: =>
+    @dom().find(".autoroll-select").is(":visible")
+
+  autorollButtonVisible: =>
+    @dom().find(".autoroll-button").is(":visible")
 
   clicked: =>
     @clickCount++

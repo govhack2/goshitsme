@@ -52,10 +52,13 @@ nextAnswer = _.debounce ->
   return if lastAnswered.data('nextified')
   lastAnswered.data('nextified', true)
   hiddenAnswers = $('div.question:hidden')
-  if hiddenAnswers.length == 0
+  newThing = if hiddenAnswers.length == 0
     $('#finished').fadeIn('fast')
   else
     hiddenAnswers.first().fadeIn('fast')
+
+  unless lastAnswered.closest('.question').data("question").autorollButtonVisible()
+    newThing[0].scrollIntoView()
 , 1250
 
 lastAnswered = null
