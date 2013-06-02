@@ -1,17 +1,45 @@
+
 class window.Question
   idCount = 0
   autorollThresholdClicks = 10
+
+  @summarise: ->
+    finishMessageTemplate = Handlebars.compile( $("#finish-message-template").html() )
+    answeredQuestions = _.map $(".question:visible"), (question_dom) ->
+      $(question_dom).data("question")
+
+    unique_questions = (question for question in answeredQuestions when question.answer && question.answer.ratio.percentage() <= 25)
+    $('#finish-messages').html("")
+
+    # add to dom
+    _.each unique_questions, (question) ->
+      element = $(finishMessageTemplate(question))
+      $('#finish-messages').append(element)
+
+    totalQuestions = $(".question").length
+    if unique_questions.length > 5
+      $("#finished-message").html("See! You are really unique!")
+    else if unique_questions.length > 3
+      $("#finished-message").html("See, you're different to the rest.")
+    else if answeredQuestions.length == totalQuestions.length
+      $("#finished-message").html("Ok, I guess you're average :(")
+    else if answeredQuestions.length >= 2
+      $("#finished-message").html("Hmm, still kind of average...")
+    else
+      $("#finished-message").html("Ok, get started above.")
 
   constructor: (@name, @desc, @source, @answers, @selectedAnswers) ->
     @clickCount = 0
     @autorollClickCount = 0
     @id = idCount
+    @answer = null
     idCount++
 
   randomAnswer: () ->
     @answers[Math.floor(Math.random() * @answers.length)]
 
   setAnswer: (answer)=>
+    @answer = answer
     $d = @dom()
     $dice = $d.find('.dice')
     $dice.siblings('input').val(if answer then answer.value else 'no answers')
@@ -73,6 +101,7 @@ class window.Question
       randomAnswer = question.weightedRandomAnswer()
       if randomAnswer == @answerToAutoFind
         @setAnswer(@answerToAutoFind)
+        Question.summarise()
       else
         @setAnswer(randomAnswer)
         commenceRollin button, donefn, 1

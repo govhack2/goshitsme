@@ -3,6 +3,7 @@ $gray: rgba(200,200,200,1)
 $divider: rgba(240,240,240,1)
 $green: rgb(5,210,34)
 $red: rgb(200,5,34)
+$font-red: lighten($red,3)
 
 body
   margin: 0
@@ -15,7 +16,25 @@ body
 @mixin dropshadow($color)
   box-shadow: 0px 2px 4px $color
 
+body .finish
+  background: white
+
+.note
+  margin: 5px 5px
+  font-size: 16px
+  color: darken($gray, 20)
+  .emph
+    color: $font-red
+    font-weight: bold
+
+.finish
+  p
+    color: darken($gray, 15)
 .hero
+  p
+    color: darken($gray, 5)
+
+.hero, .finish
   background: url('../images/banner.png')
   background-size: cover
   background-position: right center
@@ -23,11 +42,10 @@ body
   background-color: white
   padding: 35px 0 20px 0
   h1
-    color: lighten($red,3)
+    color: $font-red
     margin: 0
     font-size: 56px
   p
-    color: darken($gray, 5)
     font-size: 23px
     margin-top: 0
     margin-left: 3px

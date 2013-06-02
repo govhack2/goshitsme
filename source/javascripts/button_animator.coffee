@@ -82,6 +82,7 @@ $ ->
       question = button.closest('.question').data("question")
       randomAnswer = question.weightedRandomAnswer()
       question.setAnswer(randomAnswer)
+      Question.summarise()
       nextAnswer()
 
   source   = $("#question-template").html()
