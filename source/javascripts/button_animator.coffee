@@ -33,15 +33,12 @@ newFace = (button, onDone) ->
   else
     onDone() if onDone
 
-commenceRollin = (button, onDone)->
+window.commenceRollin = (button, onDone, spinAmount=6)->
   unless button.data('spins')
-    button.data('spins', 6)
+    button.data('spins', spinAmount)
 
-  newFace button
-
-  setTimeout((->newFace(button, ->
-      onDone() if onDone
-    )), 65)
+  newFace button, ->
+    onDone() if onDone
 
 # Pick a random sound based on the Sound Choice category
 playSound = ->

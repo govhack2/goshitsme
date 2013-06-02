@@ -60,10 +60,26 @@ class window.Question
     $d.find(".message").hide()
     $d.find(".autoroll-select").hide()
 
-  dropdownSelected: =>
+  autoRoll: =>
     $d = @dom()
+    @answerToAutoFind = @findAnswer($d.find("select").val())
+    button = $d.find("button.dice")
+    question = this
+
+    donefn = =>
+      @clickCount++
+      randomAnswer = question.weightedRandomAnswer()
+      if randomAnswer == @answerToAutoFind
+        @setAnswer(@answerToAutoFind)
+      else
+        @setAnswer(randomAnswer)
+        commenceRollin button, donefn, 1
+
+    commenceRollin button, donefn, 1
+
+  dropdownSelected: =>
     @hideDropdown()
-    @setAnswer(@findAnswer($d.find("select").val()))
+    @autoRoll()
 
   clicked: =>
     @clickCount++
