@@ -1,7 +1,7 @@
 
 class window.Question
   idCount = 0
-  autorollThresholdClicks = 10
+  autorollThresholdClicks = 2
 
   @summarise: ->
     finishMessageTemplate = Handlebars.compile( $("#finish-message-template").html() )
