@@ -1,5 +1,5 @@
 {
-  "title":"GoShitMe",
+  "title":"Statistical Me",
   "description":"Roll for identity!",
   "license":"Creative Commons Attribution 2.5 Australia",
   "attribution":"Based on Australian Bureau of Statistics Data",
@@ -776,7 +776,7 @@
       "code":"industry_of_employment",
       "label":"Industry",
       "description":"Which industry are you employed in?",
-      "count":9824440,
+      "count":9446223,
       "answers":[
         {
           "label":"Agriculture forestry and fishing",
@@ -849,10 +849,6 @@
         {
           "label":"Arts and recreation services",
           "count":151574
-        },
-        {
-          "label":"Other services",
-          "count":378217
         }
       ]
     },
@@ -860,39 +856,39 @@
       "code":"occupation",
       "label":"Occupation",
       "description":"What is your role at work?",
-      "count":19738618,
+      "count":9869309,
       "answers":[
         {
           "label":"Manager",
-          "count":2587938
+          "count":1293969
         },
         {
           "label":"Professional",
-          "count":4290882
+          "count":2145441
         },
         {
           "label":"Technician / Trade",
-          "count":2850292
+          "count":1425146
         },
         {
           "label":"Community / Personal Service",
-          "count":1943796
+          "count":971898
         },
         {
           "label":"Clerical / Administrative",
-          "count":2967118
+          "count":1483559
         },
         {
           "label":"Sales",
-          "count":1884280
+          "count":942140
         },
         {
           "label":"Machinery Operator / Driver",
-          "count":1319098
+          "count":659549
         },
         {
           "label":"Labourer",
-          "count":1895214
+          "count":947607
         }
       ]
     },
