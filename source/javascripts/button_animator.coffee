@@ -85,6 +85,12 @@ $ ->
       element.data('question', question)
       $('.questions').append( element )
 
+      answer_selector = element.find("select.answer-selector")
+      answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
+      $.each question.answers, ->
+        answer_selector.append($("<option />").val(this.value).text(this.value))
+
+
     _.each $('.dice'), (button) ->
       setFace(button, gimmeFace())
 
