@@ -27,6 +27,12 @@ csv_files = Dir["#{config.path}/**/*.csv"]
 
 #------------------------------------------------------------------------------#
 
+META = {
+  license: "Creative Commons Attribution 2.5 Australia",
+  attribution: "Based on Australian Bureau of Statistics Data",
+  year: "2011"
+}
+
 STATES = {
   '1' => 'NSW',
   '2' => 'VIC',
@@ -229,18 +235,9 @@ if IMPORT == :states
   end
 elsif IMPORT == :australia
 
-  path = 'source/api'
-  FileUtils::mkdir_p(path)
-  File.open("#{path}/statistics.json", 'wb') do |file|
-    file.write(MultiJson.dump(data, pretty: true))
-  end
-
   questions = {
     title: "Statistical Me",
     description: "Roll for identity!",
-    license: "Creative Commons Attribution 2.5 Australia",
-    attribution: "Based on Australian Bureau of Statistics Data",
-    year: "2011",
     questions: [
       {
         :code => :gender,
@@ -430,7 +427,13 @@ elsif IMPORT == :australia
   end
 
   File.open('source/api/questions.json', 'wb') do |file|
-    file.write(MultiJson.dump(questions, pretty: true))
+    file.write(MultiJson.dump(questions.merge(META), pretty: true))
+  end
+
+  path = 'source/api'
+  FileUtils::mkdir_p(path)
+  File.open("#{path}/statistics.json", 'wb') do |file|
+    file.write(MultiJson.dump(australia.merge(META), pretty: true))
   end
 
 end

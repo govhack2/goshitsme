@@ -1,9 +1,6 @@
 {
   "title":"Statistical Me",
   "description":"Roll for identity!",
-  "license":"Creative Commons Attribution 2.5 Australia",
-  "attribution":"Based on Australian Bureau of Statistics Data",
-  "year":"2011",
   "questions":[
     {
       "code":"gender",
@@ -1184,5 +1181,8 @@
         }
       ]
     }
-  ]
+  ],
+  "license":"Creative Commons Attribution 2.5 Australia",
+  "attribution":"Based on Australian Bureau of Statistics Data",
+  "year":"2011"
 }
