@@ -33,15 +33,12 @@ newFace = (button, onDone) ->
   else
     onDone() if onDone
 
-commenceRollin = (button, onDone)->
+window.commenceRollin = (button, onDone, spinAmount=6)->
   unless button.data('spins')
-    button.data('spins', 6)
+    button.data('spins', spinAmount)
 
-  newFace button
-
-  setTimeout((->newFace(button, ->
-      onDone() if onDone
-    )), 65)
+  newFace button, ->
+    onDone() if onDone
 
 # Pick a random sound based on the Sound Choice category
 playSound = ->
@@ -54,7 +51,11 @@ playSound = ->
 nextAnswer = _.debounce ->
   return if lastAnswered.data('nextified')
   lastAnswered.data('nextified', true)
-  $('div.question:hidden').first().fadeIn('fast')
+  hiddenAnswers = $('div.question:hidden')
+  if hiddenAnswers.length == 0
+    $('#finished').fadeIn('fast')
+  else
+    hiddenAnswers.first().fadeIn('fast')
 , 1250
 
 lastAnswered = null
