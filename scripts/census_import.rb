@@ -232,7 +232,7 @@ if IMPORT == :suburbs
         count: count
       }
       suburb = suburb.gsub(' ', '_')
-      path = "source/api/#{state}/#{suburb}"
+      path = "build/api/#{state}/#{suburb}"
       FileUtils::mkdir_p(path)
       File.open("#{path}/statistics.json", 'wb') do |file|
         file.write(MultiJson.dump(suburb_data.merge(META), pretty: true))
