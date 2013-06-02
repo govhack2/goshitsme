@@ -1,12 +1,6 @@
 Statistical Me
 ==============
 
-See how long it takes to randomly find someone just like you.
+Made for GovHack Perth 2013: http://hackerspace.govhack.org/?q=groups/statistical-me
 
-TODO
-----
-
-* Only show one question at a time
-* Allow a question to be skipped
-* Show the number of clicks
-* Payoff at the end with sfx and personal summary
+Try it out here: http://www.statisticalme.com/
