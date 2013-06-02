@@ -21,7 +21,7 @@ setFace = (button, face) ->
 gimmeAnswer = (button) ->
   question = button.closest('.question').data("question")
   randomAnswer = question.randomAnswer()
-  button.siblings('input').val(if randomAnswer then randomAnswer.value else 'no answers')
+  button.closest('.question').find('input').val(if randomAnswer then randomAnswer.value else 'no answers')
 
 newFace = (button, onDone) ->
   spins = button.data('spins')
