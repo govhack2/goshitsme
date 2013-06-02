@@ -102,7 +102,7 @@ class window.Question
     donefn = =>
       @clickCount++
       randomAnswer = question.weightedRandomAnswer()
-      if randomAnswer == @answerToAutoFind
+      if @clickCount > 300 || randomAnswer == @answerToAutoFind
         @setAnswer(@answerToAutoFind)
         Question.summarise()
         @answerToAutoFind = null
