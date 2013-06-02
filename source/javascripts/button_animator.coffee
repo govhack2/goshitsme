@@ -92,7 +92,7 @@ $ ->
 
   source   = $("#question-template").html()
   if source
-  template = Handlebars.compile(source)
+    template = Handlebars.compile(source)
 
   DATATRON.get_questions (questions)->
     i = 0
