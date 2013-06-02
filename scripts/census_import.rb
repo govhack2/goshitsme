@@ -164,14 +164,14 @@ csv_files.each do |file|
     entry[:suburb] ||= suburb
     if type =~ /B01/
       _add_entry(row, entry, :gender, /^Total_Persons_([^P].*)/)
-      _add_entry(row, entry, :age, /^Age_groups_(.*)_Persons/)
-      _add_entry(row, entry, :school_completed, /^Highest_year_of_school_completed_(.*)_Persons/)
+      _add_entry(row, entry, :age, /^Age_groups_(.*)_Persons$/)
+      _add_entry(row, entry, :school_completed, /^Highest_year_of_school_completed_(.*)_Persons$/)
     end
     if type =~ /B40/
-      _add_entry(row, entry, :level_of_education, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :level_of_education, /Persons_(.*)_Total$/)
     end
     if type =~ /B43/
-      _add_entry(row, entry, :industry_of_employment, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :industry_of_employment, /Persons_(.*)_Total$/)
     end
     if type =~ /B45/
       _add_entry(row, entry, :occupation, /Total_Occupation_(.*)/)
@@ -183,25 +183,25 @@ csv_files.each do |file|
       _add_entry(row, entry, :vehicles_per_house, /^Number_of_motor_vehicles_per_dwelling_(.*)_Dwellings/)
     end
     if type =~ /B28/
-      _add_entry(row, entry, :weekly_household_income, /^([0-9]+.*)_Total/)
+      _add_entry(row, entry, :weekly_household_income, /^([0-9]+.*)_Total$/)
     end
     if type =~ /B33/
-      _add_entry(row, entry, :monthly_mortgage_repayment, /^([0-9]+.*)_Total/)
+      _add_entry(row, entry, :monthly_mortgage_repayment, /^([0-9]+.*)_Total$/)
     end
     if type =~ /B34/
-      _add_entry(row, entry, :weekly_rent, /^([0-9]+.*)_Total/)
+      _add_entry(row, entry, :weekly_rent, /^([0-9]+.*)_Total$/)
     end
     if type =~ /B35/
       _add_entry(row, entry, :internet_type, /connection_(.*?)[_]*Total$/)
     end
     if type =~ /B46/
-      _add_entry(row, entry, :travel_to_work, /(.*?)_Persons/)
+      _add_entry(row, entry, :travel_to_work, /(.*?)_Persons$/)
     end
     if type =~ /B14/
-      _add_entry(row, entry, :religion, /(.*?)_Persons/)
+      _add_entry(row, entry, :religion, /(.*?)_Persons$/)
     end
     if type =~ /B09/
-      _add_entry(row, entry, :country_of_birth, /(.*?)_Persons/)
+      _add_entry(row, entry, :country_of_birth, /(.*?)_Persons$/)
     end
     if type =~ /B13/
       _add_entry(row, entry, :languages_spoken, /Speaks_(other_language_)*(.*?)_Persons/, 3)
@@ -210,10 +210,10 @@ csv_files.each do |file|
       _add_entry(row, entry, :marital_status, /Persons_Total_(.*)/)
     end
     if type =~ /B17/
-      _add_entry(row, entry, :weekly_personal_income, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :weekly_personal_income, /Persons_(.*)_Total$/)
     end
     if type =~ /B41/
-      _add_entry(row, entry, :qualifications, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :qualifications, /Persons_(.*)_Total$/)
     end
   end
 end

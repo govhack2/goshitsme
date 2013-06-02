@@ -692,7 +692,7 @@
       "code":"level_of_education",
       "label":"Level of Education",
       "description":"What kind of tertiary qualification do you have?",
-      "count":10931777,
+      "count":7796867,
       "answers":[
         {
           "label":"Postgraduate Degree",
@@ -712,7 +712,7 @@
         },
         {
           "label":"Other Certificate",
-          "count":3404720
+          "count":269810
         },
         {
           "label":"Certificate III and IV",
