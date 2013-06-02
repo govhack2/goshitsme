@@ -19,8 +19,8 @@ class window.Question
     totalQuestions = $(".question").length
     if unique_questions.length > 5
       $("#finished-message").html("See! You are really unique!")
-    else if unique_questions.length > 3
-      $("#finished-message").html("See, you're different to the rest.")
+    else if unique_questions.length >= 3
+      $("#finished-message").html("See, you're different to the rest!")
     else if answeredQuestions.length == totalQuestions.length
       $("#finished-message").html("Ok, I guess you're average :(")
     else if answeredQuestions.length >= 2
