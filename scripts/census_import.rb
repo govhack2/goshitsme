@@ -25,10 +25,6 @@ config.path = File.expand_path(config.path)
 xlsx_files = Dir["#{config.path}/**/*.xlsx"]
 csv_files = Dir["#{config.path}/**/*.csv"]
 
-IMPORT = :australia
-# IMPORT = :states
-# IMPORT = :suburbs
-
 #------------------------------------------------------------------------------#
 
 STATES = {
@@ -100,6 +96,15 @@ CORRECTIONS = {
   'Christian nfd' => 'Other Christian'
 }
 
+#No_Internet_connection_Total
+#1525107
+#Type_of_Internet_connection_Broadband_Total
+#5424509
+#Type_of_Internet_connection_Dial_up_Total
+#235401
+#Type_of_Internet_connection_Other_Total
+#303047
+
 def _add_entry(row, entry, name, pattern, num = 2)
   row.each do |header, count|
     next if header =~ /Not_stated/i
@@ -129,6 +134,10 @@ def _add_entry(row, entry, name, pattern, num = 2)
 end
 
 #------------------------------------------------------------------------------#
+
+IMPORT = :australia
+#IMPORT = :states
+#IMPORT = :suburbs
 
 data = {}
 TYPES = %w{B01 B05 B09 B13 B14 B17B B24 B28 B29 B33 B34 B35 B40B B41B B43C B45A B46}
@@ -183,7 +192,7 @@ csv_files.each do |file|
       _add_entry(row, entry, :weekly_rent, /^([0-9]+.*)_Total/)
     end
     if type =~ /B35/
-      _add_entry(row, entry, :internet_type, /connection_(.*?)[_]*Total/)
+      _add_entry(row, entry, :internet_type, /connection_(.*?)[_]*Total$/)
     end
     if type =~ /B46/
       _add_entry(row, entry, :travel_to_work, /(.*?)_Persons/)
@@ -209,9 +218,20 @@ csv_files.each do |file|
   end
 end
 
-if IMPORT == :australia
+if IMPORT == :states
+  STATES.values.each do |state|
+    path = "source/api/#{state}"
+    FileUtils::mkdir_p(path)
+    File.mkdir_p('source/api/#{state.downcase}/statistics.json')
+    File.open('data/australia.json', 'wb') do |file|
+      file.write(MultiJson.dump(data, pretty: true))
+    end
+  end
+elsif IMPORT == :australia
 
-  File.open('data/australia.json', 'wb') do |file|
+  path = 'source/api'
+  FileUtils::mkdir_p(path)
+  File.open("#{path}/statistics.json", 'wb') do |file|
     file.write(MultiJson.dump(data, pretty: true))
   end
 
@@ -222,6 +242,13 @@ if IMPORT == :australia
     attribution: "Based on Australian Bureau of Statistics Data",
     year: "2011",
     questions: [
+      {
+        :code => :gender,
+        label: "Gender",
+        description: "Which gender are you?",
+        count: 0,
+        answers: []
+      },
       {
         label: 'State / Territory',
         description: 'Where do you live?',
@@ -260,13 +287,6 @@ if IMPORT == :australia
             count: 357222
           }
         ]
-      },
-      {
-        :code => :gender,
-        label: "Gender",
-        description: "Which gender are you?",
-        count: 0,
-        answers: []
       },
       {
         :code => :age,
@@ -398,7 +418,7 @@ if IMPORT == :australia
     code = question[:code]
     if code && australia.include?(code)
       australia[code].each do |label, count|
-        next if label == 'Other'
+        #next if label == 'Other'
         question[:answers] << {
           label: label,
           count: count
