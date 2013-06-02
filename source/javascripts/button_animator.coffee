@@ -38,7 +38,7 @@ window.commenceRollin = (button, onDone, spinAmount=6)->
     button.data('spins', spinAmount)
 
   newFace button, ->
-    onDone() if onDone
+      onDone() if onDone
 
 # Pick a random sound based on the Sound Choice category
 playSound = ->
@@ -91,6 +91,7 @@ $ ->
       nextAnswer()
 
   source   = $("#question-template").html()
+  if source
   template = Handlebars.compile(source)
 
   DATATRON.get_questions (questions)->
