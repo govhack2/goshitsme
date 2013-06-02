@@ -73,9 +73,12 @@ $ ->
 
   $('.questions').on 'click', '.answer-and-dice', (e) ->
     button = $(@)
-    playSound()
     questionContainer = button.closest('.question')
-    questionContainer.data("question").clicked()
+    questionModel = questionContainer.data("question")
+    return if questionModel.isAutoRolling()
+
+    questionModel.clicked()
+    playSound()
     lastAnswered = questionContainer
     commenceRollin button, ->
       # the final (non-rollin') answer must be weighted random

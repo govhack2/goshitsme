@@ -62,6 +62,9 @@ class window.Question
     $d.find(".message").hide()
     $d.find(".autoroll-select").hide()
 
+  isAutoRolling: =>
+    @answerToAutoFind != undefined && @answerToAutoFind != null
+
   autoRoll: =>
     $d = @dom()
     @answerToAutoFind = @findAnswer($d.find("select").val())
@@ -73,6 +76,7 @@ class window.Question
       randomAnswer = question.weightedRandomAnswer()
       if randomAnswer == @answerToAutoFind
         @setAnswer(@answerToAutoFind)
+        @answerToAutoFind = null
       else
         @setAnswer(randomAnswer)
         commenceRollin button, donefn, 1
