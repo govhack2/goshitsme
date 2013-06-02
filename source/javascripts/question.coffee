@@ -82,8 +82,8 @@ class window.Question
   dropdownSelected: =>
     $d = @dom()
     @hideDropdown()
-    @setAnswer(@findAnswer($d.find("select").val()))
     @hideAutorollButton()
+    @autoRoll()
     @autorollClickCount = 0
 
   showAutorollButton: =>
