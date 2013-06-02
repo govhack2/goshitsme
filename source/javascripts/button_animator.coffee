@@ -52,6 +52,7 @@ playSound = ->
   sound.play()
 
 $ ->
+
   $('.questions').on 'change', 'select', (e) ->
     select = $(@)
     select.closest('.question').data("question").dropdownSelected()
@@ -65,4 +66,21 @@ $ ->
       question = button.closest('.question').data("question")
       randomAnswer = question.weightedRandomAnswer()
       question.setAnswer(randomAnswer)
+
+  source   = $("#question-template").html()
+  template = Handlebars.compile(source)
+
+  DATATRON.get_questions (questions)->
+    i = 0
+    for question in questions
+      if i++ == 1
+        question.first = true
+
+      html = template(question)
+      element = $(html)
+      element.data('question', question)
+      $('.questions').append( element )
+
+    _.each $('.dice'), (button) ->
+      setFace(button, gimmeFace())
 
