@@ -1,8 +1,10 @@
 class window.Question
   idCount = 0
+  autorollThresholdClicks = 10
 
   constructor: (@name, @desc, @source, @answers, @selectedAnswers) ->
     @clickCount = 0
+    @autorollClickCount = 0
     @id = idCount
     idCount++
 
@@ -78,17 +80,30 @@ class window.Question
     commenceRollin button, donefn, 1
 
   dropdownSelected: =>
+    $d = @dom()
     @hideDropdown()
-    @autoRoll()
+    @setAnswer(@findAnswer($d.find("select").val()))
+    @hideAutorollButton()
+    @autorollClickCount = 0
+
+  showAutorollButton: =>
+    $d = @dom()
+    $d.find('.autoroll-button').show()
+
+  hideAutorollButton: =>
+    $d = @dom()
+    $d.find('.autoroll-button').hide()
+
+  autorollButtonClicked: =>
+    $d = @dom()
+    if $d.find(".autoroll-select").is(":visible")
+      @hideDropdown()
+    else
+      @showDropdown()
 
   clicked: =>
     @clickCount++
-    if @clickCount == 5
+    @autorollClickCount++
+    if @autorollClickCount == autorollThresholdClicks
       # Show the auto-roll functionality
-      @showDropdown()
-      answer_selector = $("#question-#{this.id}").find("select.answer-selector")
-
-      answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
-      $.each @answers, ->
-        answer_selector.append($("<option />").val(this.value).text(this.value))
-
+      @showAutorollButton()

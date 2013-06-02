@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>STATISTICALME.COM</title>
+    <title>STATISTICAL ME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sound files -->
     <audio id="dice1" src="sounds/dice1.mp3"></audio>
@@ -20,7 +20,7 @@
   <body>
     <div class="hero">
       <div class="container">
-        <h1>STATISTICALME.COM</h1>
+        <h1>STATISTICAL ME</h1>
         <p>See how long it takes to randomly find someone just like you and discover just how unique you are.</p>
       </div>
       <div style="clear:both"></div>
@@ -38,12 +38,16 @@
   </body>
 
   <script id="question-template" type="text/x-handlebars-template">
-    <div class="question" id="question-{{id}}">
+    <div class="question" id="question-{{id}}" style="display:none;">
+      <button class="autoroll-button">
+        ...
+      </button>
       <div class="label">
         {{desc}}
         <div class="source" style="display:none"></div>
       </div>
-      <div class="message" style='display:none'>Tired of clicking? Choose your desired value and we'll roll for you.</div>
+      <div class="message" style='display:none'>Tired of clicking? Choose your desired value and we'll roll for you.
+      </div>
       <div class="answer-and-dice">
         <button class="dice">
           <div class="dieface">&nbsp;</div>
@@ -54,7 +58,6 @@
         <select class='answer-selector'>
         </select>
       </div>
-
     </div>
   </script>
 

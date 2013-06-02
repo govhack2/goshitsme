@@ -21,7 +21,7 @@ setFace = (button, face) ->
 gimmeAnswer = (button) ->
   question = button.closest('.question').data("question")
   randomAnswer = question.randomAnswer()
-  button.siblings('input').val(if randomAnswer then randomAnswer.value else 'no answers')
+  button.closest('.question').find('input').val(if randomAnswer then randomAnswer.value else 'no answers')
 
 newFace = (button, onDone) ->
   spins = button.data('spins')
@@ -48,18 +48,59 @@ playSound = ->
   sound.playbackRate = _.random(50, 90) / 100 if sound.playbackRate
   sound.play()
 
+nextAnswer = _.debounce ->
+  return if lastAnswered.data('nextified')
+  lastAnswered.data('nextified', true)
+  $('div.question:hidden').first().fadeIn('fast')
+, 1250
+
+lastAnswered = null
+
+
 $ ->
+
   $('.questions').on 'change', 'select', (e) ->
     select = $(@)
     select.closest('.question').data("question").dropdownSelected()
 
-  $('.questions').on 'click', '.dice', (e) ->
+  $('.questions').on 'click', '.autoroll-button', (e) ->
+    button = $(@)
+    button.closest('.question').data("question").autorollButtonClicked()
+
+  $('.questions').on 'click', '.answer-and-dice', (e) ->
     button = $(@)
     playSound()
-    button.closest('.question').data("question").clicked()
+    questionContainer = button.closest('.question')
+    questionContainer.data("question").clicked()
+    lastAnswered = questionContainer
     commenceRollin button, ->
       # the final (non-rollin') answer must be weighted random
       question = button.closest('.question').data("question")
       randomAnswer = question.weightedRandomAnswer()
       question.setAnswer(randomAnswer)
+      nextAnswer()
 
+  source   = $("#question-template").html()
+  template = Handlebars.compile(source)
+
+  DATATRON.get_questions (questions)->
+    i = 0
+    for question in questions
+      if i++ == 1
+        question.first = true
+
+      html = template(question)
+      element = $(html)
+      element.data('question', question)
+      $('.questions').append( element )
+      element.show() if i == 1
+
+      # populate dropdown
+      answer_selector = element.find("select.answer-selector")
+      answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
+      $.each question.answers, ->
+        answer_selector.append($("<option />").val(this.value).text(this.value))
+
+
+    _.each $('.dice'), (button) ->
+      setFace(button, gimmeFace())

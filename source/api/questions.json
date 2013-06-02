@@ -1,10 +1,23 @@
 {
   "title":"Statistical Me",
   "description":"Roll for identity!",
-  "license":"Creative Commons Attribution 2.5 Australia",
-  "attribution":"Based on Australian Bureau of Statistics Data",
-  "year":"2011",
   "questions":[
+    {
+      "code":"gender",
+      "label":"Gender",
+      "description":"Which gender are you?",
+      "count":21507719,
+      "answers":[
+        {
+          "label":"Male",
+          "count":10634013
+        },
+        {
+          "label":"Female",
+          "count":10873706
+        }
+      ]
+    },
     {
       "label":"State / Territory",
       "description":"Where do you live?",
@@ -41,22 +54,6 @@
         {
           "label":"ACT",
           "count":357222
-        }
-      ]
-    },
-    {
-      "code":"gender",
-      "label":"Gender",
-      "description":"Which gender are you?",
-      "count":21507719,
-      "answers":[
-        {
-          "label":"Male",
-          "count":10634013
-        },
-        {
-          "label":"Female",
-          "count":10873706
         }
       ]
     },
@@ -288,7 +285,7 @@
       "code":"languages_spoken",
       "label":"Languages Spoken",
       "description":"Which language do you speak at home?",
-      "count":19995096,
+      "count":20422229,
       "answers":[
         {
           "label":"English",
@@ -457,6 +454,10 @@
         {
           "label":"Vietnamese",
           "count":233388
+        },
+        {
+          "label":"Other",
+          "count":427133
         }
       ]
     },
@@ -632,11 +633,11 @@
       "code":"internet_type",
       "label":"Internet Type",
       "description":"What kind of internet connection do you have?",
-      "count":19105938,
+      "count":7488064,
       "answers":[
         {
           "label":"None",
-          "count":13446028
+          "count":1525107
         },
         {
           "label":"Broadband",
@@ -645,6 +646,10 @@
         {
           "label":"Dial up",
           "count":235401
+        },
+        {
+          "label":"Other",
+          "count":303047
         }
       ]
     },
@@ -684,7 +689,7 @@
       "code":"level_of_education",
       "label":"Level of Education",
       "description":"What kind of tertiary qualification do you have?",
-      "count":10931777,
+      "count":7796867,
       "answers":[
         {
           "label":"Postgraduate Degree",
@@ -704,7 +709,7 @@
         },
         {
           "label":"Other Certificate",
-          "count":3404720
+          "count":269810
         },
         {
           "label":"Certificate III and IV",
@@ -948,7 +953,7 @@
       "code":"travel_to_work",
       "label":"Daily Commute",
       "description":"How do you get to your place of work?",
-      "count":9841778,
+      "count":9908394,
       "answers":[
         {
           "label":"Train",
@@ -989,6 +994,10 @@
         {
           "label":"Bicycle",
           "count":103913
+        },
+        {
+          "label":"Other",
+          "count":66616
         },
         {
           "label":"Walked only",
@@ -1172,5 +1181,8 @@
         }
       ]
     }
-  ]
+  ],
+  "license":"Creative Commons Attribution 2.5 Australia",
+  "attribution":"Based on Australian Bureau of Statistics Data",
+  "year":"2011"
 }

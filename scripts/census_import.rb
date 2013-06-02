@@ -25,11 +25,13 @@ config.path = File.expand_path(config.path)
 xlsx_files = Dir["#{config.path}/**/*.xlsx"]
 csv_files = Dir["#{config.path}/**/*.csv"]
 
-IMPORT = :australia
-# IMPORT = :states
-# IMPORT = :suburbs
-
 #------------------------------------------------------------------------------#
+
+META = {
+  license: "Creative Commons Attribution 2.5 Australia",
+  attribution: "Based on Australian Bureau of Statistics Data",
+  year: "2011"
+}
 
 STATES = {
   '1' => 'NSW',
@@ -100,6 +102,15 @@ CORRECTIONS = {
   'Christian nfd' => 'Other Christian'
 }
 
+#No_Internet_connection_Total
+#1525107
+#Type_of_Internet_connection_Broadband_Total
+#5424509
+#Type_of_Internet_connection_Dial_up_Total
+#235401
+#Type_of_Internet_connection_Other_Total
+#303047
+
 def _add_entry(row, entry, name, pattern, num = 2)
   row.each do |header, count|
     next if header =~ /Not_stated/i
@@ -130,6 +141,10 @@ end
 
 #------------------------------------------------------------------------------#
 
+#IMPORT = :australia
+IMPORT = :states
+#IMPORT = :suburbs
+
 data = {}
 TYPES = %w{B01 B05 B09 B13 B14 B17B B24 B28 B29 B33 B34 B35 B40B B41B B43C B45A B46}
 csv_files.each do |file|
@@ -155,14 +170,14 @@ csv_files.each do |file|
     entry[:suburb] ||= suburb
     if type =~ /B01/
       _add_entry(row, entry, :gender, /^Total_Persons_([^P].*)/)
-      _add_entry(row, entry, :age, /^Age_groups_(.*)_Persons/)
-      _add_entry(row, entry, :school_completed, /^Highest_year_of_school_completed_(.*)_Persons/)
+      _add_entry(row, entry, :age, /^Age_groups_(.*)_Persons$/)
+      _add_entry(row, entry, :school_completed, /^Highest_year_of_school_completed_(.*)_Persons$/)
     end
     if type =~ /B40/
-      _add_entry(row, entry, :level_of_education, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :level_of_education, /Persons_(.*)_Total$/)
     end
     if type =~ /B43/
-      _add_entry(row, entry, :industry_of_employment, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :industry_of_employment, /Persons_(.*)_Total$/)
     end
     if type =~ /B45/
       _add_entry(row, entry, :occupation, /Total_Occupation_(.*)/)
@@ -174,25 +189,25 @@ csv_files.each do |file|
       _add_entry(row, entry, :vehicles_per_house, /^Number_of_motor_vehicles_per_dwelling_(.*)_Dwellings/)
     end
     if type =~ /B28/
-      _add_entry(row, entry, :weekly_household_income, /^([0-9]+.*)_Total/)
+      _add_entry(row, entry, :weekly_household_income, /^([0-9]+.*)_Total$/)
     end
     if type =~ /B33/
-      _add_entry(row, entry, :monthly_mortgage_repayment, /^([0-9]+.*)_Total/)
+      _add_entry(row, entry, :monthly_mortgage_repayment, /^([0-9]+.*)_Total$/)
     end
     if type =~ /B34/
-      _add_entry(row, entry, :weekly_rent, /^([0-9]+.*)_Total/)
+      _add_entry(row, entry, :weekly_rent, /^([0-9]+.*)_Total$/)
     end
     if type =~ /B35/
-      _add_entry(row, entry, :internet_type, /connection_(.*?)[_]*Total/)
+      _add_entry(row, entry, :internet_type, /connection_(.*?)[_]*Total$/)
     end
     if type =~ /B46/
-      _add_entry(row, entry, :travel_to_work, /(.*?)_Persons/)
+      _add_entry(row, entry, :travel_to_work, /(.*?)_Persons$/)
     end
     if type =~ /B14/
-      _add_entry(row, entry, :religion, /(.*?)_Persons/)
+      _add_entry(row, entry, :religion, /(.*?)_Persons$/)
     end
     if type =~ /B09/
-      _add_entry(row, entry, :country_of_birth, /(.*?)_Persons/)
+      _add_entry(row, entry, :country_of_birth, /(.*?)_Persons$/)
     end
     if type =~ /B13/
       _add_entry(row, entry, :languages_spoken, /Speaks_(other_language_)*(.*?)_Persons/, 3)
@@ -201,27 +216,36 @@ csv_files.each do |file|
       _add_entry(row, entry, :marital_status, /Persons_Total_(.*)/)
     end
     if type =~ /B17/
-      _add_entry(row, entry, :weekly_personal_income, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :weekly_personal_income, /Persons_(.*)_Total$/)
     end
     if type =~ /B41/
-      _add_entry(row, entry, :qualifications, /Persons_(.*)_Total/)
+      _add_entry(row, entry, :qualifications, /Persons_(.*)_Total$/)
     end
   end
 end
 
-if IMPORT == :australia
-
-  File.open('data/australia.json', 'wb') do |file|
-    file.write(MultiJson.dump(data, pretty: true))
+if IMPORT == :states
+  STATES.values.each do |state|
+    path = "source/api/#{state}"
+    FileUtils::mkdir_p(path)
+    state_data = data[state][nil] rescue {}
+    File.open("#{path}/statistics.json", 'wb') do |file|
+      file.write(MultiJson.dump(state_data.merge(META), pretty: true))
+    end
   end
+elsif IMPORT == :australia
 
   questions = {
     title: "Statistical Me",
     description: "Roll for identity!",
-    license: "Creative Commons Attribution 2.5 Australia",
-    attribution: "Based on Australian Bureau of Statistics Data",
-    year: "2011",
     questions: [
+      {
+        :code => :gender,
+        label: "Gender",
+        description: "Which gender are you?",
+        count: 0,
+        answers: []
+      },
       {
         label: 'State / Territory',
         description: 'Where do you live?',
@@ -260,13 +284,6 @@ if IMPORT == :australia
             count: 357222
           }
         ]
-      },
-      {
-        :code => :gender,
-        label: "Gender",
-        description: "Which gender are you?",
-        count: 0,
-        answers: []
       },
       {
         :code => :age,
@@ -398,7 +415,7 @@ if IMPORT == :australia
     code = question[:code]
     if code && australia.include?(code)
       australia[code].each do |label, count|
-        next if label == 'Other'
+        #next if label == 'Other'
         question[:answers] << {
           label: label,
           count: count
@@ -410,7 +427,13 @@ if IMPORT == :australia
   end
 
   File.open('source/api/questions.json', 'wb') do |file|
-    file.write(MultiJson.dump(questions, pretty: true))
+    file.write(MultiJson.dump(questions.merge(META), pretty: true))
+  end
+
+  path = 'source/api'
+  FileUtils::mkdir_p(path)
+  File.open("#{path}/statistics.json", 'wb') do |file|
+    file.write(MultiJson.dump(australia.merge(META), pretty: true))
   end
 
 end
