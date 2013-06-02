@@ -54,7 +54,11 @@ playSound = ->
 nextAnswer = _.debounce ->
   return if lastAnswered.data('nextified')
   lastAnswered.data('nextified', true)
-  $('div.question:hidden').first().fadeIn('fast')
+  hiddenAnswers = $('div.question:hidden')
+  if hiddenAnswers.length == 0
+    $('#finished').fadeIn('fast')
+  else
+    hiddenAnswers.first().fadeIn('fast')
 , 1250
 
 lastAnswered = null
