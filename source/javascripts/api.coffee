@@ -4,7 +4,7 @@ load_suburbs = (state) ->
   $("#suburb").hide();
   $("#statistics").hide();
   $.ajax
-    url: "api/#{state}/questions.json"
+    url: "/api/#{state}/questions.json"
     success: (data, textStatus, jqXHR) =>
       display_suburbs(data);
 
@@ -12,7 +12,7 @@ load_data = (state, suburb) ->
   suburb = suburb.replace /[ ]+/g, "_"
   $("#statistics_link").hide();
   $("#statistics_link").empty();
-  link = "api/#{state}/#{suburb}/statistics.json"
+  link = "/api/#{state}/#{suburb}/statistics.json"
   $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
   $('#statistics_link').show();
   $.ajax
