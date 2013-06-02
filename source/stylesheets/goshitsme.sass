@@ -2,10 +2,7 @@ $backdrop: rgba(240,240,240,1)
 $gray: rgba(200,200,200,1)
 $divider: rgba(240,240,240,1)
 $green: rgb(5,210,34)
-
-h1
-  color: hotpink !important
-  margin: 0
+$red: rgb(200,5,34)
 
 body
   margin: 0
@@ -25,7 +22,15 @@ body
   background-repeat: no-repeat
   background-color: white
   padding: 35px 0 20px 0
-
+  h1
+    color: lighten($red,3)
+    margin: 0
+    font-size: 56px
+  p
+    color: darken($gray, 5)
+    font-size: 23px
+    margin-top: 0
+    margin-left: 3px
 
 button
   @include rounded(5px)
@@ -35,7 +40,7 @@ button
 .answer-and-dice
   cursor: pointer
   float: right
-  width: 270px
+  width: 320px
 
 .dice
   width: 50px
@@ -50,7 +55,7 @@ button
 
   float: right
 
-  background-color: rgb(200,5,34)
+  background-color: $red
   color: white
   text-align: center
   position: relative
@@ -86,17 +91,17 @@ body
 
 .instruction
   width: 100%
-  background: rgb(200,255,200)
+  background: darken(white, 3)
   padding: 0
-  p
-    margin: 0
-    padding: 15px 0px 0px 0px
+  padding: 25px 0
+
   .close
+    display: none
     font-size: 14px
     width: 100px
     height: 25px
     float: right
-    margin: 10px 0px
+    margin: 3px 0px 10px 0
     background-color: $green
     color: white
     box-shadow: 0 0 3px #666, inset -1px -2px 0px rgba(0,0,0,0.2), inset 1px 2px 1px rgba(255,255,255,0.5), 0px 2px 4px rgba(0,0,0,0.4)
@@ -112,7 +117,7 @@ body
   -moz-transition: 0.5s
   -o-transition: 0.5s
   transition: 0.5s
-  max-height: 45px
+  // max-height: 45px
 
   &.fadeout
     max-height: 0px
@@ -121,34 +126,33 @@ body
   background: $divider
   height: 10px
 
-
-.question
+.question, .instruction
   position: relative
   padding: 20px 0
   margin: 0
-  margin-top: 5px
   clear: both
 
-  .source
+  .source, .sub
     color: #888
-    font-size: x-small
+    font-size: 10px
     margin: 2px
 
-.label
+.label, .instruction p
   font-size: 18px
+  margin: 2px
 .message
-  font-size: 14px
+  font-size: 18px
 
 .label, .message
   position: relative
   padding-top: 5px
   float: left
-  width: 330px
+  width: 260px
   height: 45px
 
 .autoroll-select select
   background: transparent
-  width: 240px
+  width: 290px
   font-size: 16px
   line-height: 1
   border: 0
@@ -161,7 +165,8 @@ body
 
 .autoroll-select
   padding: 0 10px
-  width: 225px
+  margin-bottom: 4px
+  width: 275px
   height: 34px
   overflow: hidden
   background: url("../images/downarrow.png") no-repeat right #ddd
@@ -182,7 +187,7 @@ body
   border: none
   background-color: white
 .answer
-  width: 150px
+  width: 200px
   padding: 0 15px
 
 .license
@@ -196,7 +201,7 @@ body
   border: 2px solid $gray
   padding-left: 4px
   position: absolute
-  right: 255px
+  right: 305px
   top: 32.5px
   width: 25px
   height: 25px
