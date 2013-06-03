@@ -1,82 +1,58 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>STATISTICAL ME</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/dice.png">
-    <!-- Sound files -->
-    <audio id="dice1" src="sounds/dice1.mp3"></audio>
-    <audio id="dice2" src="sounds/dice2.mp3"></audio>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-41399812-1', 'statisticalme.com');
-      ga('send', 'pageview');
-
-    </script>
-  </head>
-  <body>
-    <div class="hero">
-      <div class="container">
-        <h1>Statistical Me</h1>
-        <p>Discover just how unique you are...</p>
-      </div>
-      <div style="clear:both"></div>
+<div class="hero">
+  <div class="container">
+    <h1>Statistical Me</h1>
+    <p>Discover just how unique you are...</p>
+  </div>
+  <div style="clear:both"></div>
+</div>
+<div class="instruction">
+  <div class="container">
+    <button type="button" class="close">OK</button>
+    <p>Roll the dice until you find yourself.</p>
+    <p class="sub">The chance of getting each answer is based on real data.</p>
+  </div>
+</div>
+<div class="container questions">
+</div>
+<div style="clear:both"></div>
+<div id="finished" class="finish">
+  <div class="container">
+    <p id='finished-message'>Ok, get started above.</p>
+    <div id="finish-messages">
     </div>
-    <div class="instruction">
-      <div class="container">
-        <button type="button" class="close">OK</button>
-        <p>Roll the dice until you find yourself.</p>
-        <p class="sub">The chance of getting each answer is based on real data.</p>
-      </div>
-    </div>
-    <div class="container questions">
-    </div>
-    <div style="clear:both"></div>
-    <div id="finished" class="finish">
-      <div class="container">
-        <p id='finished-message'>Ok, get started above.</p>
-        <div id="finish-messages">
-        </div>
-      </div>
-      <div style="clear:both"></div>
-      <div class="license">Like this Govhack 2013 hack? Then <a
-      href="http://hackerspace.govhack.org/?q=groups/statistical-me">vote for us!</a></div>
-    </div>
-    <div style="clear:both"></div>
-    <div class="license"><a href='api'>Developers API</a> | <a href='http://www.youtube.com/watch?v=6aC5IpTuelE'>Project Video</a> | <a href='http://hackerspace.govhack.org/?q=groups/statistical-me'>GovHack Project Page</a> | <a href='https://github.com/govhack2/goshitsme'>Source Code on GitHub</a></div>
-    <div class="license">Creative Commons Attribution 2.5 Australia. Based on Australian Bureau of Statistics Data (2011).</div>
-  </body>
+  </div>
+  <div style="clear:both"></div>
+  <div class="license">Like this Govhack 2013 hack? Then <a
+  href="http://hackerspace.govhack.org/?q=groups/statistical-me">vote for us!</a></div>
+</div>
+<div style="clear:both"></div>
+<div class="license"><a href='api'>Developers API</a> | <a href='http://www.youtube.com/watch?v=6aC5IpTuelE'>Project Video</a> | <a href='http://hackerspace.govhack.org/?q=groups/statistical-me'>GovHack Project Page</a> | <a href='https://github.com/govhack2/goshitsme'>Source Code on GitHub</a></div>
+<div class="license">Creative Commons Attribution 2.5 Australia. Based on Australian Bureau of Statistics Data (2011).</div>
 
-  <script id="finish-message-template" type="text/x-handlebars-template">
-    <div class='note'>Only <span class='emph'>{{answer.ratio}}</span> of people answered <span class='emph'>{{answer.value}}</span> for <span class='emph'>{{name}}</span>!</div>
-  </script>
+<script id="finish-message-template" type="text/x-handlebars-template">
+  <div class='note'>Only <span class='emph'>{{answer.ratio}}</span> of people answered <span class='emph'>{{answer.value}}</span> for <span class='emph'>{{name}}</span>!</div>
+</script>
 
-  <script id="question-template" type="text/x-handlebars-template">
-    <div class="question" id="question-{{id}}" style="display:none;">
-      <button class="autoroll-button">
-        ...
+<script id="question-template" type="text/x-handlebars-template">
+  <div class="question" id="question-{{id}}" style="display:none;">
+    <button class="autoroll-button">
+      ...
+    </button>
+    <div class="label">
+      {{desc}}
+      <div class="source" style="display:none"></div>
+    </div>
+    <div class="message" style='display:none'>Tired of clicking? Auto-roll!
+    </div>
+    <div class="answer-and-dice">
+      <button class="dice">
+        <div class="dieface">&nbsp;</div>
       </button>
-      <div class="label">
-        {{desc}}
-        <div class="source" style="display:none"></div>
-      </div>
-      <div class="message" style='display:none'>Tired of clicking? Auto-roll!
-      </div>
-      <div class="answer-and-dice">
-        <button class="dice">
-          <div class="dieface">&nbsp;</div>
-        </button>
-        <input class="answer" id="appendedInputButton" type="text" disabled="disabled" />
-      </div>
-      <div class="autoroll-select" style='display:none'>
-        <select class='answer-selector'>
-        </select>
-      </div>
+      <input class="answer" id="appendedInputButton" type="text" disabled="disabled" />
     </div>
-  </script>
-
-</html>
+    <div class="autoroll-select" style='display:none'>
+      <select class='answer-selector'>
+      </select>
+    </div>
+  </div>
+</script>

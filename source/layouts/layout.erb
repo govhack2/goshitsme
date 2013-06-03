@@ -6,14 +6,31 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/dice.png"/>
+
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title %></title>
+    <title>Statistical Me</title>
 
     <%= stylesheet_link_tag "normalize", "all" %>
     <%= javascript_include_tag  "all" %>
-  </head>
 
+  </head>
   <body class="<%= page_classes %>">
+    <!-- Sound files -->
+    <audio id="dice1" src="sounds/dice1.mp3"></audio>
+    <audio id="dice2" src="sounds/dice2.mp3"></audio>
+
     <%= yield %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41399812-1', 'statisticalme.com');
+      ga('send', 'pageview');
+
+    </script>
   </body>
 </html>
