@@ -3,8 +3,17 @@ states = ['NSW', 'VIC', 'QLD', 'SA', 'WA', 'TAS', 'NT', 'ACT', 'Other']
 load_suburbs = (state) ->
   $("#suburb").hide();
   $("#statistics").hide();
+  $("#statistics_link").hide();
+  $("#statistics_link").empty();
+  link = "http://www.statisticalme.com/api/#{state}/statistics.json"
+  $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
+  $('#statistics_link').show();
   $.ajax
-    url: "#{state}/questions.json"
+    url: link
+    success: (data, textStatus, jqXHR) =>
+      display_statistics(data);
+  $.ajax
+    url: "http://www.statisticalme.com/api/#{state}/questions.json"
     success: (data, textStatus, jqXHR) =>
       display_suburbs(data);
 
@@ -12,7 +21,7 @@ load_data = (state, suburb) ->
   suburb = suburb.replace /[ ]+/g, "_"
   $("#statistics_link").hide();
   $("#statistics_link").empty();
-  link = "#{state}/#{suburb}/statistics.json"
+  link = "http://www.statisticalme.com/api/#{state}/#{suburb}/statistics.json"
   $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
   $('#statistics_link').show();
   $.ajax
