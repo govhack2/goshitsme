@@ -95,24 +95,24 @@ $ ->
   if source
     template = Handlebars.compile(source)
 
-  DATATRON.get_questions (questions)->
-    i = 0
-    for question in questions
-      if i++ == 1
-        question.first = true
+    DATATRON.get_questions (questions)->
+      i = 0
+      for question in questions
+        if i++ == 1
+          question.first = true
 
-      html = template(question)
-      element = $(html)
-      element.data('question', question)
-      $('.questions').append( element )
-      element.show() if i == 1
+        html = template(question)
+        element = $(html)
+        element.data('question', question)
+        $('.questions').append( element )
+        element.show() if i == 1
 
-      # populate dropdown
-      answer_selector = element.find("select.answer-selector")
-      answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
-      $.each question.answers, ->
-        answer_selector.append($("<option />").val(this.value).text(this.value))
+        # populate dropdown
+        answer_selector = element.find("select.answer-selector")
+        answer_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
+        $.each question.answers, ->
+          answer_selector.append($("<option />").val(this.value).text(this.value))
 
 
-    _.each $('.dice'), (button) ->
-      setFace(button, gimmeFace())
+      _.each $('.dice'), (button) ->
+        setFace(button, gimmeFace())

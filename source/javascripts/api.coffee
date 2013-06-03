@@ -53,23 +53,22 @@ display_statistics = (data) ->
   $("#statistics").show();
 
 $ ->
-
-  state_selector = $("#state").find("select.state-selector")
-  if state_selector
-    state_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
-    for state in states
-      state_selector.append($("<option />").val(state).text(state))
-    $("#state").show();
-    link = "http://www.statisticalme.com/api/statistics.json"
-    $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
-    $('#statistics_link').show();
-    $.ajax
-      url: link
-      success: (data, textStatus, jqXHR) =>
-        display_statistics(data);
-    $('.states').on 'change', 'select', (e) ->
-      state = state_selector.find(":selected").text()
-      load_suburbs(state)
   source = $("#statistics-template").html()
   if source
     window.statistics_template = Handlebars.compile(source)
+    state_selector = $("#state").find("select.state-selector")
+    if state_selector
+      state_selector.append($("<option />").text('Choose Answer').attr('disabled', true).attr('selected', true))
+      for state in states
+        state_selector.append($("<option />").val(state).text(state))
+      $("#state").show();
+      link = "http://www.statisticalme.com/api/statistics.json"
+      $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
+      $('#statistics_link').show();
+      $.ajax
+        url: link
+        success: (data, textStatus, jqXHR) =>
+          display_statistics(data);
+      $('.states').on 'change', 'select', (e) ->
+        state = state_selector.find(":selected").text()
+        load_suburbs(state)
