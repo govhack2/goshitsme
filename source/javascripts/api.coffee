@@ -60,6 +60,13 @@ $ ->
     for state in states
       state_selector.append($("<option />").val(state).text(state))
     $("#state").show();
+    link = "http://www.statisticalme.com/api/statistics.json"
+    $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
+    $('#statistics_link').show();
+    $.ajax
+      url: link
+      success: (data, textStatus, jqXHR) =>
+        display_statistics(data);
     $('.states').on 'change', 'select', (e) ->
       state = state_selector.find(":selected").text()
       load_suburbs(state)
