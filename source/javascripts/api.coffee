@@ -5,7 +5,7 @@ load_suburbs = (state) ->
   $("#statistics").hide();
   $("#statistics_link").hide();
   $("#statistics_link").empty();
-  link = "http://www.statisticalme.com/api/#{state}/statistics.json"
+  link = "http://www.statisticalme.com.s3-website-ap-southeast-2.amazonaws.com/api/#{state}/statistics.json"
   $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
   $('#statistics_link').show();
   $.ajax
@@ -13,7 +13,7 @@ load_suburbs = (state) ->
     success: (data, textStatus, jqXHR) =>
       display_statistics(data);
   $.ajax
-    url: "http://www.statisticalme.com/api/#{state}/questions.json"
+    url: "http://www.statisticalme.com.s3-website-ap-southeast-2.amazonaws.com/api/#{state}/questions.json"
     success: (data, textStatus, jqXHR) =>
       display_suburbs(data);
 
@@ -21,7 +21,7 @@ load_data = (state, suburb) ->
   suburb = suburb.replace /[ ]+/g, "_"
   $("#statistics_link").hide();
   $("#statistics_link").empty();
-  link = "http://www.statisticalme.com/api/#{state}/#{suburb}/statistics.json"
+  link = "http://www.statisticalme.com.s3-website-ap-southeast-2.amazonaws.com/api/#{state}/#{suburb}/statistics.json"
   $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
   $('#statistics_link').show();
   $.ajax
@@ -62,7 +62,7 @@ $ ->
       for state in states
         state_selector.append($("<option />").val(state).text(state))
       $("#state").show();
-      link = "http://www.statisticalme.com/api/statistics.json"
+      link = "http://www.statisticalme.com.s3-website-ap-southeast-2.amazonaws.com/api/statistics.json"
       $('#statistics_link').append("<pre>\n        Link: <a href='#{link}'>#{link}</a>\n</pre>");
       $('#statistics_link').show();
       $.ajax

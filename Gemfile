@@ -16,5 +16,5 @@ end
 
 group :development do
   gem 'awesome_print'
-  gem 'debugger'
+  gem 'byebug'
 end
